@@ -161,7 +161,7 @@
     padding: 20px 15px;
     min-height: auto;
     align-items: center;
-    margin-right: 0; /* תיקנתי את המרווח מימין ל-0 כדי למרכז נכון */
+    margin-right: 0; /* מרכז נכון */
   }
 
   .vertical-divider {
@@ -178,7 +178,7 @@
   }
 
   .results-grid img {
-    width: 120%;
+    width: 100%; /* תיקנתי ל-100% כדי שלא תצא מהמסך */
     border-radius: 16px;
     box-sizing: border-box;
   }
@@ -189,7 +189,7 @@
     margin-top: 30px;
     padding: 20px;
     box-sizing: border-box;
-    text-align: right; /* הוספתי כדי ליישר את הטקסט ימינה */
+    text-align: right; /* יישור טקסט ימינה */
   }
 
   .text-box-with-icon .title {
@@ -198,10 +198,10 @@
     width: 100%;
     padding-bottom: 8px;
     position: relative;
-    text-align: right; /* הוספתי יישור ימינה לכותרת */
+    text-align: right; /* יישור ימינה */
   }
 
-  /* השאר את הקו התחתון של הכותרת */
+  /* הקו התחתון של הכותרת */
   .text-box-with-icon .title::after {
     content: "";
     position: absolute;
@@ -215,18 +215,23 @@
   }
 
   .practice-title-wrapper {
-    justify-content: center;
-    padding-right: 0;
+    display: flex;          /* חשוב כדי למרכז */
+    justify-content: center; /* מרכז אופקי */
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     margin-top: 40px;
     margin-bottom: 20px;
   }
+
   .practice-title {
-    font-size: 55px; /* גודל שמתאים לנייד, לא גדול מדי */
-    text-align: center; /* מרכז את הכותרת */
+    font-size: 48px;     /* גודל מתאים לנייד */
+    text-align: center;  /* יישור מרכזי */
     padding-bottom: 8px;
-    margin: 0 auto; /* מרכז את הכותרת אופקית */
-    max-width: 90%; /* מונע שהכותרת תיגע בקצוות המסך */
+    margin: 0 auto;
+    max-width: 90%;
   }
+
   /* מודאל התמונה - fullscreen */
   #imageModal {
     display: none;
@@ -258,8 +263,6 @@
     user-select: none;
   }
 }
-
-
 
 
   </style>
