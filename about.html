@@ -155,49 +155,51 @@
       min-height: 450px;
     }
 
-    /* תגובתיות למובייל */
 @media (max-width: 768px) {
   .content-row {
-    flex-direction: column;
+    flex-direction: row; /* נשאר אופקי גם בטלפון */
+    flex-wrap: wrap;
     padding: 30px 15px;
-    min-height: auto;
+    gap: 30px;
   }
 
   .results-grid {
-    max-width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 20px;
+    width: 100%;
   }
 
   .text-box-with-icon {
-    max-width: 100%;
-    margin-top: 40px;
+    width: 100%;
     padding: 20px;
   }
 
   .text-box-with-icon .title {
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 24px;
+    margin-bottom: 30px;
     margin-top: 0;
-    margin-right: 20px;
     width: 100%;
+    text-align: center;
   }
 
   .text-box-with-icon .title::after {
-    width: 100%;
+    display: none; /* הסרת הקו אם מפריע */
   }
 
   .practice-title {
-    font-size: 36px;
-    padding-bottom: 8px;
+    font-size: 30px;
+    padding-bottom: 6px;
+    text-align: center;
   }
 
   .practice-title-wrapper {
-    padding-right: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding-right: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
+
   </style>
 </head>
 <body>
