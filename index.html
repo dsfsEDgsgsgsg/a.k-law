@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>כותרת אתר</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="css10.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    /* בסיסי */
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdf8f1;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ====== תפריט עליון אופקי ====== */
+    nav.top-nav {
+      background-color: #fff;
+      border-top: 1px solid #d2b48c;
+      border-bottom: 1px solid #d2b48c;
+      direction: rtl;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav.top-nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 0;
+      margin: 0;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav ul li a {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      color: #a27851;
+    }
+
+    nav.top-nav ul li a:hover,
+    nav.top-nav ul li a:focus {
+      color: #7d5a3d;
+      border-bottom: 2px solid #a27851;
+    }
+
+    /* ====== כותרות ====== */
     .two-columns {
       display: flex;
       justify-content: space-between;
       gap: 60px;
-      max-width: 100%;
-      padding: 0 60px;
+      max-width: 1200px;
       margin: 80px auto;
+      padding: 0 20px;
       flex-wrap: wrap;
     }
 
     .column {
       width: 40%;
-      font-family: 'Playfair Display', serif;
       font-size: 20px;
       line-height: 2;
       color: #333;
@@ -55,18 +101,10 @@
       margin-left: auto;
     }
 
-    .right-title {
-      text-align: right;
-    }
-
     .left-column {
       text-align: right;
       direction: rtl;
       margin-right: auto;
-    }
-
-    .left-title {
-      text-align: right;
     }
 
     .column-text strong {
@@ -85,13 +123,151 @@
       margin-bottom: 8px;
     }
 
-    /* 🔽 התאמה למסכים קטנים (רספונסיבי) */
+    /* ====== לוגו ====== */
+    .logo10 {
+      display: block;
+      max-width: 400px;
+      width: 100%;
+      margin: 40px auto;
+      height: auto;
+    }
+
+    /* ====== Header ====== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      background: #fff;
+      border-bottom: 1px solid #d2b48c;
+      direction: rtl;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #a27851;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 14px;
+      color: #c8a75c;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .icon-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      font-size: 40px;
+      color: #c8a75c;
+      flex-shrink: 0;
+    }
+
+    .icon-group a {
+      color: inherit;
+    }
+
+    /* ====== כפתור המבורגר ====== */
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      width: 40px;
+      height: 30px;
+      position: absolute;
+      top: 15px;
+      left: 20px; /* מכיוון rtl, כפתור בצד שמאל */
+      z-index: 1100;
+    }
+
+    .menu-icon span {
+      height: 4px;
+      background: #a27851;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ====== תפריט צד (סיידבר) ====== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+      padding: 60px 20px 20px;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      z-index: 1200;
+      direction: rtl;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar a {
+      font-size: 20px;
+      padding: 15px 0;
+      color: #333;
+      font-weight: 700;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar a:hover {
+      color: #a27851;
+    }
+
+    /* ====== רספונסיביות ====== */
     @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .icon-group {
+        font-size: 36px;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      nav.top-nav {
+        display: none;
+      }
+
       .two-columns {
         flex-direction: column;
         gap: 30px;
-        padding: 20px;
-        margin: 40px auto;
+        margin: 40px 20px;
       }
 
       .column {
@@ -115,29 +291,8 @@
       }
 
       .logo10 {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto 20px;
-      }
-
-      header, .top-nav ul {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .icon-group {
-        margin-top: 10px;
-      }
-
-      .top-nav ul {
-        padding: 0;
-      }
-
-      .top-nav ul li {
-        display: block;
-        margin: 10px 0;
+        max-width: 100%;
+        margin: 30px auto;
       }
     }
   </style>
@@ -145,32 +300,28 @@
 <body>
 
 <header>
-  <!-- כפתור המבורגר -->
   <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- לוגו באמצע -->
   <div class="logo">
     אריאל קנד - משרד עורכי דין
     <span>Ariel Kand Law Firm</span>
   </div>
 
-  <!-- אייקונים ימניים -->
   <div class="icon-group">
-    <a href="https://wa.me/972524855911" target="_blank" style="font-size:40px; color:#c8a75c;">
+    <a href="https://wa.me/972524855911" target="_blank" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="tel:0524855911" style="margin-top: 4px; margin-right: 5px; font-size:34px; color:#c8a75c;">
+    <a href="tel:0524855911" aria-label="טלפון">
       <i class="fas fa-phone"></i>
     </a>
   </div>
 </header>
 
-<!-- תפריט עליון אופקי -->
-<nav class="top-nav">
+<nav class="top-nav" role="navigation" aria-label="תפריט ראשי">
   <ul>
     <li><a href="index.html">דף הבית</a></li>
     <li><a href="about.html">תוצאות</a></li>
@@ -179,15 +330,14 @@
   </ul>
 </nav>
 
-<!-- תפריט צד -->
-<div class="sidebar" id="sidebar" style="display: none;">
+<div class="sidebar" id="sidebar" aria-hidden="true">
   <a href="index.html">דף הבית</a>
   <a href="about.html">תוצאות</a>
   <a href="services.html">תחומי עיסוק</a>
   <a href="contact.html">צור קשר</a>
 </div>
 
-<img class="logo10" src="Arielogo.jpg">
+<img class="logo10" src="Arielogo.jpg" alt="לוגו משרד עורכי דין אריאל קנד" />
 
 <div class="two-columns">
   <div class="column right-column">
@@ -196,16 +346,16 @@
       אודות עורך הדין אריאל קנד
     </h3>
     <p class="column-text">
-      <strong>🎓 תואר והשכלה:</strong><br>
-      בעל תואר ראשון <strong>L.L.B</strong> במשפטים.<br><br>
+      <strong>🎓 תואר והשכלה:</strong><br />
+      בעל תואר ראשון <strong>L.L.B</strong> במשפטים.<br /><br />
 
-      <strong>👨‍👩‍👧‍👦 רקע אישי:</strong><br>
-      יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.<br><br>
+      <strong>👨‍👩‍👧‍👦 רקע אישי:</strong><br />
+      יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.<br /><br />
 
-      <strong>💼 ניסיון מקצועי:</strong><br>
-      עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.<br><br>
+      <strong>💼 ניסיון מקצועי:</strong><br />
+      עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.<br /><br />
 
-      <strong>⚖️ חזון:</strong><br>
+      <strong>⚖️ חזון:</strong><br />
       עו"ד אריאל קנד חרט על דגלו להעניק ללקוחותיו שירות מקצועי, אמין וקשוב – מתוך אמונה ש<strong>הלקוח במרכז</strong>, והמטרה היא הצלחתו המלאה תוך מיקסום ההליך.
     </p>
   </div>
@@ -216,14 +366,14 @@
       שירות המשרד
     </h3>
     <p class="column-text">
-      <strong>🛡️ ייצוג נפגעים בלבד:</strong><br>
-      משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.<br><br>
+      <strong>🛡️ ייצוג נפגעים בלבד:</strong><br />
+      משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.<br /><br />
 
-      <strong>📂 תחומי טיפול:</strong><br>
-      תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי, נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.<br><br>
+      <strong>📂 תחומי טיפול:</strong><br />
+      תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי, נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.<br /><br />
 
-      <strong>🔁 ליווי כולל:</strong><br>
-      אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא. <br>
+      <strong>🔁 ליווי כולל:</strong><br />
+      אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא.<br />
       מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא זכויותיו.
     </p>
   </div>
@@ -233,22 +383,12 @@
   function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.getElementById("menuIcon");
-
-    if (!sidebar.classList.contains("active")) {
-      sidebar.style.display = "block";
-      setTimeout(() => {
-        sidebar.classList.add("active");
-        menuIcon.classList.add("active");
-      }, 10);
-    } else {
-      sidebar.classList.remove("active");
-      menuIcon.classList.remove("active");
-      setTimeout(() => {
-        sidebar.style.display = "none";
-      }, 300);
-    }
+    const isActive = sidebar.classList.toggle("active");
+    menuIcon.classList.toggle("active", isActive);
+    sidebar.setAttribute("aria-hidden", !isActive);
   }
 </script>
+
 <script src="nagishli_beta.js"></script>
 
 </body>
