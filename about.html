@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>כותרת אתר</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css10.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -153,6 +154,64 @@
       gap: 0;
       min-height: 450px;
     }
+    @media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .text-box-with-icon {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .text-box-with-icon .title {
+    font-size: 26px;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .text-box-with-icon .title::after {
+    width: 80%;
+    right: 10%;
+  }
+
+  .text-box-with-icon .icon {
+    font-size: 30px;
+    margin: 0 auto 10px;
+  }
+
+  .results-section {
+    padding: 0;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .practice-title-wrapper {
+    padding-right: 0;
+    justify-content: center;
+    margin: 30px 0 20px;
+  }
+
+  .practice-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+}
+
   </style>
 </head>
 <body>
