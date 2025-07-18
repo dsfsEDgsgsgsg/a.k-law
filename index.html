@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>כותרת אתר</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css10.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -38,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      direction: rtl; /* חשוב בשביל להציב את האייקון מימין */
+      direction: rtl;
     }
 
     .column-title .title-icon {
@@ -59,13 +60,13 @@
     }
 
     .left-column {
-      text-align: right;    /* כאן העדכון */
-      direction: rtl;       /* טקסט בעברית בצד שמאל */
+      text-align: right;
+      direction: rtl;
       margin-right: auto;
     }
 
     .left-title {
-      text-align: right;    /* כותרת בעברית גם בצד שמאל */
+      text-align: right;
     }
 
     .column-text strong {
@@ -82,6 +83,62 @@
 
     .column-text br {
       margin-bottom: 8px;
+    }
+
+    /* 🔽 התאמה למסכים קטנים (רספונסיבי) */
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        margin: 40px auto;
+      }
+
+      .column {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .column-title {
+        font-size: 26px;
+        padding-bottom: 5px;
+      }
+
+      .column-title .title-icon {
+        font-size: 22px;
+        padding: 10px;
+      }
+
+      .column-text {
+        font-size: 18px;
+        line-height: 2;
+      }
+
+      .logo10 {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px;
+      }
+
+      header, .top-nav ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .icon-group {
+        margin-top: 10px;
+      }
+
+      .top-nav ul {
+        padding: 0;
+      }
+
+      .top-nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -195,4 +252,4 @@
 <script src="nagishli_beta.js"></script>
 
 </body>
-</html> 
+</html>
