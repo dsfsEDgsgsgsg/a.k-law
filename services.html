@@ -92,77 +92,106 @@
   height: 2.9px;
   background: linear-gradient(to right, transparent, #a27851, transparent);
 }
-
-
-/* ===== רספונסיבי לטלפונים - מתחת ל-768px ===== */
+/* 1. להסתיר את התפריט העליון האופקי במובייל */
 @media (max-width: 768px) {
-  /* תפריט עליון ייעלם (או יוסתר) */
-  nav.top-nav {
+  .top-nav ul {
     display: none;
   }
-  
-  /* כפתור המבורגר יהיה גלוי */
+
+  /* 2. להציג את כפתור ההמבורגר במובייל */
   .menu-icon {
     display: flex;
   }
-  
-  /* סיידבר */
-  .sidebar {
-    display: flex; /* וודא שהוא גלוי */
-    right: -250px; /* סגור בצד */
-    position: fixed;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #fff;
-    box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
-    padding: 60px 20px 20px;
-    flex-direction: column;
-    transition: right 0.3s ease;
-    z-index: 1200;
-  }
-  
-  /* כאשר הסיידבר פעיל */
-  .sidebar.active {
-    right: 0;
-  }
-  
-  /* קישורים בסיידבר גדולים יותר ונוחים ללחיצה */
-  .sidebar a {
-    font-size: 20px;
-    padding: 15px 0;
-    color: #333;
-    font-weight: 700;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* התאמת הלוגו והאייקונים בכותרת למובייל */
-  .logo {
-    font-size: 22px;
+
+  /* 3. לסדר את ההדר למובייל שיראה טוב */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    text-align: center;
   }
-  
-  .icon-group a {
-    font-size: 32px !important;
-    margin: 0 10px;
+
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
   }
-  
-  /* תתאים את רוחב תיבות התוכן אם יש */
-  .box-container {
-    grid-template-columns: 1fr !important;
-    padding: 20px !important;
+
+  .icon-group {
+    display: flex;
+    gap: 10px;
   }
-  
-  .box {
-    width: 100% !important;
-    margin: 0 auto 20px;
+
+  /* אפשר גם לקצר את הטקסט בעמודות במובייל (אם רוצים) */
+  .column {
+    font-size: 18px;
   }
-  
-  /* כפתור ההמבורגר מעל כולם */
-  .menu-icon {
-    z-index: 1500;
-  }
+}
+
+/* 4. עיצוב כפתור ההמבורגר */
+.menu-icon {
+  display: none; /* מוסתר כברירת מחדל במחשב */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+  z-index: 1600;
+}
+
+.menu-icon span {
+  width: 100%;
+  height: 3px;
+  background-color: #a27851;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* כפתור המבורגר פעיל - מראה X */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 5. סיידבר צדדי לתפריט במובייל */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* מוסתר מחוץ למסך */
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.15);
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1500;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar a:hover {
+  background-color: #f9f5e6;
+  color: #a27851;
+}
+
 }
 
   </style>
