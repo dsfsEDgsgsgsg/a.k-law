@@ -161,7 +161,7 @@
     padding: 20px 15px;
     min-height: auto;
     align-items: center;
-    margin-right: 0; /* מרכז נכון */
+    margin-right: 0; /* תיקנתי את המרווח מימין ל-0 כדי למרכז נכון */
   }
 
   .vertical-divider {
@@ -178,7 +178,7 @@
   }
 
   .results-grid img {
-    width: 100%; /* תיקנתי ל-100% כדי שלא תצא מהמסך */
+    width: 120%;
     border-radius: 16px;
     box-sizing: border-box;
   }
@@ -189,7 +189,7 @@
     margin-top: 30px;
     padding: 20px;
     box-sizing: border-box;
-    text-align: right; /* יישור טקסט ימינה */
+    text-align: right; /* הוספתי כדי ליישר את הטקסט ימינה */
   }
 
   .text-box-with-icon .title {
@@ -198,10 +198,10 @@
     width: 100%;
     padding-bottom: 8px;
     position: relative;
-    text-align: right; /* יישור ימינה */
+    text-align: right; /* הוספתי יישור ימינה לכותרת */
   }
 
-  /* הקו התחתון של הכותרת */
+  /* השאר את הקו התחתון של הכותרת */
   .text-box-with-icon .title::after {
     content: "";
     position: absolute;
@@ -215,23 +215,18 @@
   }
 
   .practice-title-wrapper {
-    display: flex;          /* חשוב כדי למרכז */
-    justify-content: center; /* מרכז אופקי */
-    width: 100%;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    justify-content: center;
+    padding-right: 0;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
   .practice-title {
-    font-size: 48px;     /* גודל מתאים לנייד */
-    text-align: center;  /* יישור מרכזי */
+    font-size: 70px;
+    text-align: center;
     padding-bottom: 8px;
-    margin: 0 auto;
-    max-width: 90%;
+    margin-right: 20px;
   }
-
   /* מודאל התמונה - fullscreen */
   #imageModal {
     display: none;
