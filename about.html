@@ -155,6 +155,49 @@
       min-height: 450px;
     }
 
+    /* תגובתיות למובייל */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    padding: 30px 15px;
+    min-height: auto;
+  }
+
+  .results-grid {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .text-box-with-icon {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .text-box-with-icon .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .text-box-with-icon .title::after {
+    width: 100%;
+  }
+
+  .practice-title {
+    font-size: 36px;
+    padding-bottom: 8px;
+  }
+
+  .practice-title-wrapper {
+    padding-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
   </style>
 </head>
 <body>
