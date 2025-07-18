@@ -154,7 +154,7 @@
       gap: 0;
       min-height: 450px;
     }
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
   .content-row {
     flex-direction: column;
     padding: 20px 15px;
@@ -164,36 +164,38 @@
 
   .results-grid {
     display: grid;
-    grid-template-columns: 1fr; /* תמונות אחת מתחת לשנייה */
+    grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
   }
 
   .results-grid img {
     width: 100%;
-    max-width: 600px;
     border-radius: 16px;
+    box-sizing: border-box;
   }
 
   .text-box-with-icon {
     max-width: 100%;
-    margin-top: 30px;
-    padding: 20px 15px;
     width: 100%;
+    margin-top: 30px;
+    padding: 20px;
     box-sizing: border-box;
   }
 
   .text-box-with-icon .title {
     font-size: 28px;
-    margin-bottom: 20px;
-    margin-top: 0;
+    margin: 0 0 20px 0;
     width: 100%;
     padding-bottom: 0;
+    position: relative;
   }
 
+  /* הסרת הקו התחתון לחלוטין */
   .text-box-with-icon .title::after {
-    content: none; /* הסרת הקו התחתון */
+    content: none;
   }
 
   .practice-title-wrapper {
@@ -207,37 +209,6 @@
     font-size: 36px;
     text-align: center;
     padding-bottom: 8px;
-  }
-  
-  /* מודאל התמונה - fullscreen */
-  #imageModal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-  }
-
-  #imageModal .modal-content {
-    max-width: 95vw;
-    max-height: 90vh;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
-  }
-
-  #imageModal .close {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
   }
 }
 
