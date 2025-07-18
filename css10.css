@@ -340,3 +340,96 @@ header {
 .contact-item.location-link:hover i {
   color: var(--main-color) !important;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 18px; /* הגדלת גודל טקסט כללי */
+  }
+
+  header {
+    height: 90px; /* קצת יותר גבוה */
+    padding: 20px 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo span {
+    font-size: 16px;
+  }
+
+  .menu-icon {
+    width: 45px;
+    height: 40px;
+  }
+
+  .menu-icon span {
+    height: 5px;
+  }
+
+  .icon-group {
+    font-size: 40px;
+    right: 15px;
+    gap: 15px;
+  }
+
+  .top-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .top-nav li {
+    margin: 12px 0;
+  }
+
+  .top-nav a {
+    font-size: 20px;
+    padding: 12px 15px;
+  }
+
+  .sidebar {
+    font-size: 20px;
+    width: 75vw;
+    padding: 40px 20px;
+  }
+
+  .content-section {
+    flex-direction: column;
+    padding: 30px 15px;
+    max-width: 95vw;
+    margin: 30px auto;
+  }
+
+  .content-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .content-section p {
+    font-size: 18px;
+    text-align: right;
+  }
+
+  .contact-sidebar {
+    max-width: 90vw;
+    margin-top: 20px;
+    padding: 25px 20px;
+  }
+
+  .contact-sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    font-size: 18px;
+    padding: 12px 15px;
+  }
+
+  .contact-item i {
+    font-size: 36px;
+    min-width: 36px;
+    padding: 8px;
+  }
+}
