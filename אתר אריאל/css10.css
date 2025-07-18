@@ -1,0 +1,342 @@
+:root {
+  --main-color: #a27851;
+  --main-color-light: #d2b496;
+  --bg-color: #f1ebe6;
+  --text-dark: #222;
+}
+
+/* נגיש לי */
+div#NagishLiTrigger {
+  position: absolute;
+  left: 30px;
+  top: 400px;
+  right: auto;
+  margin-left: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #FDF8F1;
+
+
+}
+
+header {
+  background-color: #000;
+  color: var(--main-color);
+  padding: 15px 20px;
+  position: relative;
+  height: 80px;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.icon-group {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 20px;
+  font-size: 22px;
+  z-index: 1102;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.3;
+  z-index: 1100;
+  text-shadow: 0 0 5px rgba(162, 120, 81, 0.8);
+}
+
+.logo span {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  color: #a27851cc;
+  margin-top: 4px;
+  font-family: 'Arial', sans-serif;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1101;
+  width: 35px;
+  height: 30px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-color);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #000;
+  color: var(--main-color);
+  border-right: 2px solid var(--main-color);
+  padding: 30px 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: none;
+  direction: rtl;
+  font-size: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: var(--main-color);
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 10px;
+  border-bottom: 1px solid #a2785122;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  color: white;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+}
+
+.top-nav {
+  background-color: #000;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #a2785133;
+  border-bottom: 1px solid #a2785133;
+  user-select: none;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.top-nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.top-nav a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 10px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.top-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #a2785133;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.top-nav a:hover {
+  color: white;
+}
+
+.top-nav a:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.logo10 {
+  width: 100%;
+  height: 450px;
+}
+
+.logo11 {
+  width: 100%;
+  height: 450px;
+}
+
+.content-section {
+  display: flex;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-right: 5px solid var(--main-color);
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+.content-section h1 {
+  color: var(--main-color);
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 10px;
+}
+
+.content-section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.contact-sidebar {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 320px;
+  font-family: 'Playfair Display', serif;
+  color: #222;
+  text-align: right;
+  direction: rtl;
+  transition: box-shadow 0.3s ease;
+  margin-top: -1188px;
+}
+
+.contact-sidebar:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.contact-sidebar h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+  letter-spacing: 1.3px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 19px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(162,120,81,0.3);
+  transition: color 0.3s ease, transform 0.15s ease, background-color 0.25s ease;
+}
+
+.contact-item i {
+  font-size: 32px;
+  min-width: 32px;
+  padding: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(162,120,81,0.4);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #7a5436;
+  transform: translateX(8px);
+  background-color: #f9f4e9;
+  box-shadow: 0 3px 10px rgba(163,134,63,0.3);
+}
+
+.contact-item:hover i {
+  transform: scale(1.25);
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(162,120,81,0.7);
+}
+
+/* צבעים לפי סוג */
+.whatsapp-link i { color: #25D366; }
+.phone-link i { color: #34b7f1; }
+.email-link i { color: #D44638; }
+.location-link i { color: var(--main-color); }
+
+/* שמירה על צבעי אייקונים */
+.contact-item.whatsapp-link:hover i {
+  color: #25D366 !important;
+}
+
+.contact-item.phone-link:hover i {
+  color: #34b7f1 !important;
+}
+
+.contact-item.email-link:hover i {
+  color: #D44638 !important;
+}
+
+.contact-item.location-link:hover i {
+  color: var(--main-color) !important;
+}

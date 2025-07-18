@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>כותרת אתר</title>
+  
+    <link rel="stylesheet" href="css10.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+  </style>
+</head>
+<body>
+
+
+<header>
+  <!-- כפתור המבורגר -->
+  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- לוגו באמצע -->
+   <div class="logo">
+  אריאל קנד - משרד עורכי דין
+  <span>Ariel Kand Law Firm</span>
+</div>
+
+
+
+  <!-- אייקונים ימניים -->
+  <div class="icon-group">
+    <a href="https://wa.me/972524855911" target="_blank" style="font-size:40px; color:#c8a75c;">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:0524855911" style="margin-top: 4px; margin-right: 5px; font-size:34px; color:#c8a75c;">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+</header>
+
+<!-- תפריט עליון אופקי -->
+<nav class="top-nav">
+  
+  <ul>
+    <li><a href="index.html">דף הבית</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
+  </ul>
+</nav>
+
+<!-- תפריט צד -->
+<div class="sidebar" id="sidebar" style="display: none;">
+  <a href="index.html">דף הבית</a>
+  <a href="about.html">תוצאות</a>
+  <a href="services.html">תחומי עיסוק</a>
+  <a href="contact.html">צור קשר</a>
+</div>
+
+  <section class="content-section">
+  <div class="text-box">
+    <h1>עורך דין לתאונות דרכים</h1>
+
+    <h2>מה זה?</h2>
+    <p>
+      כל פגיעה פיזית שנגרמה כתוצאה משימוש ברכב מנועי – בין אם כנוסע, נהג, הולך רגל או רוכב אופניים חשמליים.
+    </p>
+
+    <h2>מי זכאי?</h2>
+    <p>
+      כל מי שנפגע בתאונת דרכים – גם אם הוא אשם, גם אם הפוגע ברח, וגם אם לא היה ביטוח בתוקף.
+    </p>
+
+    <h2>איך תובעים?</h2>
+    <p>
+      מגישים תביעה לפי חוק הפיצויים לנפגעי תאונות דרכים (הפלת"ד) ישירות נגד חברת הביטוח שביטחה את הרכב המעורב.
+      אם לא הייתה פוליסה – פונים ל"קרנית" (הקרן לפיצוי נפגעי תאונות דרכים).
+    </p>
+
+    <h2>למה חשוב עו"ד?</h2>
+    <p>
+      כדי להוכיח נכות, כאב וסבל, אובדן הכנסה ועוד – יש לנהל נכון את ההליך הרפואי והמשפטי.
+      עורך דין מנוסה יבטיח שלא תוותר על זכויותיך וימקסם את הפיצוי.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+
+    if (!sidebar.classList.contains("active")) {
+      sidebar.style.display = "block";
+      setTimeout(() => {
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
+      }, 10);
+    } else {
+      sidebar.classList.remove("active");
+      menuIcon.classList.remove("active");
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
+    }
+  }
+</script>
+<script src="nagishli_beta.js"></script>
+</body>
+</html>
