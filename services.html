@@ -94,6 +94,76 @@
 }
 
 
+/* ===== רספונסיבי לטלפונים - מתחת ל-768px ===== */
+@media (max-width: 768px) {
+  /* תפריט עליון ייעלם (או יוסתר) */
+  nav.top-nav {
+    display: none;
+  }
+  
+  /* כפתור המבורגר יהיה גלוי */
+  .menu-icon {
+    display: flex;
+  }
+  
+  /* סיידבר */
+  .sidebar {
+    display: flex; /* וודא שהוא גלוי */
+    right: -250px; /* סגור בצד */
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+    padding: 60px 20px 20px;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 1200;
+  }
+  
+  /* כאשר הסיידבר פעיל */
+  .sidebar.active {
+    right: 0;
+  }
+  
+  /* קישורים בסיידבר גדולים יותר ונוחים ללחיצה */
+  .sidebar a {
+    font-size: 20px;
+    padding: 15px 0;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* התאמת הלוגו והאייקונים בכותרת למובייל */
+  .logo {
+    font-size: 22px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .icon-group a {
+    font-size: 32px !important;
+    margin: 0 10px;
+  }
+  
+  /* תתאים את רוחב תיבות התוכן אם יש */
+  .box-container {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+  }
+  
+  .box {
+    width: 100% !important;
+    margin: 0 auto 20px;
+  }
+  
+  /* כפתור ההמבורגר מעל כולם */
+  .menu-icon {
+    z-index: 1500;
+  }
+}
 
   </style>
 </head>
