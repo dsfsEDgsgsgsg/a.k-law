@@ -93,39 +93,45 @@
   background: linear-gradient(to right, transparent, #a27851, transparent);
 }
 
-	  @media (max-width: 768px) {
+	@media (max-width: 768px) {
   .box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה */
-    gap: 20px; /* רווחים יפים בין הקוביות */
-    padding: 20px;
+    gap: 20px; /* רווח בין הקוביות */
+    padding: 15px;
     justify-items: center;
   }
 
   .box {
-    width: 100%;
-    max-width: 160px; /* כל קובייה באותו גודל */
-    aspect-ratio: 1 / 1; /* ריבוע מושלם */
-    padding: 25px 15px;
+    width: 140px;          /* רוחב קבוע */
+    height: 140px;         /* גובה קבוע - כך זה ריבוע מדויק */
+    padding: 20px 10px;
     box-sizing: border-box;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-top: 5px solid #c9a44d;
-    border-bottom: 5px solid #c9a44d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-top: 4px solid #c9a44d;
+    border-bottom: 4px solid #c9a44d;
     background-color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .icon {
-    font-size: 38px; /* מתאים לריבוע בגודל בינוני */
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 8px;
+    flex-shrink: 0;
   }
 
   .title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
+    line-height: 1.2;
+    overflow-wrap: break-word;
   }
 }
+
 
 
 
