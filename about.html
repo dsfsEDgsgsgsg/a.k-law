@@ -154,51 +154,55 @@
       gap: 0;
       min-height: 450px;
     }
-
 @media (max-width: 768px) {
   .content-row {
-    flex-direction: row; /* נשאר אופקי גם בטלפון */
-    flex-wrap: wrap;
-    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
+    padding: 20px;
   }
 
   .results-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 עמודות */
+    gap: 15px;
     width: 100%;
+    max-width: 400px;
+    justify-items: center;
+  }
+
+  .results-grid img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
   .text-box-with-icon {
     width: 100%;
-    padding: 20px;
-  }
-
-  .text-box-with-icon .title {
-    font-size: 24px;
-    margin-bottom: 30px;
-    margin-top: 0;
-    width: 100%;
+    max-width: 500px;
     text-align: center;
+    padding: 10px;
   }
 
   .text-box-with-icon .title::after {
-    display: none; /* הסרת הקו אם מפריע */
+    display: none; /* הסרת קו מפריד */
   }
 
-  .practice-title {
-    font-size: 30px;
-    padding-bottom: 6px;
-    text-align: center;
-  }
-
-  .practice-title-wrapper {
-    padding-right: 0;
-    margin-top: 30px;
+  .text-box-with-icon .title {
+    font-size: 26px;
     margin-bottom: 15px;
-    text-align: center;
+  }
+
+  .text-box-with-icon p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 10px;
   }
 }
+
 
   </style>
 </head>
