@@ -97,17 +97,18 @@
   .box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה */
-    gap: 16px; /* מרווח ביניהן */
-    padding: 10px; /* מרווח פנימי שלא יחרוג מהדף */
-    box-sizing: border-box;
+    gap: 16px; /* מרווח בין הקוביות */
+    padding: 10px;
   }
 
   .box {
-    width: 100%; /* תתפרס על כל התא */
-    aspect-ratio: 1/1; /* תיראה כמו קובייה */
-    padding: 25px 15px;
-    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 1/1; /* גורם לכל קובייה להיות ריבוע */
+    padding: 40px 20px; /* שומר על אותו גודל טקסט ואייקון */
   }
+
+  /* לא מקטינים את האייקון והטקסט – שומרים על הגודל הרגיל */
+
 
   .icon {
     font-size: 40px;
