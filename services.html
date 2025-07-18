@@ -95,22 +95,29 @@
 
 @media (max-width: 768px) {
   .box-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 תיבות בשורה */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה */
+    gap: 16px; /* מרווח ביניהן */
+    padding: 10px; /* מרווח פנימי שלא יחרוג מהדף */
+    box-sizing: border-box;
   }
 
   .box {
-    width: 100%; /* תתאים את עצמה לגודל התא */
-    padding: 30px 15px;
+    width: 100%; /* תתפרס על כל התא */
+    aspect-ratio: 1/1; /* תיראה כמו קובייה */
+    padding: 25px 15px;
+    box-sizing: border-box;
   }
 
   .icon {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .title {
     font-size: 18px;
   }
 }
+
 
 
   </style>
