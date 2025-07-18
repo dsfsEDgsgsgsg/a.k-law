@@ -340,6 +340,7 @@ header {
 .contact-item.location-link:hover i {
   color: var(--main-color) !important;
 }
+
 @media (max-width: 768px) {
   body {
     font-size: 18px; /* הגדלת גודל טקסט כללי */
