@@ -93,38 +93,40 @@
   background: linear-gradient(to right, transparent, #a27851, transparent);
 }
 
-@media (max-width: 768px) {
+	  @media (max-width: 768px) {
   .box-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 1fr)); /* 2 ריבועים קטנים בשורה */
-    gap: 20px; /* רווח גדול יותר */
-    padding: 15px;
+    grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה */
+    gap: 20px; /* רווחים יפים בין הקוביות */
+    padding: 20px;
     justify-items: center;
   }
 
   .box {
     width: 100%;
-    max-width: 140px; /* גבול גודל לקובייה */
+    max-width: 160px; /* כל קובייה באותו גודל */
     aspect-ratio: 1 / 1; /* ריבוע מושלם */
-    padding: 20px 10px;
+    padding: 25px 15px;
     box-sizing: border-box;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    border-top: 4px solid #c9a44d;
-    border-bottom: 4px solid #c9a44d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #c9a44d;
+    border-bottom: 5px solid #c9a44d;
+    background-color: white;
     text-align: center;
   }
 
   .icon {
-    font-size: 32px; /* מותאם לגודל הריבוע */
-    margin-bottom: 8px;
+    font-size: 38px; /* מתאים לריבוע בגודל בינוני */
+    margin-bottom: 10px;
   }
 
   .title {
-    font-size: 14px; /* מתאים לגודל קטן */
+    font-size: 16px;
     font-weight: bold;
   }
 }
+
 
 
 
