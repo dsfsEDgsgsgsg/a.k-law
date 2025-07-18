@@ -342,6 +342,9 @@ header {
 @media (max-width: 768px) {
   body {
     font-size: 18px; /* הגדלת גודל טקסט כללי */
+    
+  background-color: #FDF8F1;
+
   }
 
   header {
