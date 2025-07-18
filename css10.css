@@ -381,14 +381,15 @@ header {
     margin: 0;
   }
 
-  .top-nav li {
-    margin: 0 15px; /* יותר רווח בין הפריטים */
-  }
-
-  .top-nav a {
+   .top-nav a {
     font-size: 22px;      /* טקסט גדול יותר */
     padding: 15px 20px;   /* פדינג גדול יותר ללחיצה נוחה */
   }
+
+  .top-nav li {
+    margin: 0 20px;       /* קצת יותר רווח בין הפריטים */
+  }
+}
 
   .sidebar {
     font-size: 20px;
