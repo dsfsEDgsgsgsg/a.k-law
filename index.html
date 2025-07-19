@@ -117,6 +117,7 @@
   overflow: visible;
   background-color: black;
   padding: 20px 0;
+  box-sizing: border-box;
 }
 
 .carousel-track {
@@ -127,6 +128,7 @@
   direction: ltr;
   max-width: 1000px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .carousel-track img {
@@ -141,6 +143,7 @@
   display: block;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .carousel-track img:hover {
@@ -182,27 +185,30 @@
     margin: 30px auto 20px auto;
   }
 
-  /* קרוסלה למובייל: 2 תמונות ריבועיות, עם רווחים קטנים, לא מזיזים דף */
+  /* קרוסלה למובייל: שתי תמונות ריבועיות בשורה, רווחים קטנים, בלי גלילה */
   .carousel-container {
     max-width: 100%;
-    padding: 0 12px;
+    padding: 0 8px;
     overflow: visible;
+    box-sizing: border-box;
   }
 
   .carousel-track {
+    display: flex;
     flex-wrap: wrap;
+    gap: 6px;
     justify-content: space-between;
-    gap: 8px;
+    box-sizing: border-box;
   }
 
   .carousel-track img {
-    width: calc((100% - 8px) / 2);
+    width: calc((100% - 6px) / 2);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 }
 
@@ -251,7 +257,6 @@
 #lightbox .close-btn:hover {
   color: #a27851; /* זהב */
 }
-
 
   </style>
 </head>
