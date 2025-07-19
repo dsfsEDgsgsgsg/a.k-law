@@ -1,94 +1,149 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>כותרת אתר</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css10.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css10.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
   <style>
-    .two-columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      max-width: 100%;
-      padding: 0 60px;
-      margin: 80px auto;
-      flex-wrap: wrap;
-    }
+    /* כל הקודם נשאר כמו קודם, רק הוספתי פה */
+/* כל הקודם נשאר כמו קודם, רק הוספתי פה */
+/* סגנון כללי שני טורים */
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 100%;
+  padding: 0 60px;
+  margin: 80px auto;
+  flex-wrap: wrap;
+}
 
-    .column {
-      width: 40%;
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      line-height: 2;
-      color: #333;
-    }
+.column {
+  width: 40%;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  line-height: 2;
+  color: #333; /* טקסט כהה */
+}
 
-    .column-title {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      padding-bottom: 1px;
-      border-bottom: 3px solid #a27851;
-      text-shadow: 0 0 2px rgba(162, 120, 81, 0.2);
-      color: #a27851;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      direction: rtl;
-    }
+.column-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  padding-bottom: 1px;
+  border-bottom: 3px solid #a27851; /* זהב */
+  text-shadow: 0 0 2px rgba(162, 120, 81, 0.2);
+  color: #a27851; /* זהב */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  direction: rtl;
+}
 
-    .column-title .title-icon {
-      font-size: 28px;
-      color: #a27851;
-      padding: 20px;
-      user-select: none;
-    }
+.column-title .title-icon {
+  font-size: 28px;
+  color: #a27851; /* זהב */
+  padding: 20px;
+  user-select: none;
+}
 
-    .right-column {
-      text-align: right;
-      direction: rtl;
-      margin-left: auto;
-    }
+.right-column {
+  text-align: right;
+  direction: rtl;
+  margin-left: auto;
+}
 
-    .right-title {
-      text-align: right;
-    }
+.left-column {
+  text-align: right;
+  direction: rtl;
+  margin-right: auto;
+}
 
-    .left-column {
-      text-align: right;
-      direction: rtl;
-      margin-right: auto;
-    }
+.column-text strong {
+  color: #a27851; /* זהב */
+  font-weight: 800;
+}
 
-    .left-title {
-      text-align: right;
-    }
+.column-text {
+  font-size: 20px;
+  margin: 0;
+  line-height: 2.1;
+  direction: rtl;
+}
 
-    .column-text strong {
-      color: #a27851;
-      font-weight: 800;
-    }
+/* --- קרוסלה --- */
 
-    .column-text {
-      font-size: 20px;
-      margin: 0;
-      line-height: 2.1;
-      direction: rtl;
-    }
+.carousel-section {
+  background-color: black; /* שחור כהה */
+  padding: 50px 0;
+  text-align: center;
+  color: white; /* טקסט לבן */
+  position: relative;
+}
 
-    .column-text br {
-      margin-bottom: 8px;
-    }
+.carousel-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #a27851; /* זהב */
+}
 
+.carousel-line {
+  height: 2px;
+  width: 260px;
+  background-color: #a27851; /* זהב */
+  margin: 0 auto 40px;
+}
 
+.carousel-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: visible;
+  background-color: black;
+  padding: 20px 0;
+}
 
+.carousel-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  direction: ltr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-    /* תגובתיות - התאמה לטלפונים */
+.carousel-track img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(162, 120, 81, 0.8); /* צל זהב */
+  user-select: none;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(162, 120, 81, 1); /* צל זהב חזק */
+}
+
+/* תגובתיות למובייל */
 @media (max-width: 768px) {
   .two-columns {
     flex-direction: column;
@@ -121,117 +176,258 @@
     max-height: 250px;
     margin: 30px auto 20px auto;
   }
+
+  .carousel-container {
+    max-width: 100%;
+    padding: 0 10px;
+    overflow-x: auto;
+  }
+
+  .carousel-track {
+    justify-content: flex-start;
+  }
+
+  .carousel-track img {
+    width: 45vw;
+    max-width: none;
+    margin: 0;
+    padding: 5px;
+  }
 }
+
+/* --- לייטבוקס --- */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85); /* שחור עם שקיפות */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  width: 90vw;
+  max-height: 95vh;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(162, 120, 81, 0.9); /* צל זהב */
+  object-fit: contain;
+}
+
+#lightbox .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 900;
+  transition: color 0.3s ease;
+  z-index: 10001;
+}
+
+#lightbox .close-btn:hover {
+  color: #a27851; /* זהב */
+}
+
   </style>
 </head>
 <body>
+  <header>
+    <div
+      class="menu-icon"
+      id="menuIcon"
+      onclick="toggleMenu()"
+      aria-expanded="false"
+      role="button"
+      tabindex="0"
+      aria-label="פתח/סגור תפריט"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-<header>
-  <!-- כפתור המבורגר -->
-  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <div class="logo">
+      אריאל קנד - משרד עורכי דין
+      <span>Ariel Kand Law Firm</span>
+    </div>
+
+    <div class="icon-group">
+      <a
+        href="https://wa.me/972524855911"
+        target="_blank"
+        style="font-size: 40px; color: #c8a75c"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a
+        href="tel:0524855911"
+        style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="about.html">תוצאות</a></li>
+      <li><a href="services.html">תחומי עיסוק</a></li>
+      <li><a href="contact.html">צור קשר</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar" id="sidebar" style="display: none">
+    <a href="index.html">דף הבית</a>
+    <a href="about.html">תוצאות</a>
+    <a href="services.html">תחומי עיסוק</a>
+    <a href="contact.html">צור קשר</a>
   </div>
 
-  <!-- לוגו באמצע -->
-  <div class="logo">
-    אריאל קנד - משרד עורכי דין
-    <span>Ariel Kand Law Firm</span>
+  <img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
+
+  <div class="two-columns">
+    <div class="column right-column">
+      <h3 class="column-title right-title">
+        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
+        אודות עורך הדין אריאל קנד
+      </h3>
+      <p class="column-text">
+        <strong>🎓 תואר והשכלה:</strong><br />
+        בעל תואר ראשון <strong>L.L.B</strong> במשפטים.<br /><br />
+
+        <strong>👨‍👩‍👧‍👦 רקע אישי:</strong><br />
+        יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף
+        האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.<br /><br />
+
+        <strong>💼 ניסיון מקצועי:</strong><br />
+        עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל
+        בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.<br /><br />
+
+        <strong>⚖️ חזון:</strong><br />
+        עו"ד אריאל קנד חרט על דגלו להעניק ללקוחותיו שירות מקצועי, אמין וקשוב –
+        מתוך אמונה ש<strong>הלקוח במרכז</strong>, והמטרה היא הצלחתו המלאה תוך
+        מיקסום ההליך.
+      </p>
+    </div>
+
+    <div class="column left-column">
+      <h3 class="column-title left-title">
+        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
+        שירות המשרד
+      </h3>
+      <p class="column-text">
+        <strong>🛡️ ייצוג נפגעים בלבד:</strong><br />
+        משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.<br /><br />
+
+        <strong>📂 תחומי טיפול:</strong><br />
+        תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי,
+        נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.<br /><br />
+
+        <strong>🔁 ליווי כולל:</strong><br />
+        אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא. <br />
+        מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא זכויותיו.
+      </p>
+    </div>
   </div>
 
-  <!-- אייקונים ימניים -->
-  <div class="icon-group">
-    <a href="https://wa.me/972524855911" target="_blank" style="font-size:40px; color:#c8a75c;">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="tel:0524855911" style="margin-top: 4px; margin-right: 5px; font-size:34px; color:#c8a75c;">
-      <i class="fas fa-phone"></i>
-    </a>
-  </div>
-</header>
+  <section class="carousel-section">
+    <h2 class="carousel-title">עם תוצאות לא מתווכחים</h2>
+    <div class="carousel-line"></div>
 
-<!-- תפריט עליון אופקי -->
-<nav class="top-nav">
-  <ul>
-    <li><a href="index.html">דף הבית</a></li>
-    <li><a href="about.html">תוצאות</a></li>
-    <li><a href="services.html">תחומי עיסוק</a></li>
-    <li><a href="contact.html">צור קשר</a></li>
-  </ul>
-</nav>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="images/doc1.png" alt="מסמך 1" />
+        <img src="images/doc2.png" alt="מסמך 2" />
+        <img src="images/doc3.png" alt="מסמך 3" />
+        <img src="result4.jpg" alt="מסמך 4" />
+        <img src="images/doc5.png" alt="מסמך 5" />
+        <img src="images/doc6.png" alt="מסמך 6" />
+        <img src="images/doc7.png" alt="מסמך 7" />
+        <img src="images/doc8.png" alt="מסמך 8" />
+      </div>
+    </div>
+  </section>
 
-<!-- תפריט צד -->
-<div class="sidebar" id="sidebar" style="display: none;">
-  <a href="index.html">דף הבית</a>
-  <a href="about.html">תוצאות</a>
-  <a href="services.html">תחומי עיסוק</a>
-  <a href="contact.html">צור קשר</a>
-</div>
-
-<img class="logo10" src="Arielogo.jpg">
-
-<div class="two-columns">
-  <div class="column right-column">
-    <h3 class="column-title right-title">
-      <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
-      אודות עורך הדין אריאל קנד
-    </h3>
-    <p class="column-text">
-      <strong>🎓 תואר והשכלה:</strong><br>
-      בעל תואר ראשון <strong>L.L.B</strong> במשפטים.<br><br>
-
-      <strong>👨‍👩‍👧‍👦 רקע אישי:</strong><br>
-      יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.<br><br>
-
-      <strong>💼 ניסיון מקצועי:</strong><br>
-      עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.<br><br>
-
-      <strong>⚖️ חזון:</strong><br>
-      עו"ד אריאל קנד חרט על דגלו להעניק ללקוחותיו שירות מקצועי, אמין וקשוב – מתוך אמונה ש<strong>הלקוח במרכז</strong>, והמטרה היא הצלחתו המלאה תוך מיקסום ההליך.
-    </p>
+  <!-- לייטבוקס לתמונה מוגדלת -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="תצוגה מוגדלת של תמונה">
+    <span class="close-btn" role="button" tabindex="0" aria-label="סגור">&#10005;</span>
+    <img src="" alt="תמונה מוגדלת" />
   </div>
 
-  <div class="column left-column">
-    <h3 class="column-title left-title">
-      <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
-      שירות המשרד
-    </h3>
-    <p class="column-text">
-      <strong>🛡️ ייצוג נפגעים בלבד:</strong><br>
-      משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.<br><br>
+  <script>
+    // תפריט צדדי
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const menuIcon = document.getElementById("menuIcon");
 
-      <strong>📂 תחומי טיפול:</strong><br>
-      תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי, נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.<br><br>
-
-      <strong>🔁 ליווי כולל:</strong><br>
-      אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא. <br>
-      מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא זכויותיו.
-    </p>
-  </div>
-</div>
-
-<script>
-  function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
-
-    if (!sidebar.classList.contains("active")) {
-      sidebar.style.display = "block";
-      setTimeout(() => {
-        sidebar.classList.add("active");
-        menuIcon.classList.add("active");
-      }, 10);
-    } else {
-      sidebar.classList.remove("active");
-      menuIcon.classList.remove("active");
-      setTimeout(() => {
-        sidebar.style.display = "none";
-      }, 300);
+      if (!sidebar.classList.contains("active")) {
+        sidebar.style.display = "block";
+        setTimeout(() => {
+          sidebar.classList.add("active");
+          menuIcon.classList.add("active");
+        }, 10);
+      } else {
+        sidebar.classList.remove("active");
+        menuIcon.classList.remove("active");
+        setTimeout(() => {
+          sidebar.style.display = "none";
+        }, 300);
+      }
     }
-  }
-</script>
-<script src="nagishli_beta.js"></script>
 
+    // לייטבוקס להגדלת תמונות
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = lightbox.querySelector("img");
+      const closeBtn = lightbox.querySelector(".close-btn");
+      const carouselImages = document.querySelectorAll(".carousel-track img");
+
+      carouselImages.forEach(img => {
+        img.addEventListener("click", () => {
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt;
+          lightbox.classList.add("active");
+          document.body.style.overflow = "hidden"; // למנוע גלילה אחורית
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightboxImage.src = "";
+        lightboxImage.alt = "";
+        document.body.style.overflow = ""; // לשחרר גלילה
+      }
+
+      closeBtn.addEventListener("click", closeLightbox);
+
+      // סגירה גם בלחיצה מחוץ לתמונה
+      lightbox.addEventListener("click", e => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      // סגירה עם מקש Escape
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && lightbox.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
