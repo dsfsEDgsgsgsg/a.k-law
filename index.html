@@ -21,6 +21,8 @@
 /* סגנון כללי שני טורים */
 /* כל הקודם נשאר כמו קודם, רק הוספתי פה */
 
+/* כל הקודם נשאר כמו קודם, רק הוספתי פה */
+
 .two-columns {
   display: flex;
   justify-content: space-between;
@@ -125,7 +127,6 @@
   overflow: visible; /* לא צריך גלילה */
   background-color: black;
   padding: 20px 0;
-  box-sizing: border-box;
 }
 
 .carousel-track {
@@ -156,17 +157,17 @@
   transform: scale(1.05);
 }
 
-/* תגובתיות למובייל */
+/* תגובתיות למובייל - תיקון התמונות בקרוסלה */
 @media (max-width: 768px) {
   .carousel-container {
     max-width: 100%;
     padding: 0 10px;
-    overflow-x: hidden; /* למנוע גלילה אופקית */
+    overflow-x: hidden; /* מונע גלילה אופקית */
   }
 
   .carousel-track {
-    justify-content: center; /* מרכז את התמונות בשורה */
-    flex-wrap: wrap; /* שורות חדשות */
+    justify-content: center; /* מרכז את התמונות */
+    flex-wrap: wrap;         /* מאפשר שורות */
     gap: 15px;
     max-width: 100%;
   }
@@ -179,10 +180,9 @@
   }
 }
 
-/* עבור מסכים קטנים יותר - טלפונים */
 @media (max-width: 480px) {
   .carousel-track img {
-    width: calc((100% / 2) - 10px); /* 2 תמונות בשורה */
+    width: calc((100% / 2) - 10px); /* 2 תמונות בשורה עם מרווח */
   }
 }
 
@@ -231,7 +231,6 @@
 #lightbox .close-btn:hover {
   color: #d4af37;
 }
-
 
   </style>
 </head>
