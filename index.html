@@ -182,21 +182,21 @@
     margin: 30px auto 20px auto;
   }
 
-  /* התאמת הקרוסלה למובייל - שתי תמונות ריבועיות בשורה */
+  /* קרוסלה למובייל: 2 תמונות ריבועיות, עם רווחים קטנים, לא מזיזים דף */
   .carousel-container {
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0 12px;
     overflow: visible;
   }
 
   .carousel-track {
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
   }
 
   .carousel-track img {
-    width: calc((100% - 12px) / 2);
+    width: calc((100% - 8px) / 2);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
@@ -251,6 +251,7 @@
 #lightbox .close-btn:hover {
   color: #a27851; /* זהב */
 }
+
 
   </style>
 </head>
