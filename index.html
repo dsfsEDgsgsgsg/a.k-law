@@ -182,22 +182,25 @@
     margin: 30px auto 20px auto;
   }
 
-  /* כאן השינוי שרק קטן את התמונות בקרוסלה כדי לא לחרוג מהקווים */
+  /* התאמת הקרוסלה למובייל - 2 תמונות בשורה, לא יחרגו */
   .carousel-container {
     max-width: 100%;
-    padding: 0 15px;
-    overflow-x: auto;
+    padding: 0 20px;
+    overflow: visible;
   }
 
   .carousel-track {
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
   }
 
   .carousel-track img {
-    width: auto;          /* רוחב גמיש */
-    max-width: 100%;      /* לא יעבור את רוחב המיכל */
-    height: 120px;        /* גובה קטן יותר */
-    margin: 0 10px;       /* ריווח אופקי בין התמונות */
+    width: calc((100% - 15px) / 2);
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
