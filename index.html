@@ -19,6 +19,8 @@
     /* כל הקודם נשאר כמו קודם, רק הוספתי פה */
 /* כל הקודם נשאר כמו קודם, רק הוספתי פה */
 /* סגנון כללי שני טורים */
+/* כל הקודם נשאר כמו קודם, רק הוספתי פה */
+
 .two-columns {
   display: flex;
   justify-content: space-between;
@@ -34,7 +36,7 @@
   font-family: "Playfair Display", serif;
   font-size: 20px;
   line-height: 2;
-  color: #333; /* טקסט כהה */
+  color: #333;
 }
 
 .column-title {
@@ -42,9 +44,9 @@
   font-weight: 900;
   margin-bottom: 20px;
   padding-bottom: 1px;
-  border-bottom: 3px solid #a27851; /* זהב */
+  border-bottom: 3px solid #a27851;
   text-shadow: 0 0 2px rgba(162, 120, 81, 0.2);
-  color: #a27851; /* זהב */
+  color: #a27851;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -53,7 +55,7 @@
 
 .column-title .title-icon {
   font-size: 28px;
-  color: #a27851; /* זהב */
+  color: #a27851;
   padding: 20px;
   user-select: none;
 }
@@ -64,14 +66,22 @@
   margin-left: auto;
 }
 
+.right-title {
+  text-align: right;
+}
+
 .left-column {
   text-align: right;
   direction: rtl;
   margin-right: auto;
 }
 
+.left-title {
+  text-align: right;
+}
+
 .column-text strong {
-  color: #a27851; /* זהב */
+  color: #a27851;
   font-weight: 800;
 }
 
@@ -82,26 +92,29 @@
   direction: rtl;
 }
 
+.column-text br {
+  margin-bottom: 8px;
+}
+
 /* --- קרוסלה --- */
 
 .carousel-section {
-  background-color: black; /* שחור כהה */
+  background-color: black;
   padding: 50px 0;
   text-align: center;
-  color: white; /* טקסט לבן */
+  color: white;
   position: relative;
 }
 
 .carousel-title {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #a27851; /* זהב */
 }
 
 .carousel-line {
   height: 2px;
-  width: 260px;
-  background-color: #a27851; /* זהב */
+  width: 160px;
+  background-color: #d4af37;
   margin: 0 auto 40px;
 }
 
@@ -109,100 +122,78 @@
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  overflow: visible;
+  overflow: visible; /* לא צריך גלילה */
   background-color: black;
   padding: 20px 0;
+  box-sizing: border-box;
 }
 
 .carousel-track {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* מאפשר לשבור לשתי שורות */
   gap: 20px;
-  justify-content: center;
+  justify-content: center; /* מרכז את התמונות */
   direction: ltr;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .carousel-track img {
-  width: 220px;
-  height: 150px;
-  object-fit: cover;
+  width: 220px;      /* רוחב קבוע */
+  height: 150px;     /* גובה קבוע */
+  object-fit: cover; /* שומר על יחס תמונה חיתוך במידת הצורך */
   border-radius: 5px;
   background-color: white;
-  padding: 0;
-  box-shadow: 0 0 10px rgba(162, 120, 81, 0.8); /* צל זהב */
+  padding: 0;        /* בלי padding כדי שהתמונה תשתמש בכל המימד */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   user-select: none;
   display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* מצביע למשתמש שניתן ללחוץ */
+  transition: transform 0.3s ease;
 }
 
 .carousel-track img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(162, 120, 81, 1); /* צל זהב חזק */
 }
 
 /* תגובתיות למובייל */
 @media (max-width: 768px) {
-  .two-columns {
-    flex-direction: column;
-    padding: 0 20px;
-    margin: 40px auto;
-    gap: 40px;
-  }
-
-  .column {
-    width: 100%;
-    font-size: 18px;
-    line-height: 1.8;
-  }
-
-  .column-title {
-    font-size: 26px;
-    padding-bottom: 6px;
-  }
-
-  .column-title .title-icon {
-    padding: 10px;
-    font-size: 24px;
-  }
-
-  .column-text {
-    font-size: 18px;
-  }
-
-  .logo10 {
-    max-height: 250px;
-    margin: 30px auto 20px auto;
-  }
-
   .carousel-container {
     max-width: 100%;
     padding: 0 10px;
-    overflow-x: auto;
+    overflow-x: hidden; /* למנוע גלילה אופקית */
   }
 
   .carousel-track {
-    justify-content: flex-start;
+    justify-content: center; /* מרכז את התמונות בשורה */
+    flex-wrap: wrap; /* שורות חדשות */
+    gap: 15px;
+    max-width: 100%;
   }
 
   .carousel-track img {
-    width: 45vw;
-    max-width: none;
-    margin: 0;
-    padding: 5px;
+    width: calc((100% / 4) - 15px); /* 4 תמונות בשורה עם מרווח */
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
-/* --- לייטבוקס --- */
+/* עבור מסכים קטנים יותר - טלפונים */
+@media (max-width: 480px) {
+  .carousel-track img {
+    width: calc((100% / 2) - 10px); /* 2 תמונות בשורה */
+  }
+}
+
+/* --- לייטבוקס לתמונה מוגדלת --- */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.85); /* שחור עם שקיפות */
+  background: rgba(0,0,0,0.8);
   display: none;
   justify-content: center;
   align-items: center;
@@ -216,11 +207,11 @@
 }
 
 #lightbox img {
-  width: 90vw;
-  max-height: 95vh;
-  height: auto;
+  width: 90vw;       /* רוחב 90% מרוחב המסך */
+  height: auto;      /* שמור על יחס */
+  max-height: 95vh;  /* לא גבוה יותר מ-95% מגובה המסך */
   border-radius: 8px;
-  box-shadow: 0 0 25px rgba(162, 120, 81, 0.9); /* צל זהב */
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
   object-fit: contain;
 }
 
@@ -232,14 +223,15 @@
   color: white;
   cursor: pointer;
   user-select: none;
-  font-weight: 900;
+  font-weight: bold;
   transition: color 0.3s ease;
   z-index: 10001;
 }
 
 #lightbox .close-btn:hover {
-  color: #a27851; /* זהב */
+  color: #d4af37;
 }
+
 
   </style>
 </head>
