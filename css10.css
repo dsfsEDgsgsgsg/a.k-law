@@ -434,16 +434,17 @@ header {
     min-width: 36px;
     padding: 8px;
   }
-  .sidebar .close-btn {
+ .sidebar .close-btn {
   position: absolute;
   top: 15px;
   right: 15px;
   font-size: 28px;
   color: var(--main-color);
   cursor: pointer;
-  z-index: 1105; /* גבוה מ־sidebar עצמו */
+  z-index: 1105;
   user-select: none;
   background: transparent;
 }
+
 
 }
