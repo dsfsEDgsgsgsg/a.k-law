@@ -5,142 +5,109 @@
   <title>כותרת אתר</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css10.css">
+  <link rel="stylesheet" href="css10.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-  
-	    .box {
-  border-top: 5px solid #c9a44d;
-  border-bottom: 5px solid #c9a44d;
-  padding: 40px 20px;
-  width: 400px;
-  
-  margin: 50px auto;
-  background-color: white; /* חשוב לצל */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* הצללה */
-  border-radius: 12px; /* קימורים עדינים */
-}
+    .box {
+      border-top: 5px solid #c9a44d;
+      border-bottom: 5px solid #c9a44d;
+      padding: 40px 20px;
+      width: 400px;
+      margin: 50px auto;
+      background-color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
 
     .icon {
       font-size: 60px;
       margin-bottom: 20px;
-	  text-align: center;
+      text-align: center;
     }
-	.icon:hover{
-	transform: scale(1.05);
-	transition: 0.3s;
-	}
-	.box:hover {
-  background-color: #f9f5e6; /* צהוב מאוד בהיר ועדין (קרוב ללבן) */
-  box-shadow: 0 6px 18px rgba(201, 164, 77, 0.35); /* צל זהוב רך */
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
 
+    .icon:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      background-color: #f9f5e6;
+      box-shadow: 0 6px 18px rgba(201, 164, 77, 0.35);
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
     .title {
       font-size: 24px;
       font-weight: bold;
-	  
-	  text-align: center;
+      text-align: center;
     }
+
     .subtitle {
       font-size: 20px;
       font-weight: bold;
       color: #333;
     }
-	.box-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 תיבות בשורה */
-  gap: 20px;
-  padding: 40px 20px;
-  margin: auto;
-}
-.box-container a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.practice-title-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}.practice-title {
-  font-size: 50px;
-  color: #a27851;
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-align: center;
-  padding-bottom: 15px;
-  position: relative;
-  text-shadow: 0 0 2px rgba(162, 120, 81, 0.3);
-  margin: 0 auto;
-  display: inline-block;
-}
 
-.practice-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 78%;
-  transform: translateX(-70%); /* חצי מהרוחב פחות חצי מהקו */
-  width: 140%;
-  height: 2.9px;
-  background: linear-gradient(to right, transparent, #a27851, transparent);
-}
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+      margin: auto;
+    }
 
-	@media (max-width: 768px) {
-  .box-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* שתי קוביות בשורה */
-    gap: 20px; /* רווח בין הקוביות */
-    padding: 15px;
-    justify-items: center;
-  }
+    .box-container a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
 
-  .box {
-    width: 250px;          /* רוחב קבוע */
-    height: 250px;         /* גובה קבוע - כך זה ריבוע מדויק */
-    padding: 20px 10px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-top: 4px solid #c9a44d;
-    border-bottom: 4px solid #c9a44d;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    .practice-title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
 
-  .icon {
-    font-size: 56px;
-    margin-bottom: 8px;
-    flex-shrink: 0;
-  }
+    .practice-title {
+      font-size: 50px;
+      color: #a27851;
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-align: center;
+      padding-bottom: 15px;
+      position: relative;
+      text-shadow: 0 0 2px rgba(162, 120, 81, 0.3);
+      margin: 0 auto;
+      display: inline-block;
+    }
 
-  .title {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 1.2;
-    overflow-wrap: break-word;
-  }
-}
+    .practice-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 78%;
+      transform: translateX(-70%);
+      width: 140%;
+      height: 2.9px;
+      background: linear-gradient(to right, transparent, #a27851, transparent);
+    }
 
-
-
-
-
-
+    /* הסתרת תפריט צד והכפתור בנייד */
+    @media screen and (max-width: 768px) {
+      .menu-icon,
+      .sidebar {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-
 
 <header>
   <!-- כפתור המבורגר -->
@@ -151,12 +118,10 @@
   </div>
 
   <!-- לוגו באמצע -->
-   <div class="logo">
-  אריאל קנד - משרד עורכי דין
-  <span>Ariel Kand Law Firm</span>
-</div>
-
-
+  <div class="logo">
+    אריאל קנד - משרד עורכי דין
+    <span>Ariel Kand Law Firm</span>
+  </div>
 
   <!-- אייקונים ימניים -->
   <div class="icon-group">
@@ -171,7 +136,6 @@
 
 <!-- תפריט עליון אופקי -->
 <nav class="top-nav">
-  
   <ul>
     <li><a href="index.html">דף הבית</a></li>
     <li><a href="about.html">תוצאות</a></li>
@@ -179,7 +143,6 @@
     <li><a href="contact.html">צור קשר</a></li>
   </ul>
 </nav>
-
 
 <!-- תפריט צד -->
 <div class="sidebar" id="sidebar" style="display: none;">
@@ -193,7 +156,6 @@
   <h2 class="practice-title">תחומי עיסוק במשרדנו</h2>
 </div>
 
-
 <div class="box-container">
   <a href="car-accidents.html">
     <div class="box">
@@ -201,43 +163,36 @@
       <div class="title">תאונות דרכים</div>
     </div>
   </a>
-
   <a href="insurance-claims.html">
     <div class="box">
       <div class="icon"><i class="fas fa-briefcase-medical"></i></div>
       <div class="title">תאונות תלמידים</div>
     </div>
   </a>
-
   <a href="disability.html">
     <div class="box">
       <div class="icon"><i class="fas fa-wheelchair"></i></div>
       <div class="title">ביטוח לאומי</div>
     </div>
   </a>
-
   <a href="work-accidents.html">
     <div class="box">
       <div class="icon"><i class="fas fa-shield-alt"></i></div>
       <div class="title">תביעות סיעוד</div>
     </div>
   </a>
-
   <a href="real-estate.html">
     <div class="box">
       <div class="icon"><i class="fas fa-person-walking-with-cane"></i></div>
       <div class="title">אובדן כושר עבודה</div>
     </div>
   </a>
-
   <a href="nursing-claims.html">
     <div class="box">
       <div class="icon"><i class="fas fa-file-contract"></i></div>
       <div class="title">ייפוי כוח מתמשך</div>
     </div>
   </a>
-
-
   <a href="work2.html">
     <div class="box">
       <div class="icon"><i class="fas fa-hard-hat"></i></div>
@@ -245,7 +200,6 @@
     </div>
   </a>
 </div>
-<mg  class="logo11" src="cardimage.jpg">-->
 
 <script>
   function toggleMenu() {
@@ -267,6 +221,7 @@
     }
   }
 </script>
+
 <script src="nagishli_beta.js"></script>
 </body>
 </html>
