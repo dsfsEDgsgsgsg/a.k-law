@@ -213,53 +213,71 @@
     }
 
     /* === מובייל === */
-    @media (max-width: 768px) {
-      .two-columns {
-        flex-direction: column;
-        padding: 0 20px;
-        margin: 40px auto;
-        gap: 40px;
-      }
+ @media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 40px auto;
+    gap: 40px;
+    max-width: 100vw;   /* למנוע חריגה */
+    box-sizing: border-box;
+    overflow-x: hidden; /* למנוע גלילה אופקית לא רצויה */
+  }
 
-      .column {
-        width: 100%;
-        font-size: 18px;
-        line-height: 1.8;
-        min-height: auto;
-      }
+  .column {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.8;
+    min-height: auto;
+    max-width: 100vw; /* חשוב! */
+    box-sizing: border-box;
+  }
 
-      .column-title {
-        font-size: 26px;
-        padding-bottom: 10px;
-      }
+  .column-title {
+    font-size: 26px;
+    padding-bottom: 10px;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
 
-      .column-text {
-        font-size: 18px;
-        max-width: 100%;
-      }
+  .column-text {
+    font-size: 18px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
-      .logo10 {
-        max-height: 250px;
-        margin: 30px auto 20px auto;
-      }
+  .logo10 {
+    max-height: 250px;
+    margin: 30px auto 20px auto;
+    max-width: 90vw;
+    height: auto;
+  }
 
-      .carousel-container {
-        max-width: 100%;
-        padding: 0 10px;
-        overflow-x: auto;
-      }
+  .carousel-container {
+    max-width: 100vw;
+    padding: 0 10px;
+    overflow-x: auto; /* השאר גלילה אופקית בקרוסלה */
+    box-sizing: border-box;
+  }
 
-      .carousel-track {
-        justify-content: flex-start;
-      }
+  .carousel-track {
+    justify-content: flex-start;
+    flex-wrap: wrap; /* אפשר שורות */
+    gap: 10px;       /* רווח בין התמונות */
+    max-width: 100vw;
+  }
 
-      .carousel-track img {
-        width: 45vw;
-        max-width: none;
-        margin: 0;
-        padding: 5px;
-      }
-    }
+  .carousel-track img {
+    width: 48vw; /* קצת פחות מ-50vw כדי לא לחתוך */
+    max-width: 220px; /* גבול מקסימלי */
+    margin: 0;
+    padding: 0; /* הסר padding כדי לא להוסיף רוחב */
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
   </style>
 </head>
 <body>
