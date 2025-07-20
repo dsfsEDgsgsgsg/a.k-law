@@ -354,6 +354,10 @@ header {
   body {
     font-size: 18px; /* הגדלת גודל טקסט כללי */
   }
+  .menu-icon,
+      .sidebar {
+        display: none !important;
+      }
 
   header {
     height: 90px; /* קצת יותר גבוה */

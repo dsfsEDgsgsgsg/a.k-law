@@ -210,70 +210,56 @@
 
     #lightbox .close-btn:hover {
       color: #a27851;
-    }@media (max-width: 768px) {
+    }
 
+    /* === מובייל === */
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 40px auto;
+        gap: 40px;
+      }
 
-  .two-columns {
-    flex-direction: column !important;
-    padding: 0 15px !important;
-    margin: 30px auto !important;
-    gap: 20px !important;
-    max-width: 100vw !important;
-    box-sizing: border-box;
-  }
+      .column {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.8;
+        min-height: auto;
+      }
 
-  .column {
-    width: 100% !important;
-    max-width: 100vw !important;
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-    min-height: auto !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-sizing: border-box;
-  }
+      .column-title {
+        font-size: 26px;
+        padding-bottom: 10px;
+      }
 
-  /* בטקסטים ודברים אחרים – למנוע חיתוך מילים ומרווחים גדולים */
-  .column-text, .column-title {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
-  }
+      .column-text {
+        font-size: 18px;
+        max-width: 100%;
+      }
 
-  /* הכותרות: מיקום הקו התחתון במרכז */
-  .column-title::after {
-    width: 50% !important;
-    left: 50% !important;
-    margin-left: 0 !important;
-    transform: translateX(-50%) !important;
-  }
+      .logo10 {
+        max-height: 250px;
+        margin: 30px auto 20px auto;
+      }
 
-  /* קרוסלה */
-  .carousel-container {
-    max-width: 100vw !important;
-    padding: 0 10px !important;
-    overflow-x: auto !important;
-  }
+      .carousel-container {
+        max-width: 100%;
+        padding: 0 10px;
+        overflow-x: auto;
+      }
 
-  .carousel-track {
-    max-width: 100%;
-    grid-template-columns: 2fr 4fr; /* שתי תמונות בשורה */
-    gap: 10px;
-    padding: 0 15px;
-  }
+      .carousel-track {
+        justify-content: flex-start;
+      }
 
-  .carousel-track img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  #lightbox img {
-    width: 95vw !important;
-    max-height: 80vh !important;
-  }
-}
-
-}
+      .carousel-track img {
+        width: 45vw;
+        max-width: none;
+        margin: 0;
+        padding: 5px;
+      }
+    }
   </style>
 </head>
 <body>
