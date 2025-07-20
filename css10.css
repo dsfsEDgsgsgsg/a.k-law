@@ -397,6 +397,7 @@ header {
     font-size: 20px;
     width: 150px;
     padding: 40px 20px;
+    z-index: 100000;
   }
 
   .content-section {
