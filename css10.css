@@ -346,6 +346,9 @@ header {
   background-color: #FDF8F1;
 
   }
+    .sidebar {
+    display: none !important;
+  }
 
   header {
     height: 90px; /* קצת יותר גבוה */
