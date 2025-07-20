@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bangers&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <title>כותרת אתר</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="css10.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    /* כל הקודם נשאר כמו קודם, רק שיניתי את הפסקאות */
-
-    /* סגנון כללי שני טורים */
+    /* === סגנון כללי לשני טורים === */
     .two-columns {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 60px;
       max-width: 100%;
       padding: 0 60px;
@@ -34,76 +28,110 @@
       font-family: "Playfair Display", serif;
       font-size: 20px;
       line-height: 2;
-      color: #333; /* טקסט כהה */
+      color: #333;
+      text-align: center;
+      min-height: 350px;
+      margin: 0 auto;
     }
 
+    /* === כותרות באמצע, בצבע שחור, עם קו תחתון באמצע === */
     .column-title {
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      padding-bottom: 1px;
-      border-bottom: 3px solid #a27851; /* זהב */
-      text-shadow: 0 0 2px rgba(162, 120, 81, 0.2);
-      color: #a27851; /* זהב */
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      direction: rtl;
+      font-family: "Assistant", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 34px;
+      color: #000;
+      text-align: center;
+      position: relative;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      margin-left: 15px;
+      display: inline-block;
+    }
+
+    .column-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 35%;
+      height: 2px;
+      background-color: #a27851;
+      border-radius: 2px;
+      margin-left: 27%;
     }
 
     .column-title .title-icon {
       font-size: 28px;
-      color: #a27851; /* זהב */
-      padding: 20px;
+      color: #a27851;
+      padding: 0 10px;
       user-select: none;
     }
 
-    .right-column {
-      text-align: right;
-      direction: rtl;
-      margin-left: auto;
-    }
-
     .left-column {
-      text-align: right;
-      direction: rtl;
-      margin-right: auto;
+      display: inline-block;
+      margin-top: 100px;
+      margin-right: 30%;
     }
 
-    .column-text strong {
-      color: #a27851; /* זהב */
-      font-weight: 800;
-    }
-
-    /* שינוי הפונט רק לפסקאות */
     .column-text {
       font-family: "Roboto", sans-serif;
       font-size: 20px;
-      margin: 0;
-      line-height: 2.1;
+      margin: 0 auto;
+      line-height: 2;
       direction: rtl;
+      text-align: center;
+      max-width: 600px;
+      color: #333;
     }
 
-    /* --- קרוסלה --- */
+    .column-text strong {
+      color: #000;
+      font-weight: 300;
+    }
 
+    /* === קרוסלה === */
     .carousel-section {
-      background-color: black; /* שחור כהה */
+      background: url('arial100.jpg') center/cover no-repeat;
       padding: 50px 0;
       text-align: center;
-      color: white; /* טקסט לבן */
+      color: white;
       position: relative;
+      overflow: hidden;
+      
+      font-family: "Assistant", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+    }
+
+    .carousel-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 0;
+    }
+
+    .carousel-section * {
+      position: relative;
+      z-index: 1;
     }
 
     .carousel-title {
       font-size: 36px;
       margin-bottom: 10px;
-      color: #a27851; /* זהב */
+      color:aliceblue;
+      
+      font-family: "Assistant", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
     }
 
     .carousel-line {
-      height: 2px;
-      width: 260px;
-      background-color: #a27851; /* זהב */
+      height: 1.3px;
+      width: 700px;
+      background-color: #a27851;
       margin: 0 auto 40px;
     }
 
@@ -112,7 +140,6 @@
       max-width: 1100px;
       margin: 0 auto;
       overflow: visible;
-      background-color: black;
       padding: 20px 0;
     }
 
@@ -132,20 +159,60 @@
       object-fit: cover;
       border-radius: 5px;
       background-color: white;
-      padding: 0;
-      box-shadow: 0 0 10px rgba(162, 120, 81, 0.8); /* צל זהב */
-      user-select: none;
-      display: block;
+      box-shadow: 0 0 10px rgba(162, 120, 81, 0.8);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .carousel-track img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(162, 120, 81, 1); /* צל זהב חזק */
+      box-shadow: 0 0 25px rgba(162, 120, 81, 1);
     }
 
-    /* תגובתיות למובייל */
+    /* === לייטבוקס === */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #lightbox.active {
+      display: flex;
+    }
+
+    #lightbox img {
+      width: 90vw;
+      max-height: 95vh;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(162, 120, 81, 0.9);
+      object-fit: contain;
+    }
+
+    #lightbox .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      font-weight: 900;
+      transition: color 0.3s ease;
+    }
+
+    #lightbox .close-btn:hover {
+      color: #a27851;
+    }
+
+    /* === מובייל === */
     @media (max-width: 768px) {
       .two-columns {
         flex-direction: column;
@@ -158,21 +225,17 @@
         width: 100%;
         font-size: 18px;
         line-height: 1.8;
+        min-height: auto;
       }
 
       .column-title {
         font-size: 26px;
-        padding-bottom: 6px;
-      }
-
-      .column-title .title-icon {
-        padding: 10px;
-        font-size: 24px;
+        padding-bottom: 10px;
       }
 
       .column-text {
-        font-family: "Roboto", sans-serif;
         font-size: 18px;
+        max-width: 100%;
       }
 
       .logo10 {
@@ -197,70 +260,14 @@
         padding: 5px;
       }
     }
-
-    /* --- לייטבוקס --- */
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.85); /* שחור עם שקיפות */
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    #lightbox.active {
-      display: flex;
-    }
-
-    #lightbox img {
-      width: 90vw;
-      max-height: 95vh;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 25px rgba(162, 120, 81, 0.9); /* צל זהב */
-      object-fit: contain;
-    }
-
-    #lightbox .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 900;
-      transition: color 0.3s ease;
-      z-index: 10001;
-    }
-
-    #lightbox .close-btn:hover {
-      color: #a27851; /* זהב */
-    }
   </style>
 </head>
 <body>
   
 <div class="top-section">
   <header>
-    <div
-      class="menu-icon"
-      id="menuIcon"
-      onclick="toggleMenu()"
-      aria-expanded="false"
-      role="button"
-      tabindex="0"
-      aria-label="פתח/סגור תפריט"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="menu-icon" id="menuIcon" onclick="toggleMenu()" aria-expanded="false" role="button" tabindex="0" aria-label="פתח/סגור תפריט">
+      <span></span><span></span><span></span>
     </div>
 
     <div class="logo">
@@ -269,21 +276,15 @@
     </div>
 
     <div class="icon-group">
-      <a
-        href="https://wa.me/972524855911"
-        target="_blank"
-        style="font-size: 40px; color: #c8a75c"
-      >
+      <a href="https://wa.me/972524855911" target="_blank" style="font-size: 40px; color: #c8a75c">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a
-        href="tel:0524855911"
-        style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c"
-      >
+      <a href="tel:0524855911" style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c">
         <i class="fas fa-phone"></i>
       </a>
     </div>
   </header>
+
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">דף הבית</a></li>
@@ -299,139 +300,118 @@
     <a href="services.html">תחומי עיסוק</a>
     <a href="contact.html">צור קשר</a>
   </div>
-  </div>
+</div>
 
-  <img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
+<img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
 
-  <div class="two-columns">
-    <div class="column right-column">
-      <h3 class="column-title right-title">
-        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
-        אודות עורך הדין אריאל קנד
-      </h3>
-      <p class="column-text">
-        <strong>🎓 תואר והשכלה:</strong><br />
-        בעל תואר ראשון <strong>L.L.B</strong> במשפטים.<br /><br />
-
-        <strong>👨‍👩‍👧‍👦 רקע אישי:</strong><br />
-        יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף
-        האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.<br /><br />
-
-        <strong>💼 ניסיון מקצועי:</strong><br />
-        עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל
-        בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.<br /><br />
-
-        <strong>⚖️ חזון:</strong><br />
-        עו"ד אריאל קנד חרט על דגלו להעניק ללקוחותיו שירות מקצועי, אמין וקשוב –
-        מתוך אמונה ש<strong>הלקוח במרכז</strong>, והמטרה היא הצלחתו המלאה תוך
-        מיקסום ההליך.
-      </p>
-    </div>
-
-    <div class="column left-column">
-      <h3 class="column-title left-title">
-        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
-        שירות המשרד
-      </h3>
-      <p class="column-text">
-        <strong>🛡️ ייצוג נפגעים בלבד:</strong><br />
-        משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.<br /><br />
-
-        <strong>📂 תחומי טיפול:</strong><br />
-        תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי,
-        נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.<br /><br />
-
-        <strong>🔁 ליווי כולל:</strong><br />
-        אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא. <br />
-        מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא זכויותיו.
-      </p>
+<div class="two-columns">
+  <div class="column right-column">
+    <h3 class="column-title right-title">
+      <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
+      אודות עורך הדין אריאל קנד
+    </h3>
+    <div class="column-text">
+      <p><strong>🎓 תואר והשכלה:</strong></p>
+      <p>בעל תואר ראשון <strong>L.L.B</strong> במשפטים.</p>
+      <p><strong>👨‍👩‍👧‍👦 רקע אישי:</strong></p>
+      <p>יליד שנת 1990, נשוי ואב לחמישה. את שירותו הצבאי ביצע בחיל האוויר, באגף האוויוניקה – שם רכש יסודות של אחריות, דיוק והתמדה.</p>
+      <p><strong>💼 ניסיון מקצועי:</strong></p>
+      <p>עוסק בתחום הביטוח למעלה מ-10 שנים. הצטרף לשורות לשכת עורכי הדין בישראל בשנת 2021 ומאז עוסק בייצוג משפטי איכותי ומסור.</p>
+      <p><strong>⚖️ חזון:</strong></p>
+      <p>עו"ד אריאל קנד חרט על דגלו להעניק ללקוחותיו שירות מקצועי, אמין וקשוב – מתוך אמונה שהלקוח במרכז והמטרה היא הצלחתו המלאה תוך מיקסום ההליך.</p>
     </div>
   </div>
 
-  <section class="carousel-section">
-    <h2 class="carousel-title">עם תוצאות לא מתווכחים</h2>
-    <div class="carousel-line"></div>
-
-    <div class="carousel-container">
-      <div class="carousel-track">
-        <img src="images/doc1.png" alt="מסמך 1" />
-        <img src="images/doc2.png" alt="מסמך 2" />
-        <img src="images/doc3.png" alt="מסמך 3" />
-        <img src="result4.jpg" alt="מסמך 4" />
-        <img src="images/doc5.png" alt="מסמך 5" />
-        <img src="images/doc6.png" alt="מסמך 6" />
-        <img src="images/doc7.png" alt="מסמך 7" />
-        <img src="images/doc8.png" alt="מסמך 8" />
-      </div>
+  <div class="column left-column">
+    <h3 class="column-title left-title">
+      <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>שירות משרדנו
+    </h3>
+    <div class="column-text">
+      <p><strong>🛡️ ייצוג נפגעים בלבד:</strong></p>
+      <p>משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.</p>
+      <p><strong>📂 תחומי טיפול:</strong></p>
+      <p>תאונות דרכים, תאונות עבודה, תאונות תלמידים, תאונות במרחב הציבורי, נזקי גוף, תביעות ביטוח לאומי, אובדן כושר עבודה ותביעות סיעוד.</p>
+      <p><strong>🔁 ליווי כולל:</strong></p>
+      <p>אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא. מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא זכויותיו.</p>
     </div>
-  </section>
-
-  <!-- לייטבוקס לתמונה מוגדלת -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="תצוגה מוגדלת של תמונה">
-    <span class="close-btn" role="button" tabindex="0" aria-label="סגור">&#10005;</span>
-    <img src="" alt="תמונה מוגדלת" />
   </div>
+</div>
 
-  <script>
-    // תפריט צדדי
-    function toggleMenu() {
-      const sidebar = document.getElementById("sidebar");
-      const menuIcon = document.getElementById("menuIcon");
+<section class="carousel-section">
+  <h2 class="carousel-title">עם תוצאות לא מתווכחים</h2>
+  <div class="carousel-line"></div>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="images/doc1.png" alt="מסמך 1" />
+      <img src="images/doc2.png" alt="מסמך 2" />
+      <img src="images/doc3.png" alt="מסמך 3" />
+      <img src="result4.jpg" alt="מסמך 4" />
+      <img src="images/doc5.png" alt="מסמך 5" />
+      <img src="images/doc6.png" alt="מסמך 6" />
+      <img src="images/doc7.png" alt="מסמך 7" />
+      <img src="images/doc8.png" alt="מסמך 8" />
+    </div>
+  </div>
+</section>
 
-      if (!sidebar.classList.contains("active")) {
-        sidebar.style.display = "block";
-        setTimeout(() => {
-          sidebar.classList.add("active");
-          menuIcon.classList.add("active");
-        }, 10);
-      } else {
-        sidebar.classList.remove("active");
-        menuIcon.classList.remove("active");
-        setTimeout(() => {
-          sidebar.style.display = "none";
-        }, 300);
-      }
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="תצוגה מוגדלת של תמונה">
+  <span class="close-btn" role="button" tabindex="0" aria-label="סגור">&#10005;</span>
+  <img src="" alt="תמונה מוגדלת" />
+</div>
+
+<script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+    if (!sidebar.classList.contains("active")) {
+      sidebar.style.display = "block";
+      setTimeout(() => {
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
+      }, 10);
+    } else {
+      sidebar.classList.remove("active");
+      menuIcon.classList.remove("active");
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
     }
+  }
 
-    // לייטבוקס להגדלת תמונות
-    document.addEventListener("DOMContentLoaded", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImage = lightbox.querySelector("img");
-      const closeBtn = lightbox.querySelector(".close-btn");
-      const carouselImages = document.querySelectorAll(".carousel-track img");
+  document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const closeBtn = lightbox.querySelector(".close-btn");
+    const carouselImages = document.querySelectorAll(".carousel-track img");
 
-      carouselImages.forEach(img => {
-        img.addEventListener("click", () => {
-          lightboxImage.src = img.src;
-          lightboxImage.alt = img.alt;
-          lightbox.classList.add("active");
-          document.body.style.overflow = "hidden"; // למנוע גלילה אחורית
-        });
-      });
-
-      function closeLightbox() {
-        lightbox.classList.remove("active");
-        lightboxImage.src = "";
-        lightboxImage.alt = "";
-        document.body.style.overflow = ""; // לשחרר גלילה
-      }
-
-      closeBtn.addEventListener("click", closeLightbox);
-
-      // סגירה גם בלחיצה מחוץ לתמונה
-      lightbox.addEventListener("click", e => {
-        if (e.target === lightbox) {
-          closeLightbox();
-        }
-      });
-
-      // סגירה עם מקש Escape
-      document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && lightbox.classList.contains("active")) {
-          closeLightbox();
-        }
+    carouselImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
       });
     });
-  </script>
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+      document.body.style.overflow = "";
+    }
+
+    closeBtn.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && lightbox.classList.contains("active")) {
+        closeLightbox();
+      }
+    });
+  });
+</script>
 </body>
 </html>
