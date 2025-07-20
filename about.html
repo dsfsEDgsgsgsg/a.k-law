@@ -10,13 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    body {
-      background-color: #FDF8F1;
-
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-    }
     .modal {
   display: none;
   position: fixed;
@@ -187,124 +180,12 @@
       gap: 0;
       min-height: 450px;
     }
-    @media (max-width: 768px) {
-  .content-row {
-    flex-direction: column;
-    padding: 20px 15px;
-    min-height: auto;
-    align-items: center;
-    margin-right: 0; /* תיקנתי את המרווח מימין ל-0 כדי למרכז נכון */
-  }
-
-  .vertical-divider {
-    display: none; /* מסתיר את הקו המפריד במובייל */
-  }
-
-  .results-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .results-grid img {
-    width: 120%;
-    border-radius: 16px;
-    box-sizing: border-box;
-  }
-
-  .text-box-with-icon {
-    max-width: 100%;
-    width: 100%;
-    margin-top: 30px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: right; /* הוספתי כדי ליישר את הטקסט ימינה */
-  }
-
-  .text-box-with-icon .title {
-    font-size: 28px;
-    margin: 0 0 20px 0;
-    width: 100%;
-    padding-bottom: 8px;
-    position: relative;
-    text-align: right; /* הוספתי יישור ימינה לכותרת */
-  }
-
-  /* השאר את הקו התחתון של הכותרת */
-  .text-box-with-icon .title::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-left: 10px;
-    width: 100%;
-    height: 3px;
-    background-color: #a27851;
-    border-radius: 2px;
-  }
-
-  .practice-title-wrapper {
-    justify-content: center;
-    padding-right: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-
-  .practice-title {
-    font-size: 70px;
-    text-align: center;
-    padding-bottom: 8px;
-    margin-right: 20px;
-  }
-   .practice-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 2.9px;
-      background: linear-gradient(to left, transparent, #a27851, transparent);
-    }
-  /* מודאל התמונה - fullscreen */
-  #imageModal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-  }
-
-  #imageModal .modal-content {
-    max-width: 95vw;
-    max-height: 90vh;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
-  }
-
-  #imageModal .close {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-  }
-}
-
-
 
   </style>
 </head>
 <body>
+  
+<div class="top-section">
 
 <header>
   <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
@@ -343,6 +224,7 @@
   <a href="about.html">תוצאות</a>
   <a href="services.html">תחומי עיסוק</a>
   <a href="contact.html">צור קשר</a>
+</div>
 </div>
 
 

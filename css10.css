@@ -7,7 +7,7 @@
 
 /* נגיש לי */
 div#NagishLiTrigger {
-  position: absolute;
+  position: fixed;
   left: 30px;
   top: 400px;
   right: auto;
@@ -18,6 +18,17 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #FDF8F1;
+   padding-top: 120px;
+   
+}
+.top-section{
+  
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* גובה קבוע */
+  z-index: 1000; 
 }
 
 header {
@@ -117,7 +128,6 @@ header {
 
 .sidebar.active {
   left: 0;
-  display: block;
 }
 
 .sidebar a {
@@ -203,7 +213,11 @@ header {
   right: auto;
 }
 
-.logo10,
+.logo10 {
+  width: 100%;
+  height: 450px;
+}
+
 .logo11 {
   width: 100%;
   height: 450px;
@@ -244,7 +258,7 @@ header {
   padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  max-width: 170px;
+  max-width: 320px;
   font-family: 'Playfair Display', serif;
   color: #222;
   text-align: right;
@@ -338,18 +352,11 @@ header {
 
 @media (max-width: 768px) {
   body {
-    font-size: 18px;
-    background-color: #FDF8F1;
-  }
-  .sidebar {
-    display: none !important;
-  }
-  .menu-icon {
-    display: none !important;
+    font-size: 18px; /* הגדלת גודל טקסט כללי */
   }
 
   header {
-    height: 90px;
+    height: 90px; /* קצת יותר גבוה */
     padding: 20px 15px;
   }
 
@@ -376,30 +383,28 @@ header {
     gap: 15px;
   }
 
+  /* שמור על התפריט אופקי, רק גדל גודל ורגישות */
   .top-nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  /* שורה, לא טור */
     justify-content: center;
     padding: 0;
     margin: 0;
   }
 
   .top-nav li {
-    margin: 0 20px;
+    margin: 0 20px;       /* קצת יותר רווח בין הפריטים */
   }
 
   .top-nav a {
-    font-size: 22px;
-    padding: 15px 20px;
+    font-size: 22px;      /* טקסט גדול יותר */
+    padding: 15px 20px;   /* פדינג גדול יותר ללחיצה נוחה */
   }
 
   .sidebar {
     font-size: 20px;
-    width: 70vw;
-    max-width: 280px;
+    width: 75vw;
     padding: 40px 20px;
-    z-index: 100000;
-    display: block;
   }
 
   .content-section {
@@ -440,6 +445,4 @@ header {
     min-width: 36px;
     padding: 8px;
   }
- 
-
 }
