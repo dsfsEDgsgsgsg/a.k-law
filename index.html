@@ -214,45 +214,51 @@
 
     /* === מובייל === */
 @media (max-width: 768px) {
-  /* כללי גוף ומכולות */
   body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* מונע גלילה אופקית */
+    overflow-x: hidden; /* למנוע גלילה אופקית */
     max-width: 100vw;
-    box-sizing: border-box;
+    
   }
+  .top-section{
+  
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* גובה קבוע */
+  z-index: 1000; 
+}
 
   .two-columns {
-    flex-direction: column;
-    padding: 0 20px;
-    margin: 40px auto;
-    gap: 40px;
-    max-width: 100vw;
+    flex-direction: column !important;
+    padding: 0 15px !important;
+    margin: 30px auto !important;
+    gap: 20px !important;
+    max-width: 100vw !important;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
 
   .column {
-    width: 100%;
-    font-size: 18px;
-    line-height: 1.8;
-    min-height: auto;
-    max-width: 100vw;
+    width: 100% !important;
+    max-width: 100vw !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     box-sizing: border-box;
   }
 
-  .column-title {
-    font-size: 26px;
-    padding-bottom: 10px;
-    max-width: 100vw;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    margin-left: 0 !important;
+  /* בטקסטים ודברים אחרים – למנוע חיתוך מילים ומרווחים גדולים */
+  .column-text, .column-title {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
   }
 
+  /* הכותרות: מיקום הקו התחתון במרכז */
   .column-title::after {
     width: 50% !important;
     left: 50% !important;
@@ -260,66 +266,33 @@
     transform: translateX(-50%) !important;
   }
 
-  .column-text {
-    font-size: 18px;
-    max-width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-  }
-
-  .logo10 {
-    max-height: 250px;
-    margin: 30px auto 20px auto;
-    max-width: 90vw;
-    height: auto;
-    display: block;
-  }
-
   /* קרוסלה */
   .carousel-container {
-    max-width: 100vw;
-    padding: 0 10px;
-    overflow-x: hidden; /* אין גלילה אופקית כלל */
-    box-sizing: border-box;
+    max-width: 100vw !important;
+    padding: 0 10px !important;
+    overflow-x: auto !important;
   }
 
   .carousel-track {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 תמונות בשורה */
-    gap: 10px;
-    max-width: 460px; /* 2 * 220px + רווח */
-    margin: 0 auto; /* מרכז את הקרוסלה */
-    justify-items: center; /* מרכז כל תמונה בתוך התא */
-    box-sizing: border-box;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+    max-width: 100vw !important;
   }
 
   .carousel-track img {
-    width: 100%; /* תמונה ממלאת את תא הגריד */
-    max-width: 220px;
-    height: auto;
-    padding: 0;
-    border-radius: 5px;
-    display: block;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 42vw !important;
+    max-width: 200px !important;
+    height: auto !important;
+    border-radius: 5px !important;
   }
 
-  .carousel-track img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(162, 120, 81, 1);
-  }
-
-  /* לייטבוקס */
   #lightbox img {
-    width: 95vw;
-    max-height: 80vh;
-    border-radius: 8px;
-    object-fit: contain;
+    width: 95vw !important;
+    max-height: 80vh !important;
   }
 }
+
 
 
   </style>
