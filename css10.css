@@ -346,9 +346,10 @@ header {
   background-color: #FDF8F1;
 
   }
-    .sidebar {
-    display: none !important;
+  .menu-icon span{
+    z-index: 1000000000000;
   }
+    
 
   header {
     height: 90px; /* קצת יותר גבוה */
