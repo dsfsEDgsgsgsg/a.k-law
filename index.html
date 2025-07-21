@@ -259,11 +259,6 @@
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     white-space: normal !important;
-    
-      
-  }
-  .column-title {
-    margin-left: 15px;
   }
 
   /* קו תחתון בכותרות במרכז */
@@ -291,29 +286,27 @@
     box-sizing: border-box;
   }
 
-.carousel-track {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important; /* שתי תמונות בשורה */
-  grid-auto-rows: 150px !important; /* גובה קבוע לכל השורות */
-  gap: 10px !important;
-  max-width: 460px !important; /* מרכז קרוסלה */
-  margin: 0 auto !important;
-  justify-items: center !important;
-  box-sizing: border-box;
-}
+  .carousel-track {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* שתי תמונות בשורה */
+    grid-auto-rows: auto !important;
+    gap: 10px !important;
+    max-width: 460px !important; /* רוחב מתאים לקרוסלה */
+    margin: 0 auto !important; /* מרכז קרוסלה */
+    justify-items: center !important;
+    box-sizing: border-box;
+  }
 
-.carousel-track img {
-  width: 100% !important;
-  max-width: 220px !important;
-  height: 150px !important; /* גובה אחיד */
-  border-radius: 5px !important;
-  padding: 0 !important;
-  display: block !important;
-  object-fit: cover !important; /* חיתוך קל לשמירת יחס */
-  cursor: pointer !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
+  .carousel-track img {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    border-radius: 5px !important;
+    padding: 0 !important;
+    display: block !important;
+    cursor: pointer !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
 
   .carousel-track img:hover {
     transform: scale(1.05) !important;
@@ -371,6 +364,18 @@
     <a href="contact.html">צור קשר</a>
   </div>
 </div>
+
+<section class="page-hero">
+  <div class="circle-shape"></div>
+  <div class="small-circle one"></div>
+  <div class="small-circle two"></div>
+  <div class="small-circle three"></div>
+  <div class="background-shape"></div>
+  <div class="wave-shape"></div>
+
+  <h1>עורך דין תאונות דרכים</h1>
+  <p>ברמת גן והסביבה</p>
+</section>
 
 <img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
 
