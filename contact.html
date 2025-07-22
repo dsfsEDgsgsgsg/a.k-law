@@ -1,200 +1,218 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bangers&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>כותרת אתר</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css10.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- גופנים וספריות -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>body {
-    background-color: #FDF8F1;
 
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="css10.css">
+  <style>
+    body {
+      background-color: #FDF8F1;
+      margin: 0;
+      font-family: 'Assistant', sans-serif;
+    }
 
-.contact-icons {
-  background-color: #000;
-  margin-top: 80px;
-  color: #a27851;
-  padding: 40px 20px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  border-top: 1px solid #a2785122;
-  border-bottom: 1px solid #a2785122;
-}
+    .contact-icons {
+      background-color: #000;
+      margin-top: 80px;
+      color: #a27851;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #a2785122;
+      border-bottom: 1px solid #a2785122;
+    }
 
-.contact-icons h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(162, 120, 81, 0.8);
-}
+    .contact-icons h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(162, 120, 81, 0.8);
+    }
 
-.contact-methods {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
+    .contact-methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
-.contact-card {
-  background-color: #111;
-  border: 1px solid #a2785155;
-  color: #a27851;
-  text-decoration: none;
-  padding: 20px;
-  border-radius: 12px;
-  width: 230px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(162, 120, 81, 0.1);
-}
+    .contact-card {
+      background-color: #111;
+      border: 1px solid #a2785155;
+      color: #a27851;
+      text-decoration: none;
+      padding: 20px;
+      border-radius: 12px;
+      width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(162, 120, 81, 0.1);
+    }
 
-.contact-card i {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+    .contact-card i {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-.contact-card:hover {
-  background-color: #1a1a1a;
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(162, 120, 81, 0.5);
-}
+    .contact-card:hover {
+      background-color: #1a1a1a;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(162, 120, 81, 0.5);
+    }
 
-.contact-text {
-  font-size: 16px;
-  direction: rtl;
-}
+    .contact-text {
+      font-size: 16px;
+      direction: rtl;
+    }
 
-.contact-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 100px 20px 60px;
-  background-color: #fdf8f1;
-  text-align: center;
-}
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+      background-color: #fdf8f1;
+      text-align: center;
+    }
 
-.subtitle {
-  color: #b78b52;
-  font-size: 46px;
-  margin-bottom: 10px;
+    .subtitle {
+      font-size: 46px;
+      margin-bottom: 10px;
+      display: inline-block;
+      background-color: #b78b52;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
 
-  
-      font-family: "Assistant", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
+    .headline {
+      font-size: 48px;
+      font-weight: 700;
+      color: #1d1f25;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
 
+    .contact-description {
+      font-size: 20px;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
+    }
 
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+      gap: 20px;
+    }
 
-display: inline-block;
-   background-color: #b78b52;
-  color: white;
-  border: none;
-  padding: 12px 30px; 
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 10px;  /* כמו שהיה קודם */
-}
+    .icon-box {
+      background-color: #b78b52;
+      color: white;
+      padding: 20px;
+      border-radius: 18px;
+      font-size: 26px;
+      min-width: 60px;
+      text-align: center;
+    }
 
-.headline {
-  font-size: 48px;
-  font-weight: 700;
-  color: #1d1f25;
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
+    .info-text {
+      text-align: right;
+    }
 
-.contact-description {
-  font-size: 20px;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.8;
-}
-.info-row {
-  display: flex;
-  align-items: center;   /* יישור אנכי של האייקון והטקסט */
-  margin-bottom: 35px;
-  gap: 20px;
+    .info-title {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
 
-}
+    .info-detail {
+      font-size: 20px;
+      color: #6b7280;
+    }
 
+    .network-links {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
 
-.icon-box {
-  background-color: #b78b52;
-  color: white;
-  padding: 20px;
-  border-radius: 18px;
-  font-size: 26px;
-  min-width: 60px;
-  text-align: center;
-}
+    .network-links i {
+      background-color: #1d1f25;
+      color: white;
+      border-radius: 50%;
+      padding: 16px;
+      font-size: 24px;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
 
-.info-text {
-  text-align: right;
-}
+    .network-links i:hover {
+      background-color: #b78b52;
+    }
 
-.info-title {
-  font-weight: bold;
-  font-size: 22px;
-  margin-bottom: 6px;
-}
+    .items1 {
+      padding: 0 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-.info-detail {
-  font-size: 20px;
-  color: #6b7280;
-}
+    a {
+      text-decoration: none;
+    }
 
-.network-links {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-   text-decoration: none;
-  
-}
+    /* רספונסיביות למסכים קטנים */
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 32px;
+      }
 
-.network-links i {
-  background-color: #1d1f25;
-  color: white;
-  border-radius: 50%;
-  padding: 16px;
-  font-size: 24px;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-   text-decoration: none;
-}
+      .subtitle {
+        font-size: 28px;
+        padding: 10px 20px;
+      }
 
-.network-links i:hover {
-  background-color: #b78b52;
-}
-.items1{
-  margin-right: 200px;
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-}
-a {
-  text-decoration: none;
-}
+      .contact-description {
+        font-size: 18px;
+      }
 
+      .contact-card {
+        width: 100%;
+        max-width: 300px;
+      }
 
-
-  
-
+      .contact-methods {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <div class="top-section">
@@ -322,6 +340,8 @@ a {
   </div>
 </section>
 
+<!-- שאר הקוד שלך נשאר זהה (header, nav, וכו') -->
+<!-- המשך בדיוק כמו שהבאת אותו קודם, החל מה-top-section ועד הסקריפטים -->
 
 <script>
   function toggleMenu() {
