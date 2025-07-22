@@ -19,6 +19,7 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #FDF8F1;
    padding-top: 120px;
+    padding-bottom: 100px;
    
 }
 .top-section{
@@ -497,6 +498,58 @@ header {
   }
 }
 
+ .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      z-index: 1000;
+    }
+
+    .footer a {
+      flex: 1;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .footer a.whatsapp {
+      background-color: #25D366;
+    }
+
+    .footer a.facebook {
+      background-color: #1877F2;
+    }
+
+    .footer a.whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+
+    .footer a.facebook:hover {
+      background-color: #0f65d3;
+    }
+
+    .footer i {
+      font-size: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .footer a {
+        font-size: 14px;
+        gap: 6px;
+      }
+
+      .footer i {
+        font-size: 18px;
+      }
+    }
 
 
 
