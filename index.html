@@ -15,357 +15,517 @@
 
   <style>
     /* === סגנון כללי לשני טורים === */
-    .two-columns {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      max-width: 100%;
-      padding: 0 60px;
-      margin: 80px auto;
-      flex-wrap: wrap;
-    }
+   /* === 1. מבנה עמוד כללי וטקסטים === */
+.two-columns {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  max-width: 100%;
+  padding: 0 60px;
+  margin: 80px auto;
+  flex-wrap: wrap;
+}
 
-    .column {
-      width: 40%;
-      font-family: "Playfair Display", serif;
-      font-size: 20px;
-      line-height: 2;
-      color: #333;
-      text-align: center;
-      min-height: 350px;
-      margin: 0 auto;
-    }
+.column {
+  width: 40%;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  line-height: 2;
+  color: #333;
+  text-align: center;
+  min-height: 350px;
+  margin: 0 auto;
+}
 
-    /* === כותרות באמצע, בצבע שחור, עם קו תחתון באמצע === */
-    .column-title {
-      font-family: "Assistant", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      font-size: 34px;
-      color: #000;
-      text-align: center;
-      position: relative;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      margin-left: 15px;
-      display: inline-block;
-    }
+.column-title {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 34px;
+  color: #000;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  margin-left: 15px;
+  display: inline-block;
+}
 
-    .column-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 35%;
-      height: 2px;
-      background-color: #a27851;
-      border-radius: 2px;
-      margin-left: 27%;
-    }
+.column-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 2px;
+  background-color: #a27851;
+  border-radius: 2px;
+  margin-left: 27%;
+}
 
-    .column-title .title-icon {
-      font-size: 28px;
-      color: #a27851;
-      padding: 0 10px;
-      user-select: none;
-    }
+.column-title .title-icon {
+  font-size: 28px;
+  color: #a27851;
+  padding: 0 10px;
+  user-select: none;
+}
 
-    .left-column {
-      display: inline-block;
-      margin-top: 100px;
-      margin-right: 30%;
-    }
+.left-column {
+  display: inline-block;
+  margin-top: 100px;
+  margin-right: 30%;
+}
 
-    .column-text {
-      font-family: "Roboto", sans-serif;
-      font-size: 20px;
-      margin: 0 auto;
-      line-height: 2;
-      direction: rtl;
-      text-align: center;
-      max-width: 600px;
-      color: #333;
-    }
+.column-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  line-height: 2;
+  direction: rtl;
+  text-align: center;
+  max-width: 600px;
+  color: #333;
+}
 
-    .column-text strong {
-      color: #000;
-      font-weight: 300;
-    }
+.column-text strong {
+  color: #000;
+  font-weight: 300;
+}
 
-    /* === קרוסלה === */
-    .carousel-section {
-      background: url('arial100.jpg') center/cover no-repeat;
-      padding: 50px 0;
-      text-align: center;
-      color: white;
-      position: relative;
-      font-family: "Assistant", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 100;
-      overflow: visible;  
-    }
+.treatment-list {
+  direction: rtl;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-right: 1.8em;
+  margin-right: 17px;
+}
 
-    .carousel-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 0;
-    }
+.treatment-list li {
+  text-align: right;
+}
 
-    .carousel-section * {
-      position: relative;
-      z-index: 1;
-    }
+/* === 2. קרוסלה === */
+.carousel-section {
+  background: url('arial100.jpg') center/cover no-repeat;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  overflow: visible;
+}
 
-    .carousel-title {
-      font-size: 36px;
-      margin-bottom: 10px;
-      color: aliceblue;
-      font-family: "Assistant", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-    }
+.carousel-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+}
 
-    .carousel-line {
-      height: 1.3px;
-      width: 700px;
-      background-color: #a27851;
-      margin: 0 auto 40px;
-    }
+.carousel-section * {
+  position: relative;
+  z-index: 1;
+}
 
-    /* הוספתי את הקונטיינר החדש */
-    .carousel-wrapper {
-      position: relative;
-      max-width: 940px;
-      margin: 0 auto;
-      overflow: visible; /* מאפשר לחצים לצאת מחוץ ל־carousel-container */
-      padding: 0 60px; /* נותן מקום לחצים בצדדים */
-      box-sizing: border-box;
-    }
+.carousel-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+}
 
-    .carousel-container {
-      overflow: hidden; /* מסתיר את התמונות שמעבר לגלילה */
-      width: 100%;
-      position: relative;
-    }
+.carousel-line {
+  height: 1.3px;
+  width: 700px;
+  background-color: #a27851;
+  margin: 0 auto 40px;
+}
 
-    .carousel-track {
-      display: flex;
-      gap: 20px;
-      transition: transform 0.4s ease-in-out;
-      justify-content: flex-start; /* לשמור את התמונות משמאל לימין */
-      flex-direction: row; /* וודא שזו ברירת מחדל */
-      direction: ltr; /* לשבור RTL רק פה */
-    }
+.carousel-wrapper {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
 
-    .carousel-track img {
-      width: 220px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 5px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(162, 120, 81, 0.8);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex-shrink: 0;
-    }
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 
-    .carousel-track img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(162, 120, 81, 1);
-    }
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+  justify-content: flex-start;
+  flex-direction: row;
+  direction: ltr;
+}
 
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: #a27851;
-      font-size: 40px;
-      padding: 0;
-      cursor: pointer;
-      user-select: none;
-      z-index: 100; /* כדי שיראו מעל הכל */
-      transition: color 0.3s ease;
-    }
-    .carousel-arrow:hover {
-      color: #d8b48a;
-    }
+.carousel-track img {
+  width: calc((100% - 40px) / 3);
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(162, 120, 81, 0.8);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
 
-    .carousel-arrow:disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-    .carousel-arrow.prev {
-      left: 0; /* מצד שמאל (מימין למשתמש RTL) */
-    }
+.carousel-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(162, 120, 81, 1);
+}
 
-    .carousel-arrow.next {
-      right: 0; /* מצד ימין */
-    }
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #a27851;
+  font-size: 40px;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+  z-index: 100;
+  transition: color 0.3s ease;
+}
 
-    /* === לייטבוקס === */
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 10000;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+.carousel-arrow:hover {
+  color: #d8b48a;
+}
 
-    #lightbox.active {
-      display: flex;
-    }
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
 
-    #lightbox img {
-      width: 90vw;
-      max-height: 95vh;
-      border-radius: 8px;
-      box-shadow: 0 0 25px rgba(162, 120, 81, 0.9);
-      object-fit: contain;
-      overflow: visible;
-    }
+.carousel-arrow.prev {
+  right: 0;
+  left: auto;
+}
 
-    #lightbox .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      color: white;
-      cursor: pointer;
-      font-weight: 900;
-      transition: color 0.3s ease;
-    }
+.carousel-arrow.next {
+  left: 0;
+  right: auto;
+}
 
-    #lightbox .close-btn:hover {
-      color: #a27851;
-    }
+/* === 3. לייטבוקס === */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    .treatment-list {
-      direction: rtl;
-      list-style-type: disc;
-      list-style-position: outside;
-      padding-right: 1.8em;
-      margin-right: 17px;
-    }
+#lightbox.active {
+  display: flex;
+}
 
-    .treatment-list li {
-      text-align: right;
-    }
+#lightbox img {
+  width: 90vw;
+  max-height: 95vh;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(162, 120, 81, 0.9);
+  object-fit: contain;
+  overflow: visible;
+}
 
-    /* === מובייל === */
-    @media (max-width: 768px) {
-      body {
-        margin-top: 80px;
-        overflow-x: hidden;
-        max-width: 100vw;
-        box-sizing: border-box;
-      }
+#lightbox .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: 900;
+  transition: color 0.3s ease;
+}
 
-      .top-section {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 80px;
-        z-index: 1000;
-      }
+#lightbox .close-btn:hover {
+  color: #a27851;
+}
 
-      .two-columns {
-        flex-direction: column !important;
-        padding: 0 15px !important;
-        margin: 30px auto !important;
-        gap: 20px !important;
-        max-width: 100vw !important;
-        box-sizing: border-box;
-        overflow-x: hidden;
-      }
+/* === 4. המלצות (Testimonials) === */
+.testimonials {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1100px;
+  font-family: "Assistant", sans-serif;
+  flex-direction: row;
+  direction: ltr;
+}
 
-      .column {
-        width: 100% !important;
-        max-width: 100vw !important;
-        font-size: 16px !important;
-        line-height: 1.6 !important;
-        min-height: auto !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        box-sizing: border-box;
-      }
+.testimonials-title {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+}
 
-      .column-text,
-      .column-title {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        white-space: normal !important;
-      }
+.title-line {
+  width: 100px;
+  height: 2px;
+  background: #c8a75c;
+  margin: 0 auto 30px;
+}
 
-      .column-title::after {
-        width: 50% !important;
-        left: 50% !important;
-        margin-left: 0 !important;
-        transform: translateX(-50%) !important;
-      }
+.testimonials-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-      .logo10 {
-        max-height: 250px;
-        margin: 30px auto 20px auto;
-        max-width: 90vw;
-        height: auto;
-        display: block;
-      }
+.testimonials-container {
+  overflow: hidden;
+  width: 100%;
+}
 
-      .carousel-wrapper {
-        padding: 0 40px !important;
-      }
+.testimonials-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
 
-      .carousel-container {
-        max-width: 100vw !important;
-        padding: 0 10px !important;
-        overflow-x: hidden !important;
-        box-sizing: border-box;
-        position: relative;
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-      }
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  flex: 0 0 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
 
-      .carousel-track {
-        direction: ltr; /* מבטל את rtl בתוך הקרוסלה */
-        display: flex;
-        gap: 20px;
-        flex-direction: row-reverse; /* הופך את סדר התמונות */
-        transition: transform 0.3s ease;
-      }
+.quote-icon {
+  font-size: 40px;
+  color: #c8a75c;
+  margin-bottom: 10px;
+}
 
-      .carousel-track img {
-        width: 45% !important;
-        height: auto !important;
-        border-radius: 5px !important;
-        cursor: pointer !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-        flex-shrink: 0 !important;
-      }
+.testimonial-text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
 
-      .carousel-arrow {
-        display: none !important;
-      }
+.testimonial-name {
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+}
 
-      #lightbox img {
-        width: 95vw !important;
-        max-height: 80vh !important;
-        border-radius: 8px;
-        object-fit: contain;
-      }
-    }
+.testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #c8a75c;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.testimonial-arrow.prev {
+  right: 0;
+}
+
+.testimonial-arrow.next {
+  left: 0;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+.testimonial-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.testimonial-dots button.active {
+  background: #000;
+}
+/* === רספונסיביות כללית למכשירים קטנים (עד 768px) === */
+@media (max-width: 768px) {
+  body {
+    margin-top: 80px;
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .top-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+  }
+
+  .two-columns {
+    flex-direction: column !important;
+    padding: 0 15px !important;
+    margin: 30px auto !important;
+    gap: 20px !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .column {
+    width: 100% !important;
+    max-width: 100vw !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .column-text,
+  .column-title {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  .column-title::after {
+    width: 50% !important;
+    left: 50% !important;
+    margin-left: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .logo10 {
+    max-height: 250px;
+    margin: 30px auto 20px auto;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+  }
+
+  /* === קרוסלה במובייל – תמונה אחת בלבד בהתחלה === */
+  .carousel-wrapper {
+    padding: 0 20px !important;
+  }
+
+  .carousel-container {
+    max-width: 100vw !important;
+    padding: 0 10px !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .carousel-track {
+    direction: ltr;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-track img {
+    width: 90% !important; /* תמונה אחת כמעט מלאה */
+    max-width: 90% !important;
+    height: auto !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    flex-shrink: 0 !important;
+    margin: 0 auto;
+  }
+
+  .carousel-arrow {
+    display: none !important;
+  }
+
+  #lightbox img {
+    width: 95vw !important;
+    max-height: 80vh !important;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  /* === המלצות/טסטמוניאלס במובייל === */
+  .testimonial-card {
+    flex: 0 0 80% !important;
+    max-width: 80% !important;
+    margin: 0 auto;
+  }
+}
+
+/* === רספונסיביות לטאבלט (עד 1024px) === */
+@media (max-width: 1024px) {
+  .two-columns {
+    gap: 30px;
+  }
+
+  .column {
+    font-size: 18px;
+  }
+
+  .carousel-track img {
+    width: calc((100% - 20px) / 2);
+  }
+
+  .testimonial-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+  }
+}
+
+/* === מסכים גדולים מאוד (מעל 1400px) – התאמות כלליות === */
+@media (min-width: 1400px) {
+  .two-columns {
+    max-width: 1200px;
+    margin: 100px auto;
+  }
+
+  .column {
+    font-size: 22px;
+  }
+
+  .carousel-track img {
+    height: 200px;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
@@ -405,10 +565,11 @@
 
     <nav class="top-nav">
       <ul>
-        <li><a href="index.html">דף הבית</a></li>
-        <li><a href="about.html">תוצאות</a></li>
-        <li><a href="services.html">תחומי עיסוק</a></li>
-        <li><a href="contact.html">צור קשר</a></li>
+    <li><a href="index.html">דף הבית</a></li>
+    <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="mhamar.html">מאמרים</a></li>
+    <li><a href="contact.html">צור קשר</a></li>
       </ul>
     </nav>
 
@@ -428,8 +589,8 @@
     <div class="background-shape"></div>
     <div class="wave-shape"></div>
 
-    <h1>עורך דין תאונות דרכים</h1>
-    <p>ברמת גן והסביבה</p>
+    <h1>דף הבית</h1>
+    <p></p>
   </section>
 
   <img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
@@ -497,20 +658,33 @@
     <div class="carousel-line"></div>
 
     <div class="carousel-wrapper">
-      <button class="carousel-arrow prev" aria-label="התמונה הקודמת" disabled>
+      <button class="carousel-arrow prev" aria-label="התמונה הקודמת">
         <i class="fas fa-chevron-right"></i>
       </button>
 
       <div class="carousel-container">
         <div class="carousel-track">
           <img src="result1.jpg" alt="מסמך 1" />
-          <img src="result2.jpg" alt="מסמך 2" />
-          <img src="result3.jpg" alt="מסמך 3" />
-          <img src="result4.jpg" alt="מסמך 4" />
-          <img src="result5.jpg" alt="מסמך 5" />
-          <img src="result6.jpg" alt="מסמך 6" />
-          <img src="result7.jpg" alt="מסמך 7" />
-          <img src="result8.jpg" alt="מסמך 8" />
+<img src="result2.jpg" alt="מסמך 2" />
+<img src="result3.jpg" alt="מסמך 3" />
+<img src="result4.jpg" alt="מסמך 4" />
+<img src="result5.jpg" alt="מסמך 5" />
+<img src="result6.jpg" alt="מסמך 6" />
+<img src="result7.jpg" alt="מסמך 7" />
+<img src="result8.jpg" alt="מסמך 8" />
+<img src="result9.jpg" alt="מסמך 9" />
+<img src="result10.jpg" alt="מסמך 10" />
+<img src="result11.jpg" alt="מסמך 11" />
+<img src="result12.jpg" alt="מסמך 12" />
+<img src="result13.jpg" alt="מסמך 13" />
+<img src="result14.jpg" alt="מסמך 14" />
+<img src="result15.jpg" alt="מסמך 15" />
+<img src="result16.jpg" alt="מסמך 16" />
+<img src="result17.jpg" alt="מסמך 17" />
+<img src="result18.jpg" alt="מסמך 18" />
+<img src="result19.jpg" alt="מסמך 19" />
+<img src="result20.jpg" alt="מסמך 20" />
+
         </div>
       </div>
 
@@ -519,6 +693,73 @@
       </button>
     </div>
   </section>
+
+
+
+  <section class="testimonials">
+  <h2 class="testimonials-title">לקוחות מספרים</h2>
+  <div class="title-line"></div>
+
+  <div class="testimonials-wrapper">
+    <button class="testimonial-arrow prev" aria-label="הקודם">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="testimonials-container">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            מקצועי, ענייני, עושה הכל לטובת הלקוח.
+          </p>
+          <p class="testimonial-name">מור אורית</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            פרפקציוניסט ופדנט...מומלץ מניסיון.
+          </p>
+          <p class="testimonial-name">Shimi Ivragimov</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            מומלץ בחום! אמין, מקצועי וזמין תמיד לכל שאלה.
+          </p>
+          <p class="testimonial-name">Sara Syonov</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            שירות מעולה, יחס אישי ואכפתיות לכל פרט.
+          </p>
+          <p class="testimonial-name">יוסי כהן</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            עורך דין מסור, קשוב וזמין – פשוט תענוג.
+          </p>
+          <p class="testimonial-name">רון לוי</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="testimonial-arrow next" aria-label="הבא">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </div>
+
+  <div class="testimonial-dots"></div>
+</section>
+
+
+
+
 
   <div id="lightbox" aria-modal="true" role="dialog">
     <span class="close-btn" aria-label="סגור תצוגה">×</span>
@@ -545,90 +786,142 @@
       <span>עקוב אחרינו בפייסבוק</span>
     </a>
   </div>
+<script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+    if (!sidebar.classList.contains("active")) {
+      sidebar.style.display = "block";
+      setTimeout(() => {
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
+      }, 10);
+    } else {
+      sidebar.classList.remove("active");
+      menuIcon.classList.remove("active");
+      setTimeout(() => {
+        sidebar.style.display = "none";
+      }, 300);
+    }
+  }
 
-  <script>
-    function toggleMenu() {
-      const sidebar = document.getElementById("sidebar");
-      const menuIcon = document.getElementById("menuIcon");
-      if (!sidebar.classList.contains("active")) {
-        sidebar.style.display = "block";
-        setTimeout(() => {
-          sidebar.classList.add("active");
-          menuIcon.classList.add("active");
-        }, 10);
+  const track = document.querySelector(".carousel-track");
+  const prevBtn = document.querySelector(".carousel-arrow.prev");
+  const nextBtn = document.querySelector(".carousel-arrow.next");
+  const images = Array.from(track.children);
+
+  let currentIndex = 0;
+
+  function getStepWidth() {
+    const img = images[0];
+    const gap = parseInt(getComputedStyle(track).gap) || 20;
+    return img.getBoundingClientRect().width + gap;
+  }
+
+  function moveToIndex(index, animate = true) {
+    const stepWidth = getStepWidth();
+    const maxIndex = images.length - 3; // מציג תמיד 3 תמונות
+
+    if (index < 0) index = 0;
+    if (index > maxIndex) index = maxIndex;
+
+    if (animate) {
+      track.style.transition = "transform 0.4s ease-in-out";
+    } else {
+      track.style.transition = "none";
+    }
+
+    track.style.transform = `translateX(-${stepWidth * index}px)`;
+    currentIndex = index;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    stopAutoPlay(); // עצירת האוטומט לאחר פעולה ידנית
+    moveToIndex(currentIndex + 1);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    stopAutoPlay(); // עצירת האוטומט לאחר פעולה ידנית
+    moveToIndex(currentIndex - 1);
+  });
+
+  window.addEventListener("resize", () => {
+    moveToIndex(currentIndex, false);
+  });
+
+  // === גלילה אוטומטית (Auto-play) ===
+  let autoPlayInterval = null;
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayInterval = setInterval(() => {
+      const maxIndex = images.length - 3;
+      if (currentIndex >= maxIndex) {
+        currentIndex = 0; // חוזר להתחלה
       } else {
-        sidebar.classList.remove("active");
-        menuIcon.classList.remove("active");
-        setTimeout(() => {
-          sidebar.style.display = "none";
-        }, 300);
-      }
-    }
-
-    const track = document.querySelector(".carousel-track");
-    const images = Array.from(track.children);
-    const prevBtn = document.querySelector(".carousel-arrow.prev");
-    const nextBtn = document.querySelector(".carousel-arrow.next");
-
-    let currentIndex = 0;
-    let imagesToShow = 4; // ברירת מחדל לדסקטופ
-
-    function getStepWidth() {
-      const img = images[0];
-      const gap = parseInt(getComputedStyle(track).gap) || 20;
-      const imgWidth = img.getBoundingClientRect().width;
-      return imgWidth + gap;
-    }
-
-    function updateImagesToShow() {
-      const width = window.innerWidth;
-      if (width <= 768) {
-        imagesToShow = 2;
-      } else {
-        imagesToShow = 4;
-      }
-    }
-
-    function updateButtons() {
-      const maxIndex = Math.max(images.length - imagesToShow, 0);
-      prevBtn.disabled = currentIndex <= 0;
-      nextBtn.disabled = currentIndex >= maxIndex;
-    }
-
-    function updateCarousel() {
-      updateImagesToShow();
-      const stepWidth = getStepWidth();
-      const maxIndex = Math.max(images.length - imagesToShow, 0);
-
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-      const moveX = stepWidth * currentIndex;
-   track.style.transform = `translateX(-${moveX}px)`;
-
-
-      updateButtons();
-    }
-
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-
-    nextBtn.addEventListener("click", () => {
-      const maxIndex = Math.max(images.length - imagesToShow, 0);
-      if (currentIndex < maxIndex) {
         currentIndex++;
-        updateCarousel();
       }
+      moveToIndex(currentIndex);
+    }, 2000); // מעבר כל 3 שניות
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayInterval) {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = null;
+    }
+  }
+
+  window.addEventListener("load", () => {
+    moveToIndex(currentIndex, false);
+    startAutoPlay(); // הפעלת הגלילה האוטומטית
+  });
+</script>
+
+<script>
+  const tTrack = document.querySelector(".testimonials-track");
+  const tCards = Array.from(document.querySelectorAll(".testimonial-card"));
+  const tPrev = document.querySelector(".testimonial-arrow.prev");
+  const tNext = document.querySelector(".testimonial-arrow.next");
+  const tDotsContainer = document.querySelector(".testimonial-dots");
+
+  let tIndex = 0;
+  const tVisible = 3;
+  const tMaxIndex = Math.ceil(tCards.length / tVisible) - 1;
+
+  // יצירת נקודות
+  for (let i = 0; i <= tMaxIndex; i++) {
+    const dot = document.createElement("button");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      tIndex = i;
+      updateTestimonials();
     });
+    tDotsContainer.appendChild(dot);
+  }
 
-    window.addEventListener("resize", updateCarousel);
-    window.addEventListener("load", updateCarousel);
+  const tDots = Array.from(tDotsContainer.children);
 
-    const lightbox = document.getElementById("lightbox");
+  function updateTestimonials() {
+    const cardWidth = tCards[0].getBoundingClientRect().width + 20;
+    tTrack.style.transform = `translateX(-${tIndex * cardWidth * tVisible}px)`;
+
+    tDots.forEach(dot => dot.classList.remove("active"));
+    tDots[tIndex].classList.add("active");
+  }
+
+  tPrev.addEventListener("click", () => {
+    tIndex = tIndex <= 0 ? tMaxIndex : tIndex - 1;
+    updateTestimonials();
+  });
+
+  tNext.addEventListener("click", () => {
+    tIndex = tIndex >= tMaxIndex ? 0 : tIndex + 1;
+    updateTestimonials();
+  });
+
+  window.addEventListener("resize", updateTestimonials);
+     const lightbox = document.getElementById("lightbox");
     const lightboxImage = lightbox.querySelector("img");
     const closeBtn = lightbox.querySelector(".close-btn");
 
@@ -649,8 +942,7 @@
         lightbox.classList.remove("active");
       }
     });
-
-  </script>
+</script>
 
   <script src="nagishli_beta.js"></script>
 </body>

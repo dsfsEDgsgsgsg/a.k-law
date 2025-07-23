@@ -14,176 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    .modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
-  border: 3px solid #a27851;
-}
-
-.modal .close {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-
-    .results-section {
-      padding: 80px 20px;
-      text-align: right;
-      direction: rtl;
-    }
-
-    .practice-title-wrapper {
-      display: flex;
-      justify-content: center;
-      padding-right: 40px;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-
-    .practice-title {
-      font-size: 50px;
-      color: #a27851;
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      padding-bottom: 15px;
-      position: relative;
-      text-shadow: 0 0 2px rgba(162, 120, 81, 0.3);
-      margin: 0;
-      display: inline-block;
-    }
-
-    .practice-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 2.9px;
-      background: linear-gradient(to left, transparent, #a27851, transparent);
-    }
-
-    .results-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 600px;
-      margin: 0;
-    }
-
-    .results-grid img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-      border: 0.5px solid #a27851;
-    }
-
-    .results-grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-      filter: brightness(1.05);
-    }
-
-    .vertical-divider {
-      width: 3px;
-      background: linear-gradient(to bottom, transparent, #a27851, transparent);
-      min-height: 450px;
-      border-radius: 2px;
-      margin: 0 20px;
-      align-self: stretch;
-      flex-shrink: 0;
-    }
-
-    .text-box-with-icon {
-      background-color: #fff8ef;
-      padding: 30px 30px 30px 30px;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-      border: 1px solid #e0d2c0;
-      direction: rtl;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 2000px;
-      width: 1200px;
-      box-sizing: border-box;
-    }
-
-    .text-box-with-icon .icon {
-      font-size: 36px;
-      color: #a27851;
-      margin-bottom: 18px;
-      user-select: none;
-    }
-
-    .text-box-with-icon .title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 35px;
-      color: #a27851;
-      margin-bottom: 72px;
-      user-select: none;
-      margin-right: 61px;
-      margin-top: -65px;
-
-      position: relative;
-      padding-bottom: 8px; /* רווח מתחת לכותרת */
-    }
-
-    /* קו תחתון לכותרת בתיבת הטקסט */
-    .text-box-with-icon .title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-left: 10px;
-      width: 1050px; /* אורך הקו */
-      height: 3px; /* עובי הקו */
-      background-color: #a27851;
-      border-radius: 2px;
-    }
-
-    .text-box-with-icon p {
-      margin: 0;
-      font-size: 16px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .content-row {
-      display: flex;
-      direction: rtl;
-      padding: 50px 20px;
-      gap: 0;
-      min-height: 450px;
-    }
 
   </style>
 </head>
@@ -216,9 +46,11 @@
 <nav class="top-nav">
   <ul>
     <li><a href="index.html">דף הבית</a></li>
-    <li><a href="about.html">תוצאות</a></li>
     <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="mhamar.html">מאמרים</a></li>
     <li><a href="contact.html">צור קשר</a></li>
+    
   </ul>
 </nav>
 
@@ -239,45 +71,9 @@
   <div class="background-shape"></div>
   <div class="wave-shape"></div>
 
-  <h1>עורך דין תאונות דרכים</h1>
-  <p>ברמת גן והסביבה</p>
+  <h1>תוצאות במשרדנו</h1>
 </section>
 
-
-<div class="content-row">
-
-  <div style="max-width: 600px; margin-left: auto; display: flex; flex-direction: column;">
-    <div class="practice-title-wrapper">
-      <h2 class="practice-title">תוצאות במשרדנו</h2>
-    </div>
-    <section class="results-section">
-      <div class="results-grid">
-        <img src="result1.jpg" alt="תוצאה 1" />
-        <img src="result2.jpg" alt="תוצאה 2" />
-        <img src="result3.jpg" alt="תוצאה 3" />
-        <img src="result4.jpg" alt="תוצאה 4" />
-        <img src="result5.jpg" alt="תוצאה 5" />
-      </div>
-    </section>
-  </div>
-
-  <div class="vertical-divider"></div>
-
-  <div class="text-box-with-icon">
-    <i class="fas fa-pencil-alt icon" aria-hidden="true"></i>
-    <div class="title">מחויבות לתוצאה אישית</div>
-    <p>
-      אנו פועלים בכל תיק בשילוב של רגישות ונחישות, עם מחויבות אמיתית לתוצאה.<br>
-      משרדנו מתגאה בליווי אישי, שירות איכותי והצלחות מוכחות.
-    </p>
-  </div>
-
-</div>
-
-<div id="imageModal" class="modal" style="display:none;">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage" alt="" />
-</div>
 
 
   <div class="footer">

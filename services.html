@@ -14,16 +14,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    .box {
-      border-top: 5px solid #c9a44d;
-      border-bottom: 5px solid #c9a44d;
-      padding: 40px 20px;
-      width: 400px;
-      margin: 50px auto;
-      background-color: white;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      border-radius: 12px;
-    }
+.box {
+  padding: 30px 15px;
+  background-color: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  border-right: 6px solid #c9a44d;
+  border-radius: 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  width: 150px; /* רוחב קבוע לתיבה */
+  height: 200px;
+  margin-top: 50px;
+}
+
+
 
     .icon {
       font-size: 60px;
@@ -55,21 +60,27 @@
       color: #333;
     }
 
-    .box-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+.box-container {
+  display: flex;
+  gap: 0; /* בלי רווח בין התיבות */
+  padding: 0 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  overflow-x: auto; /* אם המסך צר מדי, יופיע סקרול אופקי */
+}
 
 
-      gap: 20px;
-      padding: 40px 10px;
-      margin: auto;
-    }
 
-    .box-container a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
+
+
+   .box-container a {
+  flex: 1 1 0; /* כל תיבה מתפשטת שווה בגודל */
+  max-width: 33.33%; /* 3 תיבות בשורה */
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
 
     .practice-title-wrapper {
       display: flex;
@@ -153,8 +164,9 @@
 <nav class="top-nav">
   <ul>
     <li><a href="index.html">דף הבית</a></li>
-    <li><a href="about.html">תוצאות</a></li>
     <li><a href="services.html">תחומי עיסוק</a></li>
+    <li><a href="about.html">תוצאות</a></li>
+    <li><a href="mhamar.html">מאמרים</a></li>
     <li><a href="contact.html">צור קשר</a></li>
   </ul>
 </nav>
@@ -176,14 +188,8 @@
   <div class="background-shape"></div>
   <div class="wave-shape"></div>
 
-  <h1>עורך דין תאונות דרכים</h1>
-  <p>ברמת גן והסביבה</p>
+  <h1>תחומי עיסוק במשרדנו</h1>
 </section>
-<div class="column right-column">
-    <h3 class="column-title right-title">
-      <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
-      אודות עורך הדין אריאל קנד
-    </h3>
 
 <div class="box-container">
   <a href="car-accidents.html">
