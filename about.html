@@ -2,18 +2,89 @@
 <html lang="he" dir="rtl">
 <head>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bangers&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bangers&family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
   <title>כותרת אתר</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="css10.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+      /* גלריה - 3 בשורה */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+
+    .clickable-image {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .clickable-image:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      background-color: rgba(0,0,0,0.1);
+      transform: scale(1.03);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none; /* מוסתר כברירת מחדל */
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.active {
+      display: flex; /* מופיע רק כשנפתח */
+    }
+.lightbox-content {
+  width: 90wh;
+  height: 90vh;
+
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  animation: zoomIn 0.3s ease;
+}
+
+
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover {
+      color: #c8a75c;
+    }
+
 
   </style>
 </head>
@@ -50,7 +121,6 @@
     <li><a href="about.html">תוצאות</a></li>
     <li><a href="mhamar.html">מאמרים</a></li>
     <li><a href="contact.html">צור קשר</a></li>
-    
   </ul>
 </nav>
 
@@ -74,71 +144,97 @@
   <h1>תוצאות במשרדנו</h1>
 </section>
 
+<div class="image-gallery">
+  <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+   <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+   <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+   <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+   <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+   <img src="result1.jpg" alt="תמונה 1" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example2.jpg" alt="תמונה 2" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+  <img src="example3.jpg" alt="תמונה 3" class="clickable-image" onclick="openLightbox(this.src)">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<div class="footer">
+  <a
+    class="whatsapp"
+    href="https://wa.me/972501234567"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-whatsapp"></i>
+    <span>צור קשר בוואטסאפ</span>
+  </a>
+  <a
+    class="facebook"
+    href="https://www.facebook.com/YourPageName"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-facebook-f"></i>
+    <span>עקוב אחרינו בפייסבוק</span>
+  </a>
+  <script>
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  document.getElementById("lightbox-img").src = src;
+  lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("active");
+}
+</script>
 
 
-  <div class="footer">
-    <a
-      class="whatsapp"
-      href="https://wa.me/972501234567"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fab fa-whatsapp"></i>
-      <span>צור קשר בוואטסאפ</span>
-    </a>
-    <a
-      class="facebook"
-      href="https://www.facebook.com/YourPageName"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fab fa-facebook-f"></i>
-      <span>עקוב אחרינו בפייסבוק</span>
-    </a>
-  </div>
 
 <script>
-  function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
+function toggleMenu() {
+  const sidebar = document.getElementById("sidebar");
+  const menuIcon = document.getElementById("menuIcon");
 
-    if (!sidebar.classList.contains("active")) {
-      sidebar.style.display = "block";
-      setTimeout(() => {
-        sidebar.classList.add("active");
-        menuIcon.classList.add("active");
-      }, 10);
-    } else {
-      sidebar.classList.remove("active");
-      menuIcon.classList.remove("active");
-      setTimeout(() => {
-        sidebar.style.display = "none";
-      }, 300);
-    }
+  if (!sidebar.classList.contains("active")) {
+    sidebar.style.display = "block";
+    setTimeout(() => {
+      sidebar.classList.add("active");
+      menuIcon.classList.add("active");
+    }, 10);
+  } else {
+    sidebar.classList.remove("active");
+    menuIcon.classList.remove("active");
+    setTimeout(() => {
+      sidebar.style.display = "none";
+    }, 300);
   }
+  console.log("toggleMenu function executed."); // New log
+}
 
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = modal.querySelector(".close");
+window.toggleMenu = toggleMenu; // Make it globally accessible
 
-  document.querySelectorAll('.results-grid img').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = "none";
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
 </script>
+  
 
 <script src="nagishli_beta.js"></script>
 </body>

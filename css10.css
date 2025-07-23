@@ -508,6 +508,10 @@ header {
     max-width: 95%;
     margin: 20px auto;
   }
+  .menu-icon,
+  .sidebar {
+    display: none !important;
+  }
 
   .contact-sidebar {
     margin-top: 20px;
@@ -533,7 +537,10 @@ header {
   body {
     font-size: 16px;
   }
-
+.menu-icon,
+  .sidebar {
+    display: none !important;
+  }
   header {
     height: 90px;
     padding: 20px 15px;
@@ -633,7 +640,10 @@ header {
   .logo span {
     font-size: 14px;
   }
-
+.menu-icon,
+  .sidebar {
+    display: none !important;
+  }
   .menu-icon {
     width: 30px;
     height: 25px;

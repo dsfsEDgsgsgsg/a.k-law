@@ -15,6 +15,7 @@
 
   <style>
 .box {
+    position: relative;
   padding: 30px 15px;
   background-color: white;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
@@ -25,7 +26,8 @@
   flex-shrink: 0;
   width: 150px; /* רוחב קבוע לתיבה */
   height: 200px;
-  margin-top: 50px;
+  margin-top: 20px;
+    z-index: 10
 }
 
 
@@ -68,6 +70,8 @@
   box-sizing: border-box;
   justify-content: center;
   overflow-x: auto; /* אם המסך צר מדי, יופיע סקרול אופקי */
+    position: relative;
+  z-index: 10;
 }
 
 
@@ -188,9 +192,9 @@
   <div class="background-shape"></div>
   <div class="wave-shape"></div>
 
-  <h1>תחומי עיסוק במשרדנו</h1>
-</section>
+  <h1>תחומי עיסוק במשרדנו </h1>
 
+</section>
 <div class="box-container">
   <a href="car-accidents.html">
     <div class="box">
@@ -235,6 +239,7 @@
     </div>
   </a>
 </div>
+
 
   <div class="footer">
     <a
