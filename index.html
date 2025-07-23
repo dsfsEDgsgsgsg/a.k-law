@@ -375,7 +375,7 @@
 
 .testimonial-dots button.active {
   background: #000;
-}@media (max-width: 768px) {
+@media (max-width: 768px) {
 
   .top-section {
     position: fixed;
@@ -465,26 +465,33 @@
     margin: 0;
   }
 
-  /* הצגת החצים במובייל */
+  /* הצגת החצים במובייל - מיקום ושיפור */
   .carousel-arrow {
     display: block !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background: rgba(0,0,0,0.5);
+    width: 28px;
+    height: 28px;
+    background: rgba(0,0,0,0.6);
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    user-select: none;
   }
 
   .carousel-arrow.prev {
-    left: 10px;
+    left: 12px;
   }
 
   .carousel-arrow.next {
-    right: 10px;
+    right: 12px;
   }
 
   #lightbox img {
