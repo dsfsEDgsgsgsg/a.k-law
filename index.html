@@ -375,8 +375,7 @@
 
 .testimonial-dots button.active {
   background: #000;
-}
-@media (max-width: 768px) {
+}@media (max-width: 768px) {
 
   .top-section {
     position: fixed;
@@ -434,15 +433,15 @@
     display: block;
   }
 
-  /* === קרוסלה במובייל – תמונה אחת בלבד בהתחלה עם חצים === */
+  /* === קרוסלה במובייל – כמו במחשב: כמה תמונות בשורה + חצים === */
   .carousel-wrapper {
-    padding: 0 10px !important; /* צמצום פדינג */
+    padding: 0 20px !important; /* כמו במחשב */
   }
 
   .carousel-container {
     max-width: 100vw !important;
-    padding: 0 !important;
-    overflow-x: hidden !important;
+    padding: 0 10px !important;
+    overflow-x: auto !important; /* גלילה אופקית במידת הצורך */
     box-sizing: border-box;
     position: relative;
   }
@@ -453,21 +452,20 @@
     gap: 10px;
     flex-direction: row;
     transition: transform 0.3s ease;
-    justify-content: center; /* מרכז את התמונה */
   }
 
   .carousel-track img {
-    width: 80% !important; /* מקטינים את רוחב התמונה */
-    max-width: 80% !important;
+    width: calc((100% - 20px) / 3) !important; /* 3 תמונות בשורה */
+    max-width: calc((100% - 20px) / 3) !important;
     height: auto !important;
     border-radius: 5px !important;
     cursor: pointer !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     flex-shrink: 0 !important;
-    margin: 0 auto;
+    margin: 0;
   }
 
-  /* מציגים את החצים במובייל */
+  /* הצגת החצים במובייל */
   .carousel-arrow {
     display: block !important;
     position: absolute;
@@ -543,6 +541,7 @@
     height: 200px;
   }
 }
+
 
   </style>
 </head>
