@@ -437,65 +437,7 @@
   }
 
   /* === קרוסלה במובייל – כמו במחשב: כמה תמונות בשורה + חצים === */
-  .carousel-wrapper {
-    padding: 0 20px !important; /* כמו במחשב */
-  }
-
-  .carousel-container {
-    max-width: 100vw !important;
-    padding: 0 10px !important;
-    overflow-x: auto !important; /* גלילה אופקית במידת הצורך */
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  .carousel-track {
-    direction: ltr;
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    transition: transform 0.3s ease;
-  }
-
-  .carousel-track img {
-    width: calc((100% - 20px) / 3) !important; /* 3 תמונות בשורה */
-    max-width: calc((100% - 20px) / 3) !important;
-    height: auto !important;
-    border-radius: 5px !important;
-    cursor: pointer !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    flex-shrink: 0 !important;
-    margin: 0;
-  }
-
-  /* הצגת החצים במובייל - מיקום ושיפור */
-  .carousel-arrow {
-    display: block !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 28px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    user-select: none;
-  }
-
-  .carousel-arrow.prev {
-    left: 12px;
-  }
-
-  .carousel-arrow.next {
-    right: 12px;
-  }
+ 
 
   #lightbox img {
     width: 95vw !important;
