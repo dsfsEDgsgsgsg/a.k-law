@@ -18,25 +18,23 @@
     .image-gallery {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      
       flex-wrap: wrap;
       margin: 40px auto;
       max-width: 900px;
     }
 
     .clickable-image {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 270px;
+
       cursor: pointer;
       transition: all 0.3s ease;
     }
+.clickable-image:hover {
+  filter: brightness(0.7); /* מחשיך את התמונה (כאילו שכבה אפורה מעליה) */
+  cursor: pointer; /* אם רוצים יד של לחיצה */
+}
 
-    .clickable-image:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      background-color: rgba(0,0,0,0.1);
-      transform: scale(1.03);
-    }
 
     /* Lightbox */
     .lightbox {
