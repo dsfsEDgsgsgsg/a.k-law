@@ -9,17 +9,129 @@
   <title>כותרת אתר</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css10.css">
+  <link rel="stylesheet" href="css10.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    /* --- כל הסגנונות שלך ללא שינוי --- */
+    .articles-section {
+      background-color: #f9f6f2;
+      padding: 60px 20px;
+      font-family: 'Assistant', sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      color: #222;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background-color: #c8a75c;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .article-card {
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-5px);
+    }
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .article-content {
+      padding: 20px;
+    }
+    .article-title {
+      font-size: 1.3rem;
+      color: #1d2230;
+      margin-bottom: 10px;
+    }
+    .article-excerpt {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .read-more {
+      text-decoration: none;
+      color: #c8a75c;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .read-more:hover {
+      color: #a27851;
+    }
+    /* רקע כהה מאחורי המודאל */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 5vh auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      height: 90vh;           /* גובה יחסית לחלון כדי לאפשר גלילה */
+      overflow-y: auto;       /* גלילה אנכית */
+      font-family: "Assistant", sans-serif;
+      direction: rtl;
+      position: relative;
+    }
+    .modal-content::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    .close-btn {
+      position: fixed;
+      top: 60px;
+      left: 100px;
+      font-size: 50px;
+      font-weight: bold;
+      color: #a27851;
+      cursor: pointer;
+    }
+    .modal-text h2 {
+      color: #1d2230;
+      margin-top: 0;
+    }
+    .modal-text p,
+    .modal-text ul {
+      margin-bottom: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
   
 <div class="top-section">
-
-
 <header>
   <!-- כפתור המבורגר -->
   <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
@@ -34,8 +146,6 @@
   <span>Ariel Kand Law Firm</span>
 </div>
 
-
-
   <!-- אייקונים ימניים -->
   <div class="icon-group">
     <a href="https://wa.me/972524855911" target="_blank" style="font-size:40px; color:#c8a75c;">
@@ -49,7 +159,6 @@
 
 <!-- תפריט עליון אופקי -->
 <nav class="top-nav">
-  
   <ul>
     <li><a href="index.html">דף הבית</a></li>
     <li><a href="services.html">תחומי עיסוק</a></li>
@@ -58,7 +167,6 @@
     <li><a href="contact.html">צור קשר</a></li>
   </ul>
 </nav>
-
 
 <!-- תפריט צד -->
 <div class="sidebar" id="sidebar" style="display: none;">
@@ -80,60 +188,98 @@
   <h1>מאמרים על משרדנו</h1>
 </section>
 
+<section class="articles-section">
+  <div class="container">
+    <h2 class="section-title">מאמרים מקצועיים</h2>
+    <div class="articles-grid">
 
-  <div class="footer">
-    <a
-      class="whatsapp"
-      href="https://wa.me/972501234567"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fab fa-whatsapp"></i>
-      <span>צור קשר בוואטסאפ</span>
-    </a>
-    <a
-      class="facebook"
-      href="https://www.facebook.com/YourPageName"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fab fa-facebook-f"></i>
-      <span>עקוב אחרינו בפייסבוק</span>
-    </a>
-  </div>
+      <article class="article-card">
+        <img src="images/article1.jpg" alt="תמונה למאמר" class="article-image">
+        <div class="article-content">
+          <h3 class="article-title">מאמר על תאונת דרכים</h3>
+          <p class="article-excerpt">מידי שנה נפגעים כשלושים אלף בני אדם בתאונות דרכים... לקריאה על זכויותיכם ופיצויים – לחצו על הכפתור.</p>
+          <a href="javascript:void(0)" class="read-more" onclick="openModal('article1')">לקריאה נוספת</a>
+        </div>
+      </article>
 
- <section class="section-kesher">
-    <h2 class="kesher-title">צרו איתנו קשר</h2>
-    <div class="kesher-items">
-      
-      <!-- טלפון -->
-      <div class="kesher-box">
-        <img src="https://img.icons8.com/ios-filled/50/d4b073/phone.png" class="kesher-icon" alt="טלפון">
-        <h3 class="kesher-label">טלפון</h3>
-        <p class="kesher-value"><a href="https://wa.me/972524855911">054-8095775</a></p>
-      </div>
+      <article class="article-card">
+        <img src="images/article1.jpg" alt="תמונה למאמר" class="article-image">
+        <div class="article-content">
+          <h3 class="article-title">איך יודעים מה שווי הפיצוי שמגיע לנפגע בתאונה?</h3>
+          <p class="article-excerpt">"אז כמה שווה התיק שלי?..." – שאלה אשר כל עורך דין נשאל חדשות לבקרים...</p>
+          <a href="javascript:void(0)" class="read-more" onclick="openModal('article2')">לקריאה נוספת</a>
+        </div>
+      </article>
 
-      <!-- אימייל -->
-      <div class="kesher-box">
-        <img src="https://img.icons8.com/ios-filled/50/d4b073/new-post.png" class="kesher-icon" alt="אימייל">
-        <h3 class="kesher-label">דואר אלקטרוני</h3>
-        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent">arielkand@gmail.com</a></p>
-      </div>
-
-      <!-- כתובת -->
-      <div class="kesher-box">
-        <img src="https://img.icons8.com/ios-filled/50/d4b073/marker.png" class="kesher-icon" alt="כתובת">
-        <h3 class="kesher-label">כתובת</h3>
-        <p class="kesher-value">
-          <a href="https://maps.app.goo.gl/vyR3hD7JsBtpUpJn7" target="_blank" rel="noopener">
-            ברץ 2, פתח תקווה
-          </a>
-        </p>
-      </div>
+      <!-- תוכל להוסיף עוד מאמרים באותו פורמט -->
 
     </div>
-    <div>
-      <h4 class="p10">Arial Kand</h4>
+  </div>
+</section>
+
+<!-- מודאל אחד בלבד -->
+<div id="articleModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-text" id="modalText">
+      <!-- כאן נטען תוכן דינמי -->
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <a
+    class="whatsapp"
+    href="https://wa.me/972548095775"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-whatsapp"></i>
+    <span>צור קשר בוואטסאפ</span>
+  </a>
+  <a
+    class="facebook"
+    href="https://www.facebook.com/profile.php?id=61557143331663&sk=about"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-facebook-f"></i>
+    <span>עקוב אחרינו בפייסבוק</span>
+  </a>
+</div>
+
+<section class="section-kesher">
+  <h2 class="kesher-title">צרו איתנו קשר</h2>
+  <div class="kesher-items">
+    
+    <!-- טלפון -->
+    <div class="kesher-box">
+      <img src="https://img.icons8.com/ios-filled/50/d4b073/phone.png" class="kesher-icon" alt="טלפון">
+      <h3 class="kesher-label">טלפון</h3>
+      <p class="kesher-value"><a href="https://wa.me/972524855911">054-8095775</a></p>
+    </div>
+
+    <!-- אימייל -->
+    <div class="kesher-box">
+      <img src="https://img.icons8.com/ios-filled/50/d4b073/new-post.png" class="kesher-icon" alt="אימייל">
+      <h3 class="kesher-label">דואר אלקטרוני</h3>
+      <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent">arielkand@gmail.com</a></p>
+    </div>
+
+    <!-- כתובת -->
+    <div class="kesher-box">
+      <img src="https://img.icons8.com/ios-filled/50/d4b073/marker.png" class="kesher-icon" alt="כתובת">
+      <h3 class="kesher-label">כתובת</h3>
+      <p class="kesher-value">
+        <a href="https://maps.app.goo.gl/vyR3hD7JsBtpUpJn7" target="_blank" rel="noopener">
+          ברץ 2, פתח תקווה
+        </a>
+      </p>
+    </div>
+
+  </div>
+  <div>
+    <h4 class="p10">Arial Kand</h4>
 <script>
   function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
@@ -154,6 +300,86 @@
     }
   }
 </script>
+
+<script>
+  // תוכן דינמי למאמרים
+  const articlesContent = {
+    article1: `
+      <h2>מאמר על תאונת דרכים</h2>
+      <p>מידי שנה נפגעים במדינת ישראל, למרבה הצער, כשלושים אלף בני אדם בתאונות דרכים...</p>
+      <p>אם נפגעתם בתאונת דרכים... אתם זכאים לפנות לעורך דין בתחום...</p>
+      <p><strong>מי זכאי לפיצוי?</strong></p>
+      <p>חוק הפיצויים לנפגעי תאונות דרכים (הפלת"ד)...</p>
+      <p><strong>את מי תובעים?</strong></p>
+      <p>פיצוי בגין תאונת דרכים נתבע מחברת הביטוח...</p>
+      <p>...חברות הביטוח אינן ששות לשלם ולכן חשוב ייעוץ משפטי מוקדם...</p>
+      <p><strong>כמה כסף מתקבל כפיצוי?</strong></p>
+      <p>מטרת עורך הדין היא להשיג פיצוי מרבי בהתאם לפגיעות...</p>
+      <p><strong>מהם ראשי הנזק המרכזיים?</strong></p>
+      <ul>
+        <li>נזק לא ממוני – כאב וסבל</li>
+        <li>הוצאות – תרופות, נסיעות, רופאים...</li>
+        <li>הפסדי שכר – בעבר ובעתיד</li>
+        <li>עזרת צד ג'</li>
+      </ul>
+      <p><strong>מתי לפנות לעורך דין?</strong></p>
+      <p>כמה שיותר מוקדם אחרי התאונה...</p>
+      <p><strong>שכר טרחת עורך הדין?</strong></p>
+      <p>באחוזים מתוך הפיצוי – רק אם זכיתם בתביעה.</p>
+      <p><strong>התיישנות?</strong></p>
+      <p>7 שנים מהתאונה, או מגיל 18 במקרה של קטינים.</p>
+      <p><strong>למי כדאי לפנות?</strong></p>
+      <p>עורך דין אריאל קנד – עו"ד מנוסה בתחום תאונות הדרכים...</p>
+    `,
+    article2: `
+      <h2>איך יודעים מה שווי הפיצוי שמגיע לנפגע בתאונה?</h2>
+      <p>"אז כמה שווה התיק שלי?..." – שאלה אשר כל עורך דין נשאל חדשות לבקרים. השאלה מובנת לחלוטין, שכן אין ספק כי נפגעי גוף מתאונה פונים אל עורך דין נזקי גוף במטרה להשיג פיצויים מרביים מתאונה אותה עברו. נפגעי גוף מתאונה מניחים, לעיתים בצדק רב, כי לעורך הדין אליו פנו יש ניסיון רב בהשגתה הפיצוי המקסימלי מתאונה ולפיכך, הם מסיקים כי לעורך הדין תהיה הערכה של סדרי הגודל של הפיצויים אותם הוא יכול להשיג עבורם.</p>
+      <h3>מה הם הנתונים המשפיעים על גובה הפיצויים?</h3>
+      <p>ישנם נתונים רבים המשפיעים על גובה הפיצויים המגיעים לנפגעי גוף מתאונה. יחד עם זאת, שלושה נתונים משמעותיים הינם בדרך כלל בעלי ההשפעה הגבוהה ביותר: גיל הנפגע, גובה שכרו או פוטנציאל השתכרותו והנכות הצמיתה אשר תיוותר לו מהתאונה, גובה הנכות וסוג הנכות.</p>
+      <h3>מהי חשיבות גיל הנפגע על גובה הפיצויים? </h3>
+      <p>בדרך כלל, פיצויים מרביים מתאונה מתקבלים באמצעות עורך דין נזקי גוף במקרים בהם נקבעת "נכות צמיתה". נכות צמיתה היא נכות הנקבעת בגין פגימה או מגבלה גופנית, אשר מזכה בנכות ואשר נותרת אצל נפגע גוף מתאונה עד יומו האחרון.</p>
+      <p>נפגעי גוף מתאונה אשר נותרת להם נכות צמיתה, זכאים ברוב המקרים, לקבל את השווי של הנזק אשר ייגרם להם מדי חודש בחודשו ליתרת חייהם בגין הוצאות עתידיות, עלות עזרה לה ייזקקו והפסדי ההשתכרות לעתיד.</p>
+      <p>חשיבות גיל הנפגע על גובה הפיצויים, אם כן ברורה: ככל שנפגע גוף מתאונה הוא צעיר יותר, מגיעים לו פיצויים בגין חודשים רבים יותר לעתיד הצפוי עד תום תוחלת חייו או חיי העבודה הצפויים לו.</p>
+      <h3>מהי חשיבות גובה שכרו של נפגע גוף מתאונה על גובה הפיצויים?</h3>
+      <p>נפגעי גוף מתאונה אשר נותרת להם מגבלה לצמיתות עשויים להיות זכאים לפיצויים בגין הפגיעה בשכרם בעתיד וכן בגין הפגיעה הפוטנציאלית בכושר ההשתכרות שלהם לעתיד. בתי המשפט נוהגים לחשב את הפגיעה הזו כנוסחה המביאה בחשבון את הפסדי השכר לעתיד כאחוז משכרם של נפגעי גוף מתאונה.</p>
+      <p>לפיכך, כאשר שכרו של נפגע גוף מתאונה גבוה יותר, גם 10% למשל משכרו הוא סכום גבוה יותר ולכן חישוב הפסדי השכר לעתיד יביא לתוצאה גבוה יותר בפסיקת פיצויים בגין הפסדי השתכרות לעתיד. </p>
+      <h3>מה ההבדל בין "פגיעה בהשתכרות" לבין "פגיעה בכושר השתכרות"?</h3>
+      <p>פגיעה בהשתכרות היא ההפרש השלילי בשכר שנגרם עקב נזקי גוף מתאונה. למשל: נפגע גוף מתאונה שהשתכר לפני התאונה 10,000 ₪ בחודש, ואילו לאחריה שכרו ירד ל 8,000 ₪ בחודש – הפגיעה בהשתכרות שלו היא 2,000 ₪ לחודש.</p>
+      <p>פגיעה בכושר ההשתכרות היא הפגיעה ביכולתו של נפגע גוף מתאונה להגיע למיצוי הפוטנציאל שלו. כך למשל, סטודנט, אשר לומד תואר ראשון במחשבים ואינו עובד כלל, עשוי להיות מוכר על ידי בית המשפט כבעל פוטנציאל שכר גדול ובהתאם תוערך פגיעה בכושר השתכרות בעתיד במקרה ותיוותר לו נכות צמיתה אשר לדעת בית המשפט תפגע בפוטנציאל השתכרותו.</p>
+      <h3>מה חשיבות סוג הנכות אשר תיוותר מהתאונה על גובה הפיצויים?</h3>
+      <p>נפגע גוף מתאונה יכול להיות אחד שנפגע פגיעה אורתופדית בגבו, אחד שנפגע בשמיעה, אחד שנותרה לו צלקת, נפגע פגיעה אחרת או שילוב של כמה פגיעות.</p>
+      <p>לנכויות שונות יש ביטוי שונה בחייו של נפגע תאונה והביטוי עשוי להשתנות מנפגע אחד למשנהו. כך למשל, פסנתרן אשר מאבד אצבע, יכול לחוות פגיעה משמעותית בכושר השתכרותו, בעוד אם הוא ייאבד את קולו, הפגיעה עשויה להיות זניחה. לעומתו, הזמר המופיע לצידו נמצא במצב הפוך: אבדן אצבע יהיה משמעותי פחות עבורו מאבדן קולו.</p>
+      <p>ברור, אם כן, כי ככל שהנכות גדולה יותר והסוג שלה הינו בעל משמעות תפקודית רבה יותר לחייו של נפגע גוף מתאונה, הדבר ישפיע באופן חיובי על גובה הפיצויים אותו יקבל הנפגע.</p>
+      <h3>האם עליי לבחור את עורך הדין המעריך את התיק שלי בסכום הגבוה ביותר?</h3>
+      <p>התשובה לשאלה האמורה היא: ממש לא! עורך דין נזקי גוף אשר מעריך את הפיצויים בגין נזקי גוף מתאונה בסכום הגבוה היותר, עשוי לעשות כן כדי ללכוד את הנפגע ברשתו. למעשה, עורך דין מיומן מבין כי לא ניתן להעריך מראש על אף ניסיונו הרב את גובה הפיצויים הצפוי בגין התאונה.</p>
+      <p>זהות המומחים שימונו על ידי בית המשפט, זהות השופט, יכולת ההחלמה של הנפגע, סיבוכים בלתי צפויים במצבו, הזדמנויות תעסוקתיות, אירועים רפואיים או תאונות נוספות יכולים כולם להשפיע משמעותית על התוצאה הצפויה.</p>
+      <p>עורך דין אריאל קנד  ליווה  ועודנו מלווה עשרות רבות של נפגעי גוף מתאונה, עם תוצאות גבוהות. התוצאות האמורות לא היו פרי הבטחות שווא, אלא הדרכה מדויקת של נפגעי גוף מתאונה באופן המדויק והמיטבי למימוש זכויותיהם ומיקסום פיצויים בגין נזקי גוף מתאונה וכן ניהול זהיר ומחושב של תביעת הפיצויים מול הגורמים החבים בפיצויים.</p>
+    `
+  };
+
+  function openModal(id) {
+    const modal = document.getElementById("articleModal");
+    const modalText = document.getElementById("modalText");
+    if (articlesContent[id]) {
+      modalText.innerHTML = articlesContent[id];
+      modal.style.display = "block";
+      window.scrollTo(0,0);
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("articleModal").style.display = "none";
+  }
+
+  // סגירה בלחיצה מחוץ לחלון המודאל
+  window.onclick = function(event) {
+    const modal = document.getElementById("articleModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
 <script src="nagishli_beta.js"></script>
 </body>
 </html>
