@@ -137,8 +137,7 @@
     font-size: 21px;
   }
 }
-
-/* מסכים בינוניים */
+/* מסכים בינוניים (עד 1024px) - שמור עיצוב רגיל */
 @media screen and (max-width: 1024px) {
   .practice-title {
     font-size: 2.4rem;
@@ -146,6 +145,8 @@
 
   .box {
     height: 200px;
+    max-width: 180px;  /* אפשר להשאיר לשורות מרובות */
+    border-right: 6px solid #c9a44d; /* אם רוצה פס צד */
   }
 
   .icon {
@@ -157,18 +158,48 @@
   }
 }
 
-/* מסכים קטנים */
+/* מסכים קטנים (עד 768px) - מעבר לתיבות עמודה, רוחב 80%, פס למעלה ולמטה */
 @media screen and (max-width: 768px) {
   .practice-title {
     font-size: 2rem;
   }
 
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .box-container a {
+    width: 80%;
+    max-width: 80%;
+  }
+
   .box {
-    height: 180px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 25px 15px;
+    border-top: 4px solid #c9a44d;
+    border-bottom: 4px solid #c9a44d;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    background-color: white;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .icon {
     font-size: 42px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .menu-icon,
@@ -177,14 +208,14 @@
   }
 }
 
-/* מסכים קטנטנים */
+/* מסכים קטנטנים (עד 480px) - כמו קטנים, עם התאמות קטנות בגודל */
 @media screen and (max-width: 480px) {
   .practice-title {
     font-size: 1.6rem;
   }
 
   .box {
-    height: 170px;
+    height: auto; /* מאפשר גובה גמיש */
   }
 
   .icon {
@@ -196,6 +227,7 @@
     font-size: 18px;
   }
 }
+
 
   </style>
 </head>
