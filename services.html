@@ -14,8 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* סגנון לתיבה בודדת */
-.box {
+    .box {
   position: relative;
   padding: 30px 15px;
   background-color: white;
@@ -139,20 +138,37 @@
   }
 }
 
-/* מדיה: מסכים קטנים (טאבלטים וניידים) */
-@media screen and (max-width: 768px) {
-  .box-container {
-    padding: 20px 10px;
-    gap: 20px;
+/* מסכים בינוניים */
+@media screen and (max-width: 1024px) {
+  .practice-title {
+    font-size: 2.4rem;
   }
 
   .box {
-    max-width: 100%;
-    height: 220px;
+    height: 200px;
   }
 
+  .icon {
+    font-size: 45px;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+}
+
+/* מסכים קטנים */
+@media screen and (max-width: 768px) {
   .practice-title {
     font-size: 2rem;
+  }
+
+  .box {
+    height: 180px;
+  }
+
+  .icon {
+    font-size: 42px;
   }
 
   .menu-icon,
@@ -161,14 +177,14 @@
   }
 }
 
-/* מדיה: מסכים קטנטנים (פלאפונים) */
+/* מסכים קטנטנים */
 @media screen and (max-width: 480px) {
   .practice-title {
     font-size: 1.6rem;
   }
 
   .box {
-    height: 200px;
+    height: 170px;
   }
 
   .icon {
@@ -180,6 +196,7 @@
     font-size: 18px;
   }
 }
+
   </style>
 </head>
 <body>
