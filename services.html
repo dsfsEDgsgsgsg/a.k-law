@@ -120,35 +120,35 @@
   height: 2.9px;
   background: linear-gradient(to right, transparent, #a27851, transparent);
 }
-
-/* התאמות למסכים בינוניים */
 @media screen and (max-width: 1024px) {
   .practice-title {
     font-size: 2.4rem;
   }
 
   .box {
-    max-width: 160px;
+    max-width: 300px;
+    height: 220px;
   }
 
   .icon {
-    font-size: 40px;
+    font-size: 45px;
+  }
+
+  .title {
+    font-size: 21px;
   }
 }
 
-/* התאמות למסכים קטנים (טאבלטים וניידים) */
+/* מדיה: מסכים קטנים (טאבלטים וניידים) */
 @media screen and (max-width: 768px) {
   .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
     padding: 20px 10px;
-    margin: auto;
+    gap: 20px;
   }
 
   .box {
     max-width: 100%;
-    height: auto;
+    height: 220px;
   }
 
   .practice-title {
@@ -161,21 +161,25 @@
   }
 }
 
-/* התאמות למסכים קטנטנים */
+/* מדיה: מסכים קטנטנים (פלאפונים) */
 @media screen and (max-width: 480px) {
   .practice-title {
     font-size: 1.6rem;
   }
 
+  .box {
+    height: 200px;
+  }
+
   .icon {
-    font-size: 32px;
+    font-size: 36px;
+    margin-bottom: 15px;
   }
 
   .title {
     font-size: 18px;
   }
 }
-
   </style>
 </head>
 <body>
