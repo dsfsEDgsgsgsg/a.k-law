@@ -14,8 +14,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* סגנון לתיבה בודדת */
 .box {
-    position: relative;
+  position: relative;
   padding: 30px 15px;
   background-color: white;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
@@ -24,116 +25,157 @@
   border-radius: 0;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
-  width: 150px; /* רוחב קבוע לתיבה */
-  height: 200px;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
   margin-top: 20px;
-    z-index: 10
-}
-
-
-
-    .icon {
-      font-size: 60px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .icon:hover {
-      transform: scale(1.05);
-      transition: 0.3s;
-    }
-
-    .box:hover {
-      background-color: #f9f5e6;
-      box-shadow: 0 6px 18px rgba(201, 164, 77, 0.35);
-      cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
-
-.box-container {
-  display: flex;
-  gap: 0; /* בלי רווח בין התיבות */
-  padding: 0 10px;
-  max-width: 100%;
-  box-sizing: border-box;
-  justify-content: center;
-  overflow-x: auto; /* אם המסך צר מדי, יופיע סקרול אופקי */
-    position: relative;
   z-index: 10;
 }
 
+/* אייקון */
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
+.icon:hover {
+  transform: scale(1.05);
+}
 
+/* האפקט על התיבה */
+.box:hover {
+  background-color: #f9f5e6;
+  box-shadow: 0 6px 18px rgba(201, 164, 77, 0.35);
+  cursor: pointer;
+}
 
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #222;
+}
 
-   .box-container a {
-  flex: 1 1 0; /* כל תיבה מתפשטת שווה בגודל */
-  max-width: 33.33%; /* 3 תיבות בשורה */
+/* תיבת משנה לכותרת קטנה */
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* מכולה לתיבות */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.box-container a {
+  flex: 1 1 0;
+  max-width: 33.33%;
   box-sizing: border-box;
   text-decoration: none;
   color: inherit;
 }
 
-    .practice-title-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
+/* כותרת מדור */
+.practice-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
 
-    .practice-title {
-      font-size: 50px;
-      color: #a27851;
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-align: center;
-      padding-bottom: 15px;
-      position: relative;
-      text-shadow: 0 0 2px rgba(162, 120, 81, 0.3);
-      margin: 0 auto;
-      display: inline-block;
-    }
+.practice-title {
+  font-size: 3rem;
+  color: #a27851;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding-bottom: 15px;
+  position: relative;
+  text-shadow: 0 0 2px rgba(162, 120, 81, 0.3);
+  margin: 0 auto;
+  display: inline-block;
+}
 
-    .practice-title::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 78%;
-      transform: translateX(-70%);
-      width: 140%;
-      height: 2.9px;
-      background: linear-gradient(to right, transparent, #a27851, transparent);
-    }
-       
-    /* הסתרת תפריט צד והכפתור בנייד */
-    @media screen and (max-width: 768px) {
-      .menu-icon,
-      .sidebar {
-        display: none !important;
-      }
-         .box-container {
-      display: grid;
-      grid-template-columns: 1fr;
+.practice-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 2.9px;
+  background: linear-gradient(to right, transparent, #a27851, transparent);
+}
 
-      gap: 20px;
-      padding: 40px 10px;
-      margin: auto;
-    }
-    }
+/* התאמות למסכים בינוניים */
+@media screen and (max-width: 1024px) {
+  .practice-title {
+    font-size: 2.4rem;
+  }
+
+  .box {
+    max-width: 160px;
+  }
+
+  .icon {
+    font-size: 40px;
+  }
+}
+
+/* התאמות למסכים קטנים (טאבלטים וניידים) */
+@media screen and (max-width: 768px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+    margin: auto;
+  }
+
+  .box {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .practice-title {
+    font-size: 2rem;
+  }
+
+  .menu-icon,
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* התאמות למסכים קטנטנים */
+@media screen and (max-width: 480px) {
+  .practice-title {
+    font-size: 1.6rem;
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
+
   </style>
 </head>
 <body>
