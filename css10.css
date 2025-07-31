@@ -784,3 +784,70 @@ header {
     font-size: 16px;
   }
 }
+@media (max-width: 1024px) {
+  .kesher-items {
+    gap: 80px;
+    margin-right: 0;
+  }
+
+  .kesher-box {
+    max-width: 200px;
+  }
+
+  .kesher-icon {
+    width: 40px;
+  }
+
+  .kesher-label {
+    font-size: 22px;
+  }
+
+  .section-kesher .kesher-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+
+/* מובייל רגיל */
+@media (max-width: 768px) {
+  .kesher-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-right: 0;
+  }
+
+  .kesher-box {
+    max-width: 100%;
+  }
+
+  .kesher-icon {
+    width: 38px;
+  }
+
+  .kesher-label {
+    font-size: 20px;
+  }
+
+  .section-kesher .kesher-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/* מובייל קטן */
+@media (max-width: 480px) {
+  .kesher-icon {
+    width: 34px;
+    margin-bottom: 15px;
+  }
+
+  .kesher-label {
+    font-size: 18px;
+  }
+
+  .section-kesher .kesher-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+}
