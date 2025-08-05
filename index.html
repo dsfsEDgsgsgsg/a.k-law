@@ -14,26 +14,25 @@
   <link rel="stylesheet" href="css10.css" />
 
   <style>
-    /* === סגנון כללי לשני טורים === */
-   /* === 1. מבנה עמוד כללי וטקסטים === */
+    /* === 1. מבנה עמוד כללי וטקסטים === */
 .two-columns {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 3.75rem;
   max-width: 100%;
-  padding: 0 60px;
-  margin: 80px auto;
+  padding: 0 3.75rem;
+  margin: 5rem auto;
   flex-wrap: wrap;
 }
 
 .column {
   width: 40%;
   font-family: "Playfair Display", serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 2;
   color: #333;
   text-align: center;
-  min-height: 350px;
+  min-height: 21.875rem;
   margin: 0 auto;
 }
 
@@ -42,13 +41,13 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-size: 34px;
+  font-size: 2.125rem;
   color: #000;
   text-align: center;
   position: relative;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  margin-left: 15px;
+  margin-bottom: 1.875rem;
+  padding-bottom: 0.9375rem;
+  margin-left: 0.9375rem;
   display: inline-block;
 }
 
@@ -58,33 +57,33 @@
   left: 0;
   bottom: 0;
   width: 35%;
-  height: 2px;
+  height: 0.125rem;
   background-color: #a27851;
   border-radius: 2px;
   margin-left: 27%;
 }
 
 .column-title .title-icon {
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #a27851;
-  padding: 0 10px;
+  padding: 0 0.625rem;
   user-select: none;
 }
 
 .left-column {
   display: inline-block;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   margin-right: 30%;
 }
 
 .column-text {
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0 auto;
   line-height: 2;
   direction: rtl;
   text-align: center;
-  max-width: 600px;
+  max-width: 37.5rem;
   color: #333;
 }
 
@@ -98,7 +97,7 @@
   list-style-type: disc;
   list-style-position: outside;
   padding-right: 1.8em;
-  margin-right: 17px;
+  margin-right: 1.0625rem;
 }
 
 .treatment-list li {
@@ -108,7 +107,7 @@
 /* === 2. קרוסלה === */
 .carousel-section {
   background: url('arial100.jpg') center/cover no-repeat;
-  padding: 50px 0;
+  padding: 3.125rem 0;
   text-align: center;
   color: white;
   position: relative;
@@ -132,8 +131,8 @@
 }
 
 .carousel-title {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 2.25rem;
+  margin-bottom: 0.625rem;
   color: aliceblue;
   font-family: "Assistant", sans-serif;
   font-optical-sizing: auto;
@@ -141,18 +140,18 @@
 }
 
 .carousel-line {
-  height: 1.3px;
-  width: 700px;
+  height: 0.08125rem;
+  width: 43.75rem;
   background-color: #a27851;
-  margin: 0 auto 40px;
+  margin: 0 auto 2.5rem;
 }
 
 .carousel-wrapper {
   position: relative;
-  max-width: 940px;
+  max-width: 58.75rem;
   margin: 0 auto;
   overflow: visible;
-  padding: 0 60px;
+  padding: 0 3.75rem;
   box-sizing: border-box;
 }
 
@@ -164,7 +163,7 @@
 
 .carousel-track {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   transition: transform 0.4s ease-in-out;
   justify-content: flex-start;
   flex-direction: row;
@@ -172,12 +171,12 @@
 }
 
 .carousel-track img {
-  width: calc((100% - 40px) / 3);
-  height: 150px;
+  width: calc((100% - 2.5rem) / 3);
+  height: 9.375rem;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: white;
-  box-shadow: 0 0 10px rgba(162, 120, 81, 0.8);
+  box-shadow: 0 0 0.625rem rgba(162, 120, 81, 0.8);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
@@ -185,7 +184,7 @@
 
 .carousel-track img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(162, 120, 81, 1);
+  box-shadow: 0 0 1.5625rem rgba(162, 120, 81, 1);
 }
 
 .carousel-arrow {
@@ -195,7 +194,7 @@
   background: none;
   border: none;
   color: #a27851;
-  font-size: 40px;
+  font-size: 2.5rem;
   padding: 0;
   cursor: pointer;
   user-select: none;
@@ -221,6 +220,7 @@
   left: 0;
   right: auto;
 }
+
 
 /* === 3. לייטבוקס === */
 #lightbox {
@@ -326,11 +326,13 @@
 .testimonial-text {
   font-size: 16px;
   color: #333;
-  margin-bottom: 15px;
   line-height: 1.6;
+
 }
 
+
 .testimonial-name {
+  margin-top:60px;
   font-size: 15px;
   font-weight: bold;
   color: #555;
@@ -364,19 +366,19 @@
 }
 
 .testimonial-dots button {
-  width: 8px;
-  height: 8px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid #c8a75c; /* הוספתי את "solid" כדי שהגבול יוצג */
   background: #ccc;
   cursor: pointer;
   transition: background 0.3s;
+  margin: 0 15px; /* רווח בין הנקודות */
 }
 
 .testimonial-dots button.active {
-
-
-  background: #000;
+  background: #000; /* צבע רקע שונה לכפתור הנבחר */
+  border-color: #a27851; /* אפשר להדגיש גם את הגבול */
 }
 
 
@@ -434,6 +436,7 @@
      font-size: 90px;
      margin-top: 35px;
     }
+
 @media (max-width: 768px) {
 
   .top-section {
@@ -741,9 +744,7 @@
     </div>
   </section>
 
-
-
-  <section class="testimonials">
+<section class="testimonials">
   <h2 class="testimonials-title">לקוחות מספרים</h2>
   <div class="title-line"></div>
 
@@ -754,45 +755,81 @@
 
     <div class="testimonials-container">
       <div class="testimonials-track">
+
         <div class="testimonial-card">
           <div class="quote-icon">❝</div>
           <p class="testimonial-text">
-            מקצועי, ענייני, עושה הכל לטובת הלקוח.
+            עו"ד מקצועי, נותן יחס אישי לכל אחד ואחת ליווה אותי בתביעה עד התוצאה המעולה
           </p>
-          <p class="testimonial-name">מור אורית</p>
+          <p class="testimonial-name">אבישג <span class="testimonial-date">28/07/2025</span></p>
         </div>
 
         <div class="testimonial-card">
           <div class="quote-icon">❝</div>
           <p class="testimonial-text">
-            פרפקציוניסט ופדנט...מומלץ מניסיון.
+            יחס אישי בכל שעה ביום תודה רבה על הטיפול בתיק
           </p>
-          <p class="testimonial-name">Shimi Ivragimov</p>
+          <p class="testimonial-name">סיון <span class="testimonial-date">27/07/2025</span></p>
         </div>
 
         <div class="testimonial-card">
           <div class="quote-icon">❝</div>
           <p class="testimonial-text">
-            מומלץ בחום! אמין, מקצועי וזמין תמיד לכל שאלה.
+            מבין את התיק ויודע איך לפעול זה מדהים !!!
           </p>
-          <p class="testimonial-name">Sara Syonov</p>
+          <p class="testimonial-name">מיכאל <span class="testimonial-date">18/07/2025</span></p>
         </div>
 
         <div class="testimonial-card">
           <div class="quote-icon">❝</div>
           <p class="testimonial-text">
-            שירות מעולה, יחס אישי ואכפתיות לכל פרט.
+            עו"ד אריאל קנד מקצוען מהשורה הראשונה. הוא עובד ביסודיות ובמקצועיות, עונה על כל שאלה והכל בצניעות ובסבלנות. אני ממליצה לכל אחד ואחת שמחפש.ת עו"ד שאפשר לסמוך עליו במאת האחוזים, אז הגעתם לכתובת הנכונה.
           </p>
-          <p class="testimonial-name">יוסי כהן</p>
+          <p class="testimonial-name">מישל <span class="testimonial-date">10/07/2025</span></p>
         </div>
 
         <div class="testimonial-card">
           <div class="quote-icon">❝</div>
           <p class="testimonial-text">
-            עורך דין מסור, קשוב וזמין – פשוט תענוג.
+            עו"ד זמין חרוץ נעים הליכות ורציני. שיהיה לנו ולו בהצלחה. ב"ה שיצליח בכול הדיונים.
           </p>
-          <p class="testimonial-name">רון לוי</p>
+          <p class="testimonial-name">אליעזר <span class="testimonial-date">10/07/2025</span></p>
         </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            עורך דין מס 1 שירות ויחס מצויין
+          </p>
+          <p class="testimonial-name">נועה <span class="testimonial-date">10/07/2025</span></p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            עורך דין חכם מקצועי מאוד. יעיל שירותי. אדיב אמין ונותן יחס חם בגובה עיניים. ממליצה בחום
+          </p>
+          <p class="testimonial-name">סופיה <span class="testimonial-date">10/07/2025</span></p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            עו״ד מקצועי שמכיר ויודע את העבודה מול רשויות החוק להשגת התוצאה הטובה ביותר!
+          </p>
+          <p class="testimonial-name">אנונימי <span class="testimonial-date">10/07/2025</span></p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">❝</div>
+          <p class="testimonial-text">
+            עורך דין מספר אחת עוזר לכולם ליווה אותי בצורה מקצועית ובליווי מקצועי. ממליצה בחום ♥️
+          </p>
+          <p class="testimonial-name">אפרת <span class="testimonial-date">10/07/2025</span></p>
+        </div>
+
+      
+
       </div>
     </div>
 
@@ -803,6 +840,7 @@
 
   <div class="testimonial-dots"></div>
 </section>
+
 
 
 
@@ -826,7 +864,7 @@
     </a>
     <a
       class="facebook"
-      href="https://www.facebook.com/profile.php?id=61557143331663&sk=about"
+      href="https://www.facebook.com/profile.php?id=61557143331663"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -903,22 +941,24 @@
     return img.getBoundingClientRect().width + gap;
   }
 
-  function moveToIndex(index, animate = true) {
-    const stepWidth = getStepWidth();
-    const maxIndex = images.length - 3; // מציג תמיד 3 תמונות
+ function moveToIndex(index, animate = true) {
+  const stepWidth = getStepWidth();
+  const maxIndex = images.length - 3; // מציג 3 תמונות בכל פעם
 
-    if (index < 0) index = 0;
-    if (index > maxIndex) index = maxIndex;
+  // תיקון אינדקס למעגלי:
+  if (index < 0) index = maxIndex;
+  if (index > maxIndex) index = 0;
 
-    if (animate) {
-      track.style.transition = "transform 0.4s ease-in-out";
-    } else {
-      track.style.transition = "none";
-    }
-
-    track.style.transform = `translateX(-${stepWidth * index}px)`;
-    currentIndex = index;
+  if (animate) {
+    track.style.transition = "transform 0.4s ease-in-out";
+  } else {
+    track.style.transition = "none";
   }
+
+  track.style.transform = `translateX(-${stepWidth * index}px)`;
+  currentIndex = index;
+}
+
 
   prevBtn.addEventListener("click", () => {
     stopAutoPlay(); // עצירת האוטומט לאחר פעולה ידנית
