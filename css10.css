@@ -501,67 +501,66 @@ header {
 .footer i {
   font-size: 20px;
 }
- .section-kesher {
-      text-align: center;
-      padding: 50px 20px;
-    }
+.section-kesher {
+  text-align: center;
+  padding: 50px 20px;
+}
+.section-kesher {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .section-kesher .kesher-title {
+.section-kesher .kesher-title {
   font-family: "Assistant", sans-serif;
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 60px;
-      color: #000;
-    }
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #000;
+}
 
-    .kesher-items {
-      display: flex;
-      justify-content: center;
-      gap: 160px;
-      flex-wrap: wrap;
-      margin-right: 33px;
-    }
+.kesher-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
 
-    .kesher-box {
-      text-align: center;
-      max-width: 250px;
-    }
+.kesher-box {
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+}
 
-    .kesher-icon {
-      width: 45px;
-      margin-bottom: 20px;
-    }
+.kesher-icon {
+  width: clamp(30px, 6vw, 45px);
+  margin-bottom: 15px;
+}
 
-  
+.kesher-label {
+  font-size: clamp(18px, 5vw, 24px);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
 
-        .kesher-label {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0 0 10px;
-      color: #000;
-    }
+.kesher-value a {
+  font-size: clamp(16px, 4.5vw, 20px);
+  font-weight: 400;
+  color: #1d1d1d;
+  text-decoration: none;
+  word-break: break-word;
+}
 
-    .kesher-value a {
-      font-size: 20px;
-      font-weight: 400;
-      color: #1d1d1d;
-      text-decoration: none;
-    }
-
-    .p10{
+.p10 {
   font-family: "Assistant", sans-serif;
-     font-weight: 400;
-     font-size: 90px;
-     margin-top: 35px;
-    }
+  font-weight: 400;
+  font-size: clamp(40px, 10vw, 90px);
+  margin-top: 30px;
+}
 
-/* ===== טאבלטים עד 1024px ===== */
-/* ========== טאבלטים ומעלה (עד 1024px) ========== */
-/* ===== סופר קטן - עד 320px ===== */
+
+
 @media (max-width: 320px) {
-  body {
-    font-size: 13px;
-  }
   .logo {
     font-size: 16px;
   }
@@ -606,13 +605,15 @@ header {
   .footer i {
     font-size: 14px;
   }
+  .icon-group {
+    font-size: 14px;
+    gap: 8px;
+    right: 8px;
+  }
 }
 
-/* ===== קטן - עד 480px ===== */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
+/* טלפונים קטנים עד 480px */
+@media (max-width: 480px) and (min-width: 321px) {
   .logo {
     font-size: 20px;
   }
@@ -657,33 +658,24 @@ header {
   .footer i {
     font-size: 16px;
   }
+  .icon-group {
+    font-size: 16px;
+    gap: 12px;
+    right: 10px;
+  }
 }
 
-/* ===== מובייל בינוני - עד 768px ===== */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .menu-icon {
-    display: block !important;
-    width: 40px;
-    height: 35px;
-  }
-  .menu-icon span {
-    height: 4px;
-  }
+/* מובייל בינוני ולטאבלטים קטנים - עד 768px */
+@media (max-width: 768px) and (min-width: 481px) {
   .logo {
     font-size: 22px;
   }
   .logo span {
     font-size: 16px;
   }
-  .top-nav ul {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .top-nav li {
-    margin: 0 10px;
+  .menu-icon {
+    width: 40px;
+    height: 35px;
   }
   .top-nav a {
     font-size: 18px;
@@ -697,7 +689,7 @@ header {
     padding: 20px;
   }
   .kesher-items {
-    gap: 40px;
+    gap: 10px;
     margin-right: 10px;
   }
   .kesher-box {
@@ -715,64 +707,48 @@ header {
   }
 }
 
-/* ===== טאבלטים - עד 1024px ===== */
-@media (max-width: 1024px) {
-  header {
-    height: 70px;
-    padding: 15px 10px;
-  }
-  .content-section {
-    flex-direction: column;
-    padding: 15px;
-    max-width: 95%;
-    margin: 20px auto;
-  }
+/* טאבלטים גדולים ומחשבים - מעל 769px */
+@media (min-width: 769px) {
   .logo {
-    font-size: 24px;
+    font-size: 28px;
+  }
+  .logo span {
+    font-size: 18px;
+  }
+  .menu-icon {
+    display: none;
   }
   .top-nav a {
     font-size: 20px;
+    padding: 15px 10px;
   }
-  .icon-group {
-    font-size: 28px;
+  .content-section {
+    flex-direction: row;
+    max-width: 900px;
+    padding: 40px;
+    margin: 60px auto;
+  }
+  .content-section h1 {
+    font-size: 34px;
   }
   .footer {
-    height: 40px;
-    font-size: 14px;
-  }
-  .footer a {
-    font-size: 12px;
-  }
-  .footer i {
+    height: 50px;
     font-size: 16px;
   }
-  .kesher-items {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 60px;
-    padding-bottom: 15px;
-    margin-right: 15px;
-    scrollbar-width: none;
+  .footer a {
+    font-size: 16px;
   }
-  .kesher-items::-webkit-scrollbar {
-    display: none;
-  }
-  .kesher-box {
-    flex: 0 0 220px;
-  }
-  .kesher-icon {
-    width: 40px;
-  }
-  .kesher-label {
+  .footer i {
     font-size: 20px;
   }
-  .section-kesher .kesher-title {
-    font-size: 26px;
+  .icon-group {
+    font-size: 22px;
+    gap: 20px;
+    right: 20px;
   }
 }
 
-/* ===== מסכים גדולים מעל 1400px ===== */
+/* מסכים רחבים מאוד - מעל 1400px */
 @media (min-width: 1400px) {
   .two-columns {
     max-width: 1200px;
@@ -783,64 +759,5 @@ header {
   }
   .carousel-track img {
     height: 200px;
-  }
-}
-/* תפריט עליון לאייפונים בלבד (רוחב עד 414px) */
-@media only screen and (max-width: 414px) and (-webkit-min-device-pixel-ratio: 2) {
-  .top-nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* גלילה חלקה באייפון */
-    gap: 15px;
-    padding: 0 10px;
-    margin: 0;
-  }
-
-  .top-nav li {
-    flex: 0 0 auto;
-    margin: 0;
-  }
-
-  .top-nav a {
-    font-size: 16px;
-    padding: 10px 12px;
-    white-space: nowrap;
-    display: inline-block;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  .logo {
-    font-size: 20px;  /* מקטין את הגודל */
-  }
-  
-  .logo span {
-    font-size: 14px;  /* מקטין את הגודל של הטקסט המשני */
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .logo {
-    font-size: 16px;
-  }
-  
-  .logo span {
-    font-size: 12px;
-  }
-}
-@media only screen and (max-width: 414px) {
-  .icon-group {
-    font-size: 16px;  /* מקטין את הגודל של האייקונים */
-    gap: 12px;        /* מצמצם את המרווחים בין האייקונים */
-    right: 10px;      /* מקרב את האייקונים קצת לצד ימין */
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .icon-group {
-    font-size: 14px;
-    gap: 8px;
-    right: 8px;
   }
 }
