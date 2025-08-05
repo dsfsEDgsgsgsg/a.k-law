@@ -13,15 +13,12 @@ div#NagishLiTrigger {
   right: auto;
   margin-left: 0;
 }
-
 body {
-  margin: 0;
-  
-      font-family: 'Assistant', sans-serif;
-  background-color:ghostwhite;
-   padding-top: 120px;
-    padding-bottom: 0px;
-   
+  font-family: 'Assistant', sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  background-color: ghostwhite;
+  padding-top: 120px;
+  padding-bottom: 0;
 }
 .top-section{
   
@@ -52,7 +49,6 @@ header {
   font-size: 22px;
   z-index: 1102;
 }
-
 .logo {
   position: absolute;
   top: 50%;
@@ -560,44 +556,195 @@ header {
 
 /* ===== טאבלטים עד 1024px ===== */
 /* ========== טאבלטים ומעלה (עד 1024px) ========== */
+/* ===== סופר קטן - עד 320px ===== */
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .logo span {
+    font-size: 12px;
+  }
+  .menu-icon {
+    width: 25px;
+    height: 20px;
+  }
+  .top-nav a {
+    font-size: 14px;
+    padding: 6px 4px;
+  }
+  .content-section h1 {
+    font-size: 18px;
+  }
+  .content-section p {
+    font-size: 12px;
+  }
+  .contact-sidebar {
+    padding: 10px;
+    max-width: 95vw;
+  }
+  .contact-sidebar h2 {
+    font-size: 18px;
+  }
+  .contact-item {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  .contact-item i {
+    font-size: 20px;
+  }
+  .footer {
+    height: 35px;
+    font-size: 11px;
+  }
+  .footer a {
+    font-size: 11px;
+  }
+  .footer i {
+    font-size: 14px;
+  }
+}
+
+/* ===== קטן - עד 480px ===== */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .logo span {
+    font-size: 14px;
+  }
+  .menu-icon {
+    width: 30px;
+    height: 25px;
+  }
+  .top-nav a {
+    font-size: 16px;
+    padding: 8px 6px;
+  }
+  .content-section h1 {
+    font-size: 20px;
+  }
+  .content-section p {
+    font-size: 14px;
+  }
+  .contact-sidebar {
+    padding: 15px;
+    max-width: 95vw;
+  }
+  .contact-sidebar h2 {
+    font-size: 20px;
+  }
+  .contact-item {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .contact-item i {
+    font-size: 24px;
+  }
+  .footer {
+    height: 40px;
+    font-size: 12px;
+  }
+  .footer a {
+    font-size: 12px;
+  }
+  .footer i {
+    font-size: 16px;
+  }
+}
+
+/* ===== מובייל בינוני - עד 768px ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .menu-icon {
+    display: block !important;
+    width: 40px;
+    height: 35px;
+  }
+  .menu-icon span {
+    height: 4px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .logo span {
+    font-size: 16px;
+  }
+  .top-nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .top-nav li {
+    margin: 0 10px;
+  }
+  .top-nav a {
+    font-size: 18px;
+    padding: 10px 8px;
+  }
+  .content-section h1 {
+    font-size: 24px;
+  }
+  .contact-sidebar {
+    max-width: 95vw;
+    padding: 20px;
+  }
+  .kesher-items {
+    gap: 40px;
+    margin-right: 10px;
+  }
+  .kesher-box {
+    flex: 0 0 200px;
+  }
+  .kesher-icon {
+    width: 36px;
+  }
+  .kesher-label {
+    font-size: 18px;
+  }
+  .section-kesher .kesher-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ===== טאבלטים - עד 1024px ===== */
 @media (max-width: 1024px) {
   header {
     height: 70px;
     padding: 15px 10px;
   }
-
   .content-section {
     flex-direction: column;
     padding: 15px;
     max-width: 95%;
     margin: 20px auto;
   }
-
   .logo {
     font-size: 24px;
   }
-
   .top-nav a {
     font-size: 20px;
   }
-
   .icon-group {
     font-size: 28px;
   }
-
   .footer {
     height: 40px;
     font-size: 14px;
   }
-
   .footer a {
     font-size: 12px;
   }
-
   .footer i {
     font-size: 16px;
   }
-
   .kesher-items {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -607,204 +754,34 @@ header {
     margin-right: 15px;
     scrollbar-width: none;
   }
-
   .kesher-items::-webkit-scrollbar {
     display: none;
   }
-
   .kesher-box {
     flex: 0 0 220px;
   }
-
   .kesher-icon {
     width: 40px;
   }
-
   .kesher-label {
     font-size: 20px;
   }
-
   .section-kesher .kesher-title {
     font-size: 26px;
   }
 }
 
-/* ========== מובייל בינוני (עד 768px) ========== */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
+/* ===== מסכים גדולים מעל 1400px ===== */
+@media (min-width: 1400px) {
+  .two-columns {
+    max-width: 1200px;
+    margin: 100px auto;
   }
-
-  .menu-icon {
-    display: block !important;
-    width: 40px;
-    height: 35px;
-  }
-
-  .menu-icon span {
-    height: 4px;
-  }
-
-  .logo {
+  .column {
     font-size: 22px;
   }
-
-  .logo span {
-    font-size: 16px;
-  }
-
-  .top-nav ul {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .top-nav li {
-    margin: 0 10px;
-  }
-
-  .top-nav a {
-    font-size: 18px;
-    padding: 10px 8px;
-  }
-
-  .content-section h1 {
-    font-size: 24px;
-  }
-
-  .contact-sidebar {
-    max-width: 95vw;
-    padding: 20px;
-  }
-
-  .kesher-items {
-    gap: 40px;
-    margin-right: 10px;
-  }
-
-  .kesher-box {
-    flex: 0 0 200px;
-  }
-
-  .kesher-icon {
-    width: 36px;
-  }
-
-  .kesher-label {
-    font-size: 18px;
-  }
-
-  .section-kesher .kesher-title {
-    font-size: 22px;
-    margin-bottom: 30px;
-  }
-}
-
-/* ========== מובייל קטן (עד 480px) ========== */
-@media (max-width: 480px) {
-  .logo {
-    font-size: 20px;
-  }
-
-  .logo span {
-    font-size: 14px;
-  }
-
-  .menu-icon {
-    width: 30px;
-    height: 25px;
-  }
-
-  .icon-group {
-    font-size: 22px;
-    gap: 10px;
-  }
-
-  .content-section h1 {
-    font-size: 20px;
-  }
-
-  .content-section p {
-    font-size: 14px;
-  }
-
-  .contact-sidebar {
-    padding: 15px;
-  }
-
-  .contact-sidebar h2 {
-    font-size: 20px;
-  }
-
-  .contact-item {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-
-  .contact-item i {
-    font-size: 24px;
-  }
-
-  .footer a {
-    font-size: 12px;
-  }
-
-  .footer i {
-    font-size: 16px;
-  }
-
-  .kesher-items {
-    gap: 30px;
-    margin-right: 5px;
-  }
-
-  .kesher-box {
-    flex: 0 0 180px;
-  }
-
-  .kesher-icon {
-    width: 32px;
-  }
-
-  .kesher-label {
-    font-size: 16px;
-  }
-
-  .section-kesher .kesher-title {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-/* ========== מובייל סופר קטן (עד 360px) ========== */
-@media (max-width: 360px) {
-  .logo {
-    font-size: 18px;
-  }
-
-  .menu-icon {
-    width: 28px;
-    height: 24px;
-  }
-
-  .top-nav a {
-    font-size: 16px;
-    padding: 8px 6px;
-  }
-
-  .contact-item {
-    font-size: 13px;
-  }
-
-  .contact-item i {
-    font-size: 22px;
-  }
-
-  .kesher-label {
-    font-size: 14px;
-  }
-
-  .section-kesher .kesher-title {
-    font-size: 18px;
+  .carousel-track img {
+    height: 200px;
   }
 }
 
