@@ -810,3 +810,37 @@ header {
   }
 }
 
+@media only screen and (max-width: 414px) {
+  .logo {
+    font-size: 20px;  /* מקטין את הגודל */
+  }
+  
+  .logo span {
+    font-size: 14px;  /* מקטין את הגודל של הטקסט המשני */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .logo {
+    font-size: 16px;
+  }
+  
+  .logo span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .icon-group {
+    font-size: 16px;  /* מקטין את הגודל של האייקונים */
+    gap: 12px;        /* מצמצם את המרווחים בין האייקונים */
+    right: 10px;      /* מקרב את האייקונים קצת לצד ימין */
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .icon-group {
+    font-size: 14px;
+    gap: 8px;
+    right: 8px;
+  }
+}
