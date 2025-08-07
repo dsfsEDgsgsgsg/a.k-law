@@ -43,7 +43,7 @@
   transform: scale(1.05);
 }
 
-/* האפקט על התיבה */
+/* אפקט על התיבה */
 .box:hover {
   background-color: #f9f5e6;
   box-shadow: 0 6px 18px rgba(201, 164, 77, 0.35);
@@ -119,34 +119,17 @@
   height: 2.9px;
   background: linear-gradient(to right, transparent, #a27851, transparent);
 }
+
+/* ======= מדיה קוואריז ======= */
+/* מסכים עד 1024px */
 @media screen and (max-width: 1024px) {
   .practice-title {
     font-size: 2.4rem;
   }
 
   .box {
-    max-width: 300px;
-    height: 220px;
-  }
-
-  .icon {
-    font-size: 45px;
-  }
-
-  .title {
-    font-size: 21px;
-  }
-}
-/* מסכים בינוניים (עד 1024px) - שמור עיצוב רגיל */
-@media screen and (max-width: 1024px) {
-  .practice-title {
-    font-size: 2.4rem;
-  }
-
-  .box {
-    height: 200px;
-    max-width: 180px;  /* אפשר להשאיר לשורות מרובות */
-    border-right: 6px solid #c9a44d; /* אם רוצה פס צד */
+    max-width: 220px; /* קצת יותר רחב ממובייל */
+    height: auto;     /* גובה גמיש */
   }
 
   .icon {
@@ -158,23 +141,26 @@
   }
 }
 
-/* מסכים קטנים (עד 768px) - מעבר לתיבות עמודה, רוחב 80%, פס למעלה ולמטה */
+/* מסכים עד 768px - מעבר לעמודה ומרכז תיבות */
 @media screen and (max-width: 768px) {
   .practice-title {
     font-size: 2rem;
   }
 
   .box-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* מרכז תיבות אופקית */
     gap: 30px;
     padding: 20px 0;
+    justify-content: center; /* במידה ויש צורך במרכז אנכי */
   }
 
   .box-container a {
     width: 80%;
     max-width: 80%;
+    flex: none; /* ביטול גמישות */
+    display: flex;
+    justify-content: center; /* מרכז את התוכן הפנימי */
   }
 
   .box {
@@ -191,6 +177,11 @@
     background-color: white;
     text-align: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;          /* מרכז תוכן פנימי */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .icon {
@@ -208,14 +199,14 @@
   }
 }
 
-/* מסכים קטנטנים (עד 480px) - כמו קטנים, עם התאמות קטנות בגודל */
+/* מסכים קטנים עד 480px */
 @media screen and (max-width: 480px) {
   .practice-title {
     font-size: 1.6rem;
   }
 
   .box {
-    height: auto; /* מאפשר גובה גמיש */
+    height: auto;
   }
 
   .icon {
@@ -225,6 +216,22 @@
 
   .title {
     font-size: 18px;
+  }
+}
+
+/* מסכים קטנים מאוד עד 320px */
+@media screen and (max-width: 320px) {
+  .practice-title {
+    font-size: 1.3rem;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-size: 16px;
   }
 }
 
@@ -375,7 +382,7 @@
       <div class="kesher-box">
         <img src="https://img.icons8.com/ios-filled/50/d4b073/new-post.png" class="kesher-icon" alt="אימייל">
         <h3 class="kesher-label">דואר אלקטרוני</h3>
-        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent">arielkand@gmail.com</a></p>
+        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/arielkand%40gmail.com">arielkand@gmail.com</a></p>
       </div>
 
       <!-- כתובת -->
