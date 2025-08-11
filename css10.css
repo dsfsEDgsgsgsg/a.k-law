@@ -606,16 +606,21 @@ header {
     font-size: 14px;
   }
   .icon-group {
-    font-size: 14px;
+    font-size: 10px;
     gap: 8px;
     right: 8px;
+  }
+  
+  .menu-icon,
+  .sidebar {
+    display: none !important;
   }
 }
 
 /* טלפונים קטנים עד 480px */
 @media (max-width: 480px) and (min-width: 321px) {
   .logo {
-    font-size: 20px;
+    font-size: 17px;
   }
   .logo span {
     font-size: 14px;
@@ -648,6 +653,11 @@ header {
   .contact-item i {
     font-size: 24px;
   }
+  
+  .menu-icon,
+  .sidebar {
+    display: none !important;
+  }
   .footer {
     height: 40px;
     font-size: 12px;
@@ -659,7 +669,7 @@ header {
     font-size: 16px;
   }
   .icon-group {
-    font-size: 16px;
+    font-size: 10px;
     gap: 12px;
     right: 10px;
   }
@@ -672,6 +682,11 @@ header {
   }
   .logo span {
     font-size: 16px;
+  }
+  
+  .menu-icon,
+  .sidebar {
+    display: none !important;
   }
   .menu-icon {
     width: 40px;
@@ -715,9 +730,6 @@ header {
   .logo span {
     font-size: 18px;
   }
-  .menu-icon {
-    display: none;
-  }
   .top-nav a {
     font-size: 20px;
     padding: 15px 10px;
@@ -760,4 +772,5 @@ header {
   .carousel-track img {
     height: 200px;
   }
+
 }
