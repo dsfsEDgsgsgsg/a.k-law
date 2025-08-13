@@ -20,16 +20,22 @@
       margin: 0;
       font-family: 'Assistant', sans-serif;
       margin-bottom: 35px;
+      
     }
 
     .contact-icons {
+      margin: 0;
+    position: relative;
+    z-index: 1;
       background-color: #000;
       margin-top: 80px;
       color: #a27851;
-      padding: 40px 20px;
+      
+      padding:  40px 20px;
       text-align: center;
       border-top: 1px solid #a2785122;
       border-bottom: 1px solid #a2785122;
+      
     }
 
     .contact-icons h2 {
@@ -76,22 +82,45 @@
     .contact-text {
       font-size: 16px;
       direction: rtl;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .contact-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 100px 20px 60px;
-      
-  background-color:ghostwhite;
       text-align: center;
     }
+    
+.background-wrapper {
+    position: relative;
+    background-image: url('lawer1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    padding: 20px;
+}
 
+.background-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0,0,0,0.8);
+}
     .subtitle {
       font-size: 46px;
       margin-bottom: 10px;
       display: inline-block;
       
+    position: relative;
+    z-index: 1;
       background-color: #b78b52;
       color: white;
       padding: 12px 30px;
@@ -104,14 +133,22 @@
     .headline {
       font-size: 48px;
       font-weight: 700;
-      color: #1d1f25;
+      color: #fff;
+        opacity: 1; 
       margin-bottom: 30px;
       line-height: 1.6;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .contact-description {
+      
+    position: relative;
+    z-index: 1;
       font-size: 20px;
-      color: #333;
+      
+      color: #fff;
       max-width: 700px;
       margin: 0 auto 50px;
       line-height: 1.8;
@@ -122,6 +159,9 @@
       align-items: center;
       margin-bottom: 35px;
       gap: 20px;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .icon-box {
@@ -132,21 +172,34 @@
       font-size: 26px;
       min-width: 60px;
       text-align: center;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .info-text {
       text-align: right;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .info-title {
       font-weight: bold;
       font-size: 22px;
       margin-bottom: 6px;
+      color:#fff;
+    position: relative;
+    z-index: 1;
     }
 
     .info-detail {
+      
+    position: relative;
+    z-index: 1;
       font-size: 20px;
-      color: #6b7280;
+      
+      color: white;
     }
 
     .network-links {
@@ -168,6 +221,9 @@
       align-items: center;
       justify-content: center;
       transition: background-color 0.3s ease;
+      
+    position: relative;
+    z-index: 1;
     }
 
     .network-links i:hover {
@@ -178,6 +234,9 @@
       padding: 0 20px;
       max-width: 800px;
       margin: 0 auto;
+      
+    position: relative;
+    z-index: 1;
     }
 
     a {
@@ -286,6 +345,7 @@
   <h1>צור קשר</h1>
 </section>
 
+    <div class="background-wrapper">
 <div class="contact-container">
   <p class="subtitle">צרו קשר איתנו</p>
   <p class="headline">השאירו פרטים ונחזור<br>אליכם בהקדם האפשרי.</p>
