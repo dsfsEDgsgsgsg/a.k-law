@@ -79,7 +79,7 @@
 
 .column-text {
   
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 1.25rem;
   margin: 0 auto;
   line-height: 2;
@@ -691,43 +691,28 @@
 }
 
 .background-wrapper > * {
+  margin-top: 5.5vh;
     position: relative;
     z-index: 1;
 }
-.swq1 {
 
-  margin-right: 65vw;
-  margin-top: -20vh;
-  justify-content: center;
-  text-align: right;
-  width: 17vw;
+.logo10 {
+  width: 60%;
+  height: 450px;
+  margin-right: -1.5vw;
+  border-top-left-radius: 90px;
   
-  background-color: #c6ad72; /* זהוב חם */
-  color: #1a1a29;            /* טקסט כהה */
-  font-weight: 700;
-  font-size: 1.25rem;
-  padding: 15px 25px;
-  border-radius: 4px;
-  font-family: "Assistant", sans-serif;
-  box-sizing: border-box;
+  border-bottom-left-radius: 90px;
 }
 
-.swq12 {
-
-  text-align: right;
-  margin-right: 65vw;
-  margin-top: -30vh;
-  justify-content: center;
+/* כל סוגי הטלפונים (עד טאבלט) */
+@media (max-width: 1023px) {
   
-  width: 17vw;
-    background-color: rgba(0,0,0,0.8); /* רקע כהה דומה לשחור-כחול */
-  color: #d1b97d;            /* צבע טקסט זהוב בהיר */
-  font-weight: 700;
-  font-size: 1.25rem;
-  padding: 15px 25px;
-  border-radius: 4px;
-  font-family: "Assistant", sans-serif;
-  box-sizing: border-box;
+.logo10 {
+  width: 100%;
+  height: 450px;
+  margin-top: 15vh;
+}
 }
   </style>
 </head>
@@ -784,17 +769,6 @@
     </div>
   </div>
 
-  <section class="page-hero">
-    <div class="circle-shape"></div>
-    <div class="small-circle one"></div>
-    <div class="small-circle two"></div>
-    <div class="small-circle three"></div>
-    <div class="background-shape"></div>
-    <div class="wave-shape"></div>
-
-    <h1>דף הבית</h1>
-    <p></p>
-  </section>
     <div class="background-wrapper">
   <img class="logo10" src="newlogo.jpg" alt="לוגו אריאל קנד" />
 </div>
