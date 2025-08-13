@@ -78,16 +78,24 @@
 }
 
 .column-text {
-  font-family: "Roboto", sans-serif;
+  
+  font-family: "Cascadia Code", sans-serif;
   font-size: 1.25rem;
   margin: 0 auto;
   line-height: 2;
   direction: rtl;
   text-align: center;
-  max-width: 37.5rem;
+  width: 50vw;
   color: #333;
+  margin-right: -12vw;
 }
-
+/* כל סוגי הטלפונים (עד טאבלט) */
+@media (max-width: 1023px) {
+  .column-text {
+    margin-right: 6.5vw;
+    width: 90%
+  }
+}
 .column-text strong {
   color: #000;
   font-weight: 300;
@@ -721,7 +729,6 @@
   font-family: "Assistant", sans-serif;
   box-sizing: border-box;
 }
-
   </style>
 </head>
 <body>
@@ -789,11 +796,7 @@
     <p></p>
   </section>
     <div class="background-wrapper">
-  <img class="logo10" src="Arielogo.jpg" alt="לוגו אריאל קנד" />
-    <div class="swq1">לייעוץ התקשר: 054-809-5775</div>
-    
-    <div class="swq12">אריאל קנד-משרד עורכי דין</div>
-
+  <img class="logo10" src="newlogo.jpg" alt="לוגו אריאל קנד" />
 </div>
   <div class="two-columns">
     <div class="column right-column">
@@ -1087,8 +1090,8 @@
 
     </div>
     <div>
-      <h4 class="p10">Arial Kand</h4>
-  
+      <img class="newlogo" src="newlogo1.jpg">
+      </div>
 <script>
   function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
@@ -1251,4 +1254,5 @@
 
   <script src="nagishli_beta.js"></script>
 </body>
+
 </html>

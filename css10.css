@@ -21,6 +21,13 @@ body {
   padding-top: 120px;
   padding-bottom: 0;
 }
+
+.newlogo{
+  max-width: 100%;
+  height: auto;
+  background-color: #F7F7F6;
+
+}
 .top-section{
   
     position: fixed;
