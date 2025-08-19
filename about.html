@@ -22,7 +22,6 @@
   flex-wrap: wrap;
   margin: 40px auto;
   gap: 20px; /* ריווח בין תמונות */
-  border: 3px solid #003366;
 border-radius: 12px;
 padding: 20px;
 
@@ -110,6 +109,10 @@ padding: 20px;
 }
 
 
+.clickable-image {
+  border: 2px solid black; /* רק מסגרת שחורה */
+  border-radius: 7px;
+}
 
   </style>
 </head>
@@ -200,6 +203,7 @@ padding: 20px;
   <img src="result24.jpg" alt="תמונה 24" class="clickable-image" onclick="openLightbox(this.src)">
   <img src="result25.jpg" alt="תמונה 25" class="clickable-image" onclick="openLightbox(this.src)">
 </div>
+
 
 
 <!-- Lightbox -->

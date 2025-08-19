@@ -54,7 +54,7 @@ header {
   transform: translateY(-50%);
   display: flex;
   gap: 20px;
-  font-size: 22px;
+  font-size: 34px;
   z-index: 1102;
 }
 .logo {
@@ -562,6 +562,12 @@ header {
 }
 
 
+/* כל סוגי הטלפונים (עד טאבלט) */
+@media (max-width: 1023px) {
+  .icon-group{
+    right: 0;
+  }
+}
 
 @media (max-width: 320px) {
   .logo {
@@ -607,11 +613,6 @@ header {
   }
   .footer i {
     font-size: 14px;
-  }
-  .icon-group {
-    font-size: 10px;
-    gap: 8px;
-    right: 8px;
   }
   
   .menu-icon,
@@ -670,11 +671,6 @@ header {
   }
   .footer i {
     font-size: 16px;
-  }
-  .icon-group {
-    font-size: 10px;
-    gap: 12px;
-    right: 10px;
   }
 }
 
@@ -756,11 +752,6 @@ header {
   }
   .footer i {
     font-size: 20px;
-  }
-  .icon-group {
-    font-size: 22px;
-    gap: 20px;
-    right: 20px;
   }
 }
 
