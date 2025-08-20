@@ -15,6 +15,35 @@
   <link rel="stylesheet" href="css10.css" />
 
   <style>
+    .textp1{
+
+      margin-left: 52px;
+    }
+    .textp{
+      margin-left: 20px;
+    }
+    .claims-list {
+  list-style: none;   /* בלי נקודות */
+  padding: 0;
+  margin: 0;
+}
+
+.claims-list li {
+  display: inline;    /* שיהיו בשורה */
+}
+
+.claims-list li::after {
+  content: " / ";     /* מפריד עם סלאש */
+}
+
+.claims-list li:last-child::after {
+  content: "";        /* בלי סלאש אחרי האחרון */
+}
+
+    .column-text li{
+      margin-right: 0%;
+      justify-content: center;
+    }
     /* === 1. מבנה עמוד כללי וטקסטים === */
 .two-columns {
   display: flex;
@@ -40,7 +69,7 @@
 .column-title {
   font-family: "Assistant", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 500;
   font-style: normal;
   font-size: 2.125rem;
   color: #000;
@@ -61,7 +90,7 @@
   height: 0.125rem;
   background-color: #a27851;
   border-radius: 2px;
-  margin-left: 27%;
+  margin-left: 30.9%;
 }
 
 .column-title .title-icon {
@@ -73,22 +102,27 @@
 
 .left-column {
   display: inline-block;
-  margin-top: 6.25rem;
+  margin-top: -2.25rem;
+  
   margin-right: 30%;
 }
 
 .column-text {
-  
   font-family: "Assistant", sans-serif;
   font-size: 1.25rem;
   margin: 0 auto;
-  line-height: 2;
+  line-height: 1.4;
   direction: rtl;
   text-align: center;
   width: 50vw;
   color: #333;
   margin-right: -12vw;
+
 }
+.column-text2{
+
+}
+
 /* כל סוגי הטלפונים (עד טאבלט) */
 @media (max-width: 1023px) {
   .column-text {
@@ -717,6 +751,14 @@
   margin-right: -1vw;
 }
 }
+.column-text strong {
+  color: #a27851; /* צבע לדוגמה */
+  font-size: 22px; /* גודל */
+  font-weight: bold; /* משקל טקסט */
+  
+  display: block;
+  margin: 2em 0;
+}
   </style>
 </head>
 <body>
@@ -778,14 +820,14 @@
   <div class="two-columns">
     <div class="column right-column">
       <h3 class="column-title right-title">
-        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>
+        <i  aria-hidden="true"></i>
         אודות עורך הדין אריאל קנד
       </h3>
       <div class="column-text">
 <p><strong>עו"ד אריאל קנד – מקצועיות, אנושיות, ונחישות לנצח בשבילך</strong></p>
 
 <p>
-שמי אריאל קנד, עורך דין המתמחה בדיני נזיקין ובעל ניסיון של כ-10 שנים בהתמודדות מול חברות הביטוח, מהן יצאתי חדור מטרה: לשים סוף לעוול שאנשים חווים כשהם נפגעים, ולדאוג שכל אחד ואחת יקבלו את מה שמגיע להם – באמת.
+ אריאל קנד, עורך דין המתמחה בדיני נזיקין ובעל ניסיון של כ-10 שנים בהתמודדות מול חברות הביטוח, מהן יצאתי חדור מטרה: לשים סוף לעוול שאנשים חווים כשהם נפגעים, ולדאוג שכל אחד ואחת יקבלו את מה שמגיע להם – באמת.
 </p>
 
 <p>
@@ -794,71 +836,76 @@
 
 <p><strong>החזון שלי:</strong></p>
 <ul>
-  <li>להנגיש צדק ומשפט לכל אדם שנפגע – בלי פחד, בלי בירוקרטיה מתישה, ובלי להרגיש לבד.</li>
-  <li>אני מאמין שלכל אדם – מכל רקע, מגזר או גיל – מגיע ייצוג משפטי איכותי, אנושי ונחוש.</li>
-  <li>משרד עורכי דין לא צריך להיות מקום מפחיד – אלא כתובת בטוחה, זמינה ומקצועית לכל מי שנפגע.</li>
+  <p>להנגיש צדק ומשפט לכל אדם שנפגע – בלי פחד, בלי בירוקרטיה מתישה, ובלי להרגיש לבד.</p>
+  <p>אני מאמין שלכל אדם – מכל רקע, מגזר או גיל – מגיע ייצוג משפטי איכותי, אנושי ונחוש.</p>
+  <p>משרד עורכי דין לא צריך להיות מקום מפחיד – אלא כתובת בטוחה, זמינה ומקצועית לכל מי שנפגע.</p>
 </ul>
 
 <p><strong>המשרד מטפל בתביעות בתחומים:</strong></p>
-<ul>
-  <li>תאונות דרכים</li>
-  <li>תאונות עבודה</li>
-  <li>תאונות תלמידים</li>
-  <li>תביעות מול ביטוח לאומי</li>
-  <li>תביעות סיעוד ואובדן כושר עבודה</li>
-  <li>ייפוי כוח מתמשך</li>
-  <li>לטיגציה</li>
-</ul>
-
+<p>
+  <div class="column-text2">
+  <p>תאונות דרכים</p>
+  <p>תאונות עבודה</p>
+  <p>תאונות תלמידים</p>
+  <p>תביעות מול ביטוח לאומי</p>
+  <p>תביעות סיעוד ואובדן כושר עבודה</p>
+  <p>ייפוי כוח מתמשך</p>
+  <p>לטיגציה</p>
+  </div>
+</p>
 <p><strong>הערכים שמובילים אותי בכל תיק:</strong></p>
+
+<div class="text23">
 <ul style="list-style: none; padding: 0; margin: 0;">
   <li style="display: flex; align-items: center; gap: 8px;">
-    <span style="color: #1E90FF; font-weight: bold;">🔷</span>
     מקצועיות ונחישות ללא פשרות
   </li>
   <li style="display: flex; align-items: center; gap: 8px;">
-    <span style="color: #1E90FF; font-weight: bold;">🔷</span>
     שקיפות מלאה מול הלקוח
   </li>
-  <li style="display: flex; align-items: center; gap: 8px;">
-    <span style="color: #1E90FF; font-weight: bold;">🔷</span>
+  <li style="display: flex; align-items: center; gap: 8px; ">
     יחס אישי וליווי צמוד
   </li>
-  <li style="display: flex; align-items: center; gap: 8px;">
-    <span style="color: #1E90FF; font-weight: bold;">🔷</span>
+  <li style=" display: flex; align-items: center; gap: 8px;">
     זמינות גבוהה – גם מחוץ לשעות משרד
   </li>
 </ul>
+</div>
 
       </div>
     </div>
 
     <div class="column left-column">
       <h3 class="column-title left-title">
-        <i class="fas fa-pencil-alt title-icon" aria-hidden="true"></i>שירות משרדנו
+        <i  aria-hidden="true"></i>שירות משרדנו
       </h3>
       <div class="column-text">
-        <p><strong>🛡️ ייצוג נפגעים בלבד:</strong></p>
+        <div class="textp">
+        <p><strong> ייצוג נפגעים בלבד:</strong></p>
         <p>משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.</p>
 
-        <p><strong>📂 תחומי טיפול:</strong></p>
+        <p><strong> תחומי טיפול:</strong></p>
         <ul class="treatment-list">
-          <li>תאונות דרכים</li>
-          <li>תאונות עבודה</li>
-          <li>תאונות תלמידים</li>
-          <li>תאונות במרחב הציבורי</li>
-          <li>נזקי גוף</li>
-          <li>תביעות ביטוח לאומי</li>
-          <li>אובדן כושר עבודה</li>
-          <li>תביעות סיעוד</li>
-        </ul>
+          <ul class="claims-list">
+  <li>תאונות דרכים</li>
+  <li>תאונות עבודה</li>
+  <li>תאונות תלמידים</li>
+  <li>תאונות במרחב הציבורי</li>
+  <li>נזקי גוף</li>
+  <li>תביעות ביטוח לאומי</li>
+  <li>אובדן כושר עבודה</li>
+  <li>תביעות סיעוד</li>
+</ul>
 
-        <p><strong>🔁 ליווי כולל:</strong></p>
+<div class="textp1">
+        <p><strong> ליווי כולל:</strong></p>
         <p>
           אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא.
           מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא
           זכויותיו.
         </p>
+        </div>
+        </div>
       </div>
     </div>
   </div>
