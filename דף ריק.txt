@@ -12,6 +12,31 @@
 </head>
 <body>
 
+      background-color: #fffaf4;
+  background-color: var(--bg-color);
+ <!-- אזור צור קשר -->
+  <section class="contact-sidebar">
+    <h2 class="contact-title">צור קשר</h2>
+    <div class="contact-list">
+      <a href="https://wa.me/972524855911" target="_blank" class="contact-item whatsapp-link">
+        <i class="fab fa-whatsapp"></i>
+        <span class="contact-label">05555555555</span>
+      </a>
+      <a href="tel:0524855911" class="contact-item phone-link">
+        <i class="fas fa-phone"></i>
+        <span class="contact-label">התקשר עכשיו</span>
+      </a>
+      <a href="mailto:ilyalaw20@gmail.com" class="contact-item email-link">
+        <i class="fas fa-envelope"></i>
+        <span class="contact-label">ilyalaw20@gmail.com</span>
+      </a>
+      <a href="https://maps.app.goo.gl/כתובת" target="_blank" class="contact-item location-link">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="contact-label">רחוב הדוגמה 5, תל אביב</span>
+      </a>
+    </div>
+  </section>
+
 
 <header>
   <!-- כפתור המבורגר -->
@@ -80,3 +105,5 @@
 <script src="nagishli_beta.js"></script>
 </body>
 </html>
+
+  background-color: #FDF8F1;
