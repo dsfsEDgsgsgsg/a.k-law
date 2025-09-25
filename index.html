@@ -2,7 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>כותרת אתר</title>
+  <title>עו"ד לענייני נזיקין|המרכז לטיפול בנזקי גוף</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -12,17 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="css10.css" />
+  <link rel="stylesheet" href="css47.css" />
 
   <style>
-    .textp1{
-
-      margin-left: 52px;
-    }
-    .textp{
-      margin-left: 20px;
-    }
-    .claims-list {
+   .textp1 {
+  margin-left: 52px;
+}
+.textp {
+  margin-left: 20px;
+}
+.claims-list {
   list-style: none;   /* בלי נקודות */
   padding: 0;
   margin: 0;
@@ -40,11 +39,12 @@
   content: "";        /* בלי סלאש אחרי האחרון */
 }
 
-    .column-text li{
-      margin-right: 0%;
-      justify-content: center;
-    }
-    /* === 1. מבנה עמוד כללי וטקסטים === */
+.column-text li {
+  margin-right: 0%;
+  justify-content: center;
+}
+
+/* === 1. מבנה עמוד כללי וטקסטים === */
 .two-columns {
   display: flex;
   justify-content: center;
@@ -88,14 +88,14 @@
   bottom: 0;
   width: 35%;
   height: 0.125rem;
-  background-color: #a27851;
+  background-color: #D4AF37; /* זהב */
   border-radius: 2px;
   margin-left: 30.9%;
 }
 
 .column-title .title-icon {
   font-size: 1.75rem;
-  color: #a27851;
+  color: #D4AF37; /* זהב */
   padding: 0 0.625rem;
   user-select: none;
 }
@@ -103,7 +103,6 @@
 .left-column {
   display: inline-block;
   margin-top: -2.25rem;
-  
   margin-right: 30%;
 }
 
@@ -117,19 +116,18 @@
   width: 50vw;
   color: #333;
   margin-right: -12vw;
-
 }
-.column-text2{
 
-}
+.column-text2 {}
 
 /* כל סוגי הטלפונים (עד טאבלט) */
 @media (max-width: 1023px) {
   .column-text {
     margin-right: 6.5vw;
-    width: 90%
+    width: 90%;
   }
 }
+
 .column-text strong {
   color: #000;
   font-weight: 300;
@@ -185,7 +183,7 @@
 .carousel-line {
   height: 0.09125rem;
   width: 50%;
-  background-color: #a27851;
+  background-color: #D4AF37; /* זהב */
   margin: 0 auto 2.5rem;
 }
 
@@ -219,7 +217,7 @@
   object-fit: cover;
   border-radius: 0.3125rem;
   background-color: white;
-  box-shadow: 0 0 0.625rem rgba(162, 120, 81, 0.8);
+  box-shadow: 0 0 0.625rem rgba(212, 175, 55, 0.8); /* זהב */
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex-shrink: 0;
@@ -227,7 +225,7 @@
 
 .carousel-track img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 1.5625rem rgba(162, 120, 81, 1);
+  box-shadow: 0 0 1.5625rem rgba(212, 175, 55, 1); /* זהב */
 }
 
 .carousel-arrow {
@@ -236,7 +234,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #a27851;
+  color: #D4AF37; /* זהב */
   font-size: 2.5rem;
   padding: 0;
   cursor: pointer;
@@ -246,7 +244,7 @@
 }
 
 .carousel-arrow:hover {
-  color: #d8b48a;
+  color: #ffd966; /* זהב בהיר יותר */
 }
 
 .carousel-arrow:disabled {
@@ -263,7 +261,6 @@
   left: 0;
   right: auto;
 }
-
 
 /* === 3. לייטבוקס === */
 #lightbox {
@@ -286,10 +283,8 @@
 }
 
 #lightbox img {
-  width: 90vw;
-  max-height: 95vh;
   border-radius: 8px;
-  box-shadow: 0 0 25px rgba(162, 120, 81, 0.9);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.9); /* זהב */
   object-fit: contain;
   overflow: visible;
 }
@@ -306,7 +301,7 @@
 }
 
 #lightbox .close-btn:hover {
-  color: #a27851;
+  color: #D4AF37; /* זהב */
 }
 
 /* === 4. המלצות (Testimonials) === */
@@ -328,7 +323,7 @@
 .title-line {
   width: 100px;
   height: 2px;
-  background: #c8a75c;
+  background: #D4AF37; /* זהב */
   margin: 0 auto 30px;
 }
 
@@ -359,6 +354,7 @@
   box-sizing: border-box;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .testimonial-card {
     flex: 0 0 100%;
@@ -369,7 +365,8 @@
 
 .quote-icon {
   font-size: 40px;
-  color: #c8a75c;
+  
+  color: #D4AF37; 
   margin-bottom: 10px;
 }
 
@@ -428,7 +425,8 @@
 
 .testimonial-dots button.active {
   background: #000; /* צבע רקע שונה לכפתור הנבחר */
-  border-color: #a27851; /* אפשר להדגיש גם את הגבול */
+  
+  color: #D4AF37; 
 }
 
 
@@ -739,12 +737,12 @@
   align-items: center;
   margin-right: 20vw;
 }
-
+.right-title{
+  margin-left: -1.2vw;
+}
 /* כל סוגי הטלפונים (עד טאבלט) */
 @media (max-width: 1023px) {
-  .texti{
-    margin-left: 10vw;
-  }
+  
 .logo10 {
   width: 100%;
   height: 4540px;
@@ -752,13 +750,10 @@
   
   margin-right: -1vw;
 }
-.left-title{
-  margin-left: -3vw;
-
-}
 }
 .column-text strong {
-  color: #a27851; /* צבע לדוגמה */
+  
+  color: #D4AF37; 
   font-size: 22px; /* גודל */
   font-weight: bold; /* משקל טקסט */
   
@@ -782,20 +777,21 @@
         <span></span><span></span><span></span>
       </div>
 
-
   <div class="logo">
-    אריאל קנד - משרד עורכי דין
-    <span>Ariel Kand - Law Firm</span>
+    איליה רפאילוב - משרד עורכי דין
+    <span>Ilya rfailov law office</span>
   </div>
+
+      
       <div class="icon-group">
         <a
-          href="https://wa.me/972548095775"
+          href="https://wa.me/972524855911"
           target="_blank"
           style="font-size: 40px; color: #c8a75c"
           ><i class="fab fa-whatsapp"></i
         ></a>
         <a
-          href="tel:972548095775"
+          href="tel:972524855911"
           style="margin-top: 4px; margin-right: 5px; font-size: 34px; color: #c8a75c"
           ><i class="fas fa-phone"></i
         ></a>
@@ -807,7 +803,6 @@
     <li><a href="index.html">דף הבית</a></li>
     <li><a href="services.html">תחומי עיסוק</a></li>
     <li><a href="about.html">תוצאות</a></li>
-    <li><a href="mhamar.html">מאמרים</a></li>
     <li><a href="contact.html">צור קשר</a></li>
       </ul>
     </nav>
@@ -820,105 +815,65 @@
     </div>
   </div>
 <div class="background-wrapper">
-  <img class="logo10" src="logoback21.png" alt="לוגו אריאל קנד" />
+  <img class="logo10" src="logoba.jpg" alt="לוגו אריאל קנד" />
 </div>
 
-  <div class="two-columns">
-    <div class="column right-column">
-      <h3 class="column-title right-title">
-        <i  aria-hidden="true"></i>
-        אודות עורך הדין אריאל קנד
-      </h3>
+<div class="two-columns">
+  <div class="column right-column">
+    <h3 class="column-title right-title">
+      <i aria-hidden="true"></i>
+      אודות המשרד
+    </h3>
+
       <div class="column-text">
-<p><strong>עו"ד אריאל קנד – מקצועיות, אנושיות, ונחישות לנצח בשבילך</strong></p>
+        <p><em>משרדנו – לצידך בכל צעד בדרך המשפטית</em></p>
 
 <p>
- אריאל קנד, עורך דין המתמחה בדיני נזיקין ובעל ניסיון של כ-10 שנים בהתמודדות מול חברות הביטוח, מהן יצאתי חדור מטרה: לשים סוף לעוול שאנשים חווים כשהם נפגעים, ולדאוג שכל אחד ואחת יקבלו את מה שמגיע להם – באמת.
+  משרדנו מעניק שירות משפטי מקצועי ומסור בתחום <em>דיני הנזיקין</em>, ובין היתר מטפל ב:
 </p>
 
-<p>
-את המשרד הקמתי מתוך תחושת שליחות. אני רואה בעבודתי לא רק ייצוג משפטי – אלא ליווי אישי. כל תיק שמגיע אליי הוא קודם כל אדם, סיפור חיים, מצוקה שדורשת לא רק ידע – אלא אוזן קשבת, לב פתוח ונחישות בלתי מתפשרת.
-</p>
-<p><strong>החזון שלי:</strong></p>
-
-<div class="texti">
 <ul>
-  <p>להנגיש צדק ומשפט לכל אדם שנפגע – בלי פחד, בלי בירוקרטיה מתישה, ובלי להרגיש לבד.</p>
-  <p>אני מאמין שלכל אדם – מכל רקע, מגזר או גיל – מגיע ייצוג משפטי איכותי, אנושי ונחוש.</p>
-  <p>משרד עורכי דין לא צריך להיות מקום מפחיד – אלא כתובת בטוחה, זמינה ומקצועית לכל מי שנפגע.</p>
-</ul>
-</div>
-<p><strong>המשרד מטפל בתביעות בתחומים:</strong></p>
-<p>
-  <div class="column-text2">
-  <p>תאונות דרכים</p>
-  <p>תאונות עבודה</p>
-  <p>תאונות תלמידים</p>
-  <p>תביעות מול ביטוח לאומי</p>
-  <p>תביעות סיעוד ואובדן כושר עבודה</p>
-  <p>ייפוי כוח מתמשך</p>
-  <p>לטיגציה</p>
-  </div>
-</p>
-<p><strong>הערכים שמובילים אותי בכל תיק:</strong></p>
-
-<div class="text23">
-<ul style="list-style: none; padding: 0; margin: 0;">
-  <li style="display: flex; align-items: center; gap: 8px;">
-    מקצועיות ונחישות ללא פשרות
-  </li>
-  <li style="display: flex; align-items: center; gap: 8px;">
-    שקיפות מלאה מול הלקוח
-  </li>
-  <li style="display: flex; align-items: center; gap: 8px; ">
-    יחס אישי וליווי צמוד
-  </li>
-  <li style=" display: flex; align-items: center; gap: 8px;">
-    זמינות גבוהה – גם מחוץ לשעות משרד
-  </li>
-</ul>
-</div>
-
-      </div>
-    </div>
-
-    <div class="column left-column">
-      <h3 class="column-title left-title">
-        <i  aria-hidden="true"></i>שירות משרדנו
-      </h3>
-      <div class="column-text">
-        <div class="textp">
-        <p><strong> ייצוג נפגעים בלבד:</strong></p>
-        <p>משרדנו מייצג אך ורק את ציבור הנפגעים – לעולם לא את חברות הביטוח.</p>
-
-        <p><strong> תחומי טיפול:</strong></p>
-        <ul class="treatment-list">
-          <ul class="claims-list">
   <li>תאונות דרכים</li>
-  <li>תאונות עבודה</li>
-  <li>תאונות תלמידים</li>
-  <li>תאונות במרחב הציבורי</li>
-  <li>נזקי גוף</li>
-  <li>תביעות ביטוח לאומי</li>
-  <li>אובדן כושר עבודה</li>
-  <li>תביעות סיעוד</li>
+  <li>תביעות מול המוסד לביטוח לאומי</li>
+  <li>תאונות עבודה, מחלות מקצוע ומיקרו-טראומה</li>
+  <li>תביעות מכוח פוליסות ביטוח שונות</li>
+  <li>תאונות תלמידים והוצאת תגי חניה לנכה</li>
+  <li>רשלנות רפואית ותביעות רכוש</li>
 </ul>
 
-<div class="textp1">
-        <p><strong> ליווי כולל:</strong></p>
-        <p>
-          אנו דוגלים בליווי אישי ועוטף, מרגע הפנייה ועד קבלת הפיצוי המלא.
-          מטרתנו היא לאפשר לנפגע להתמקד בבריאותו – ואנחנו נדאג למימוש מלוא
-          זכויותיו.
-        </p>
-        </div>
-        </div>
+<p>
+  במהלך השנים צברנו ניסיון עשיר בייצוג תובעים, תוך חתירה עיקשת להשגת <em>התוצאה המקסימלית עבור הלקוח</em>.
+</p>
+
+<p><strong>הצלחת המשרד נשענת על:</strong></p>
+<ul>
+  <li><em>ידע רב וניסיון מוכח</em> בטיפול באלפי תיקים.</li>
+  <li><em>שיתוף פעולה עם מומחים רפואיים ואנשי מקצוע</em> – שמאים, חוקרים, מהנדסים, אקטוארים ועוד.</li>
+  <li><em>יחס אישי וליווי צמוד</em> – כל לקוח מקבל טיפול מקצועי, דיסקרטי וקשוב.</li>
+</ul>
+
+<p>
+  קהל לקוחותינו כולל מגוון רחב של אנשים מכל שכבות החברה הישראלית, והאמון שהם נותנים בנו מהווה את ההוכחה הטובה ביותר לאיכות השירות שלנו.
+</p>
+
+<p>
+  אנו מזמינים גם אתכם להצטרף למשפחת לקוחותינו, וליהנות משירות משפטי אישי, חדשני ויצירתי – עם דגש על <em>מקצועיות חסרת פשרות</em>.
+</p>
+
+<p><em>זכרו – הצלחה נמדדת במבחן התוצאה!</em></p>
+
+<p>
+  בברכה,<br>
+  משרד עורכי הדין
+</p>
+
+
       </div>
     </div>
+
   </div>
-  <div class="btn-container">
-  <a href="contact.html" class="lift-btn">לשיחת ייעוץ ללא התחייבות</a>
-</div>
+
+
   <section class="carousel-section" aria-label="קרוסלת תמונות">
     <h2 class="carousel-title">עם תוצאות לא מתווכחים</h2>
     <div class="carousel-line"></div>
@@ -930,26 +885,13 @@
 
       <div class="carousel-container">
         <div class="carousel-track">
-          <img src="result1.jpg" alt="מסמך 1" />
-<img src="result2.jpg" alt="מסמך 2" />
-<img src="result3.jpg" alt="מסמך 3" />
-<img src="result4.jpg" alt="מסמך 4" />
-<img src="result5.jpg" alt="מסמך 5" />
-<img src="result6.jpg" alt="מסמך 6" />
-<img src="result7.jpg" alt="מסמך 7" />
-<img src="result8.jpg" alt="מסמך 8" />
-<img src="result9.jpg" alt="מסמך 9" />
-<img src="result10.jpg" alt="מסמך 10" />
-<img src="result11.jpg" alt="מסמך 11" />
-<img src="result12.jpg" alt="מסמך 12" />
-<img src="result13.jpg" alt="מסמך 13" />
-<img src="result14.jpg" alt="מסמך 14" />
-<img src="result15.jpg" alt="מסמך 15" />
-<img src="result16.jpg" alt="מסמך 16" />
-<img src="result17.jpg" alt="מסמך 17" />
-<img src="result18.jpg" alt="מסמך 18" />
-<img src="result19.jpg" alt="מסמך 19" />
-<img src="result20.jpg" alt="מסמך 20" />
+<img src="result1.png" alt="מסמך 1" />
+<img src="result2.png" alt="מסמך 2" />
+<img src="result3.png" alt="מסמך 3" />
+<img src="result4.png" alt="מסמך 4" />
+<img src="result5.png" alt="מסמך 5" />
+<img src="result6.png" alt="מסמך 6" />
+
 
         </div>
       </div>
@@ -971,78 +913,78 @@
 
     <div class="testimonials-container">
       <div class="testimonials-track">
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    שירות אישי ואכפתי, תמיד זמין לכל שאלה ונתן תחושת ביטחון לאורך כל הדרך.
+  </p>
+  <p class="testimonial-name">דנה <span class="testimonial-date">28/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עו"ד מקצועי, נותן יחס אישי לכל אחד ואחת ליווה אותי בתביעה עד התוצאה המעולה
-          </p>
-          <p class="testimonial-name">אבישג <span class="testimonial-date">28/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    תודה רבה על סבלנות אין קץ והמקצועיות. טיפול מסור מההתחלה ועד הסוף.
+  </p>
+  <p class="testimonial-name">רועי <span class="testimonial-date">27/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            יחס אישי בכל שעה ביום תודה רבה על הטיפול בתיק
-          </p>
-          <p class="testimonial-name">סיון <span class="testimonial-date">27/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    יודע להקשיב ולמצוא פתרונות יצירתיים – פשוט עו"ד מצוין.
+  </p>
+  <p class="testimonial-name">שירן <span class="testimonial-date">18/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            מבין את התיק ויודע איך לפעול זה מדהים !!!
-          </p>
-          <p class="testimonial-name">מיכאל <span class="testimonial-date">18/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    ליווי מקצועי, אכפתי ועם הרבה סבלנות. ממליץ מכל הלב לכל מי שמחפש עורך דין אמין ומסור.
+  </p>
+  <p class="testimonial-name">עמית <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עו"ד אריאל קנד מקצוען מהשורה הראשונה. הוא עובד ביסודיות ובמקצועיות, עונה על כל שאלה והכל בצניעות ובסבלנות. אני ממליצה לכל אחד ואחת שמחפש.ת עו"ד שאפשר לסמוך עליו במאת האחוזים, אז הגעתם לכתובת הנכונה.
-          </p>
-          <p class="testimonial-name">מישל <span class="testimonial-date">10/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    עו"ד עם לב גדול, תמיד נותן מענה בזמן ויודע להרגיע גם ברגעים לא פשוטים.
+  </p>
+  <p class="testimonial-name">יהודית <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עו"ד זמין חרוץ נעים הליכות ורציני. שיהיה לנו ולו בהצלחה. ב"ה שיצליח בכול הדיונים.
-          </p>
-          <p class="testimonial-name">אליעזר <span class="testimonial-date">10/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    מקצועי אמיתי, שירות ברמה הכי גבוהה שיש. תודה רבה!
+  </p>
+  <p class="testimonial-name">עומר <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עורך דין מס 1 שירות ויחס מצויין
-          </p>
-          <p class="testimonial-name">נועה <span class="testimonial-date">10/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    אמין, חרוץ ותמיד זמין ללקוחות. חווית שירות יוצאת מן הכלל.
+  </p>
+  <p class="testimonial-name">קרן <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עורך דין חכם מקצועי מאוד. יעיל שירותי. אדיב אמין ונותן יחס חם בגובה עיניים. ממליצה בחום
-          </p>
-          <p class="testimonial-name">סופיה <span class="testimonial-date">10/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    עו"ד מקצועי שיודע להתמודד עם כל מצב – בזכותו הגעתי לתוצאה הכי טובה.
+  </p>
+  <p class="testimonial-name">עדי <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עו״ד מקצועי שמכיר ויודע את העבודה מול רשויות החוק להשגת התוצאה הטובה ביותר!
-          </p>
-          <p class="testimonial-name">אנונימי <span class="testimonial-date">10/07/2025</span></p>
-        </div>
+<div class="testimonial-card">
+  <div class="quote-icon">❝</div>
+  <p class="testimonial-text">
+    ליווי אישי לאורך כל הדרך, תמיד בגובה העיניים. תודה רבה על הכל!
+  </p>
+  <p class="testimonial-name">גלית <span class="testimonial-date">10/07/2025</span></p>
+</div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">❝</div>
-          <p class="testimonial-text">
-            עורך דין מספר אחת עוזר לכולם ליווה אותי בצורה מקצועית ובליווי מקצועי. ממליצה בחום ♥️
-          </p>
-          <p class="testimonial-name">אפרת <span class="testimonial-date">10/07/2025</span></p>
-        </div>
 
       
 
@@ -1067,11 +1009,10 @@
     <img src="" alt="תמונה מוגדלת" />
   </div>
 
-
   <div class="footer">
     <a
       class="whatsapp"
-      href="https://wa.me/972548095775"
+      href="https://wa.me/972524855911"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -1080,7 +1021,7 @@
     </a>
     <a
       class="facebook"
-      href="https://www.facebook.com/profile.php?id=61557143331663"
+      href="https://www.facebook.com/share/1Awg9fNF9Y/"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -1088,9 +1029,6 @@
       <span>עקוב אחרינו בפייסבוק</span>
     </a>
   </div>
-
-
-
 
  <section class="section-kesher">
     <h2 class="kesher-title">צרו איתנו קשר</h2>
@@ -1100,14 +1038,14 @@
       <div class="kesher-box">
         <img src="https://img.icons8.com/ios-filled/50/d4b073/phone.png" class="kesher-icon" alt="טלפון">
         <h3 class="kesher-label">טלפון</h3>
-        <p class="kesher-value"><a href="https://wa.me/+972 54-809-5775">054-8095775</a></p>
+        <p class="kesher-value"><a href="https://wa.me/972524855911">052-4855911</a></p>
       </div>
 
       <!-- אימייל -->
       <div class="kesher-box">
         <img src="https://img.icons8.com/ios-filled/50/d4b073/new-post.png" class="kesher-icon" alt="אימייל">
         <h3 class="kesher-label">דואר אלקטרוני</h3>
-        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/arielkand%40gmail.com">arielkand@gmail.com</a></p>
+        <p class="kesher-value"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/ilyalaw20@gmail.com">ilyalaw20@gmail.com</a></p>
       </div>
 
       <!-- כתובת -->
@@ -1115,17 +1053,15 @@
         <img src="https://img.icons8.com/ios-filled/50/d4b073/marker.png" class="kesher-icon" alt="כתובת">
         <h3 class="kesher-label">כתובת</h3>
         <p class="kesher-value">
-          <a href="https://maps.app.goo.gl/vyR3hD7JsBtpUpJn7" target="_blank" rel="noopener">
-            ברץ 2, פתח תקווה
+          <a href="https://maps.app.goo.gl/gagKDPQucLjNbhrQ6" target="_blank" rel="noopener">
+          התנאים 5 חולון
           </a>
         </p>
       </div>
 
     </div>
-    <div>
-      <img class="newlogo" src="newlogo1.jpg">
-      </div>
       
+    <h1 class="big-word">Ilya rafailov</h1>
       <div class="footer-wrapper">
   <div class="site-footer">
     © 2025 אוריאל צולפייב - כל הזכויות שמורות | נבנה בעזרת HTML, CSS ו-JavaScript
